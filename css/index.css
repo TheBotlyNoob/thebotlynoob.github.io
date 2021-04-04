@@ -1,0 +1,14 @@
+html {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.githubStats {
+    margin: auto;
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+}
