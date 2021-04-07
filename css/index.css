@@ -1,14 +1,12 @@
 html {
     background-color: black;
+}
+#githubStatsContainer {
     display: flex;
     justify-content: center;
-    align-items: center;
-
 }
 
 .githubStats {
-    margin: auto;
-    width: 20%;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
