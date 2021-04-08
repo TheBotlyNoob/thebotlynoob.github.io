@@ -1,6 +1,4 @@
-@import url("https://unpkg.com/prismjs/themes/prism-twilight.css");
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url("import.css");
 
 *{margin:0;}
 
@@ -9,11 +7,7 @@ html {
     font-family: "Fira Code","times new roman",Consolas,Monaco,'Andale Mono';
     text-shadow: 0 0 5px #C8C8C8;
     color: white;
-    margin-top: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 10%;
-
+    margin: 5% 10% 10% 10%;
 }
 
 .container {
