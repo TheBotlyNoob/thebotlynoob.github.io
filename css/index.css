@@ -9,7 +9,10 @@ html {
     font-family: "Fira Code","times new roman",Consolas,Monaco,'Andale Mono';
     text-shadow: 0 0 5px #C8C8C8;
     color: white;
-    margin: 10%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
 
 }
 
