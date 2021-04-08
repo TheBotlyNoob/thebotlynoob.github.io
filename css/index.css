@@ -1,12 +1,64 @@
+@import url("https://unpkg.com/prismjs/themes/prism-twilight.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+*{margin:0;}
+
 html {
-    background-color: black;
+    background: black;
+    font-family: "Fira Code","times new roman",Consolas,Monaco,'Andale Mono';
+    text-shadow: 0 0 5px #C8C8C8;
+    color: white;
+    margin: 10%;
+
 }
+
+.container {
+    display: table;
+    margin: 0 auto;
+}
+
 #githubStatsContainer {
-    display: flex;
-    justify-content: center;
+    border-radius: .5em;
+    border: .3em solid hsl(0, 0%, 33%);
+    box-shadow: 1px 1px 0.5em black inset;
+    margin: .5em 0;
+    overflow: auto;
+    padding: 1em;
+    width:100%
 }
 
 .githubStats {
-    padding: 20px;
+    padding: .5%;
     text-align: center;
+    display: table;
+    margin: 0 auto;
+}
+
+pre {
+    clear: both;
+    color: #fff;
+    background: #1b1b1b;
+    padding: 0;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+    -ms-word-break: normal;
+    word-break: normal;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    line-height: 28px;
+    border-radius: 8px;
+    min-width: 100px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+code {
+    font-family:"Fira Code",Menlo,Consolas,Monaco,monospace!important;
+    text-shadow: none;
 }
