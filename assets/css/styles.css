@@ -75,6 +75,15 @@ code {
     text-shadow: none;
 }
 
-.icon {
-    filter: grayscale(0);
+#githubRepos {
+    color: white;
+    background: url("https://images.unsplash.com/photo-1462332420958-a05d1e002413?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHw%3D&auto=format&fit=crop&w=500&q=60");
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.githubLink {
+    display: block;
+    color: white;
+    margin: 7px;
 }

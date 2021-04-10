@@ -9,6 +9,6 @@
         });
     for (var i = 0 ; i < data.length ; i++) {
         currentGitHub = JSON.parse(JSON.stringify(data[i]));
-        $("#githubRepos").append(`<span><a class="githubLink" href="${currentGitHub.html_url}" target="_blank">${currentGitHub.name}</span><br>`);
+        $("#githubRepos").append(`<span><a class="githubLink" href="${currentGitHub.html_url}" target="_blank">${currentGitHub.name}, Issues: ${currentGitHub.open_issues}, Forks: ${currentGitHub.forks}</span>`);
     }
 })();

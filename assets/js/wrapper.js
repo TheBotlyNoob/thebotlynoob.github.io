@@ -1,3 +1,1 @@
-$(".middle").wrap("<div class='container'></div>");
-$("code").wrap("<pre></pre>");
-$("[class$='-icon']").each(function(){var a=$(this).attr("class").split(" ").pop().replace("-icon","");$(this).prepend(`<i class="icon fa fa-${a}"></i>`)});
+$(".middle").wrap("<div class='container'></div>");$("code").wrap("<pre></pre>");$("[class$='-icon']").each(function(){var a=$(this).attr("class").split(" ").pop().replace("-icon","");$(this).prepend(`<i class="icon fa fa-${a}"></i>`)});
