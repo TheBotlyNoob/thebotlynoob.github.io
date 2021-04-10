@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "16 Bit";
+  src: url("/assets/16-bit.ttf");
+}
+
+*{margin:0;cursor:url("/assets/cursor.cur"),auto;}
+
+#about, #title {
+    color: green;
+    text-shadow: 0 0 5px rgb(0, 155, 0);
+}
+
+header {
+    font-family: "16 Bit","Fira Code","times new roman",Consolas,Monaco,"Andale Mono";
+    text-align: center;
+    margin-bottom: 40px;
+    white-space: pre;
+}
+
+html {
+    background: black;
+    font-family: "Fira Code","times new roman",Consolas,Monaco,'Andale Mono';
+    text-shadow: 0 0 5px #C8C8C8;
+    color: white;
+    margin: 50px 100px 100px 100px;
+}
+
+.container {
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#githubStatsContainer {
+    border-radius: .5em;
+    border: .3em solid hsl(0, 0%, 33%);
+    box-shadow: 1px 1px 0.5em black inset;
+    margin: .5em 0;
+    overflow: auto;
+    padding: 1em;
+    width:100%;
+}
+
+.githubStats {
+    padding: .5%;
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+}
+
+pre {
+    display: inline-block;
+    padding: .5%;
+    text-align: center;
+    clear: both;
+    color: #fff;
+    background: #1b1b1b;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+    -ms-word-break: normal;
+    word-break: normal;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    line-height: 28px;
+    border-radius: 8px;
+    min-width: 100px;
+    width: -webkit-max-content;
+    width: -moz-max-coo;
+}
+
+code {
+    font-family:"Fira Code",Menlo,Consolas,Monaco,monospace!important;
+    text-shadow: none;
+}
