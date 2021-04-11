@@ -33,16 +33,18 @@ const setCursors=async()=>{
         $("*").each(function(){var b=$(this).css("cursor"),c=$(this);
             /* generate ids for elements that don't have them (needed for later use) */
             if(!c.attr("id"))c.attr("id",`_${Math.random().toString(36).substr(2,9)}`)
+
             /* check for animated cursors */
-            if(["pointer","move","progress","wait"].includes(b))a(`#${c.attr("id")}`,`/assets/cursors/${b}.ani`)
+
+            if(["pointer","move","progress","wait","up","pen"].includes(b))a(`#${c.attr("id")}`,`/assets/cursors/${b}.ani`)
+
             /* check for non animated cursors */
-            else if(["text","help","not-allowed","crosshair"].includes(b))c.css("cursor",`url(/assets/cursors/${b}.cur),auto`)
-            else if(["e-resize","w-resize".includes(b)])c.css("cursor","url(/assets/cursors/ew-resize.cur),auto")
-            else if (["ne-resize","sw-resize".includes(b)])c.css("cursor","url(/assets/cursors/nesw-resize.cur),auto")
-            else if(["se-resize","nw-resize".includes(b)])c.css("cursor","url(/assets/cursors/senw-resize.cur),auto")
-            /* if there are no special cursors go to the default one */
-            else c.css("cursor","url(/assets/cursors/default.cur),auto")});
-        },{"ani-cursor":1}]},{},[5]);
+
+            else if(["text","help","not-allowed","crosshair"].includes(b))c.css("cursor",`url("/assets/cursors/${b}.cur"),auto`)
+
+            else c.css("cursor",`url("/assets/cursors/default.cur"),auto`)
+        });
+    },{"ani-cursor":1}]},{},[5]);
 }
 
 /* call previously set functions */
