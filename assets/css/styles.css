@@ -3,14 +3,12 @@
   src: url("/assets/16-bit.ttf");
 }
 
-*{margin:0;}
+span,h1,h2,h3,h4,h5,h6,br,i,p,hr,strong,big,em,code,sub,sup,del,pre,samp{cursor:text;}
 
 #about, #title {
     color: green;
     text-shadow: 0 0 5px rgb(0, 155, 0);
 }
-
-span,h1,h2,h3,h4,h5,h6,br,i,p,hr,strong,big,em,code,sub,sup,del,pre,samp{cursor:text;}
 
 header {
     font-family: "16 Bit","Fira Code","times new roman",Consolas,Monaco,"Andale Mono";
