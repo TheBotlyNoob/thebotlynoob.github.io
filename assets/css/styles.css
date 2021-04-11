@@ -3,7 +3,7 @@
   src: url("/assets/16-bit.ttf");
 }
 
-*{margin:0;cursor:url("/assets/cursor.cur"),auto;}
+*{margin:0;}
 
 #about, #title {
     color: green;
@@ -73,6 +73,7 @@ pre {
 code {
     font-family:"Fira Code",Menlo,Consolas,Monaco,monospace!important;
     text-shadow: none;
+    cursor: text;
 }
 
 #githubRepos {
