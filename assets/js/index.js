@@ -39,8 +39,8 @@ const setCursors=async()=>{
 }
 
 /* call previously set functions */
-await getGitHub();
 await wrapElements();
+await getGitHub();
 await setCursors();
 
 })();
