@@ -39,7 +39,10 @@ html {
     overflow: auto;
     padding: 1em;
     width:100%;
+    color: lightblue;
 }
+
+#githubStatsContainer hr{border:1px solid lightblue;}
 
 .githubStats {
     padding: .5%;
