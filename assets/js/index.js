@@ -16,14 +16,14 @@
                 .catch(error => {
                     console.error(error);
                 });
-            for (var i = 0 ; i < data.length ; i++) {
+            for (i = 0 ; i < data.length ; i++) {
                 currentGitHub = data[i];
                 $("#githubRepos").append(`<span><a class="githubLink" href="${currentGitHub.html_url}" target="_blank">${currentGitHub.name}, Issues: ${currentGitHub.open_issues}, Forks: ${currentGitHub.forks}</span>`);
             }
         },
 
         setYouTube:async()=>{
-            data = await fetch("https://www.googleapis.com/youtube/v3/search?key=AIzaSyDiB87iTF54WOXpNcOaX7m7jHPdH8OKjDk&channelId=UCBpQy7-ZNMHhRBQ0gcHGcBw&part=snippet,id&order=date&maxResults=20")
+            var data = await fetch("https://www.googleapis.com/youtube/v3/search?key=AIzaSyDiB87iTF54WOXpNcOaX7m7jHPdH8OKjDk&channelId=UCBpQy7-ZNMHhRBQ0gcHGcBw&part=snippet,id&order=date&maxResults=20")
                 .then((response) => response.json())
                 .then(data => {
                     return JSON.parse(JSON.stringify(data));
@@ -31,8 +31,10 @@
                 .catch(error => {
                     console.error(error);
                 });
-            for (var i = 0 ; i < data.length ; i++) {
-                console.log(data.items[i].snippet.title);
+            for (i = 0 ; i < data.items.length-1 /*using -1 so that it doesn't show my channel name*/ ; i++) {
+                currentYouTube = data.items[i];
+               $("#youtubeVids").append(`<span><a class="youtubeLink" href="https://youtu.be/${currentYouTube.id.videoId}" target="_blank">${currentYouTube.snippet.title}</span>`);
+                
             }
         },
 

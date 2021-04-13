@@ -21,8 +21,8 @@ html {
     background: black;
     font-family: "Fira Code","times new roman",Consolas,Monaco,'Andale Mono';
     text-shadow: 0 0 5px #C8C8C8;
-    color: white;
     margin: 50px 100px 100px 100px;
+    color: lightblue;
 }
 
 .container {
@@ -79,14 +79,33 @@ code {
 }
 
 #githubRepos {
-    color: white;
-    background: url("https://images.unsplash.com/photo-1462332420958-a05d1e002413?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHw%3D&auto=format&fit=crop&w=500&q=60");
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    border-radius: .5em;
+    border: .3em solid hsl(0, 0%, 33%);
+    box-shadow: 1px 1px 0.5em black inset;
+    margin: .5em 0;
+    overflow: auto;
+    padding: 1em;
+    width:100%;
+}
+
+#youtubeVids {
+    border-radius: .5em;
+    border: .3em solid hsl(0, 0%, 33%);
+    box-shadow: 1px 1px 0.5em black inset;
+    margin: .5em 0;
+    overflow: auto;
+    padding: 1em;
+    width:100%;
 }
 
 .githubLink {
     display: block;
-    color: white;
     margin: 7px;
+    color: lightblue;
+}
+
+.youtubeLink {
+    display: block;
+    margin: 7px;
+    color: lightblue;
 }
