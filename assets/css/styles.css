@@ -29,16 +29,15 @@ html {
     display: table;
     margin: 0 auto;
     text-align: center;
+    align-items: center;
 }
 
 #githubStatsContainer {
     border-radius: .5em;
     border: .3em solid hsl(0, 0%, 33%);
     box-shadow: 1px 1px 0.5em black inset;
-    margin: .5em 0;
     overflow: auto;
     padding: 1em;
-    width:100%;
     color: lightblue;
 }
 
@@ -82,20 +81,16 @@ code {
     border-radius: .5em;
     border: .3em solid hsl(0, 0%, 33%);
     box-shadow: 1px 1px 0.5em black inset;
-    margin: .5em 0;
     overflow: auto;
     padding: 1em;
-    width:100%;
 }
 
 #youtubeVids {
     border-radius: .5em;
     border: .3em solid hsl(0, 0%, 33%);
     box-shadow: 1px 1px 0.5em black inset;
-    margin: .5em 0;
     overflow: auto;
     padding: 1em;
-    width:100%;
 }
 
 .githubLink {
