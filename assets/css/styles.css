@@ -93,10 +93,16 @@ code {
     padding: 1em;
 }
 
-.githubLink {
+.githubLinkContainer{
     display: block;
-    margin: 7px;
+    margin: 10px;
     color: lightblue;
+    cursor: pointer;
+}
+
+.githubLinkContainer * {
+    color: inherit;
+    cursor: inherit;
 }
 
 .youtubeLink {

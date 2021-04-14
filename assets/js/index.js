@@ -1,4 +1,4 @@
-(async()=>{
+$(document).ready(async()=>{
 
     var wrapElements=async()=>{
         /* wrap important elements (such as code)*/
@@ -20,12 +20,12 @@
                 });
             for (i = 0 ; i < data.length ; i++) {
                 currentGitHub = data[i];
-                $("#githubRepos").append(`<span><a class="githubLink" href="${currentGitHub.html_url}" target="_blank">${currentGitHub.name}, Issues: ${currentGitHub.open_issues}, Forks: ${currentGitHub.forks}</span>`);
+                $("#githubRepos").append(`<div class="githubLinkContainer"><span><a class="githubLink" href="${currentGitHub.html_url}" target="_blank">${currentGitHub.name}, Issues: ${currentGitHub.open_issues}, Forks: ${currentGitHub.forks}</span><br><span class="githubDesc">${currentGitHub.description ?? ''}</span></a>`);
             }
         },
 
         YouTube:async()=>{
-            var data = await fetch("https://www.googleapis.com/youtube/v3/search?key=AIzaSyCyQEWcesl042F-EvVZsVWOh5Mw2ABId64&channelId=UCBpQy7-ZNMHhRBQ0gcHGcBw&part=snippet,id&order=date&maxResults=20")
+            data = await fetch("https://www.googleapis.com/youtube/v3/search?key=AIzaSyCyQEWcesl042F-EvVZsVWOh5Mw2ABId64&channelId=UCBpQy7-ZNMHhRBQ0gcHGcBw&part=snippet,id&order=date&maxResults=20")
                 .then((response) => response.json())
                 .then(data => {
                     return JSON.parse(JSON.stringify(data));
@@ -35,7 +35,7 @@
                 });
             for (i = 0 ; i < data.items?.length-1 /*using -1 so that it doesn't show my channel name*/ ; i++) {
                 currentYouTube = data.items[i];
-               $("#youtubeVids").append(`<span><a class="youtubeLink" href="https://youtu.be/${currentYouTube.id.videoId}" target="_blank">${currentYouTube.snippet.title}</span>`);
+               $("#youtubeVids").append(`<span><a class="youtubeLink" href="https://youtu.be/${currentYouTube.id.videoId}" target="_blank">${currentYouTube.snippet.title}<img class="youtubeImage" src="${currentYouTube.snippet.thumbnails.default.url}" alt="YouTube Thumbnail"></img></a></span>`);
                 
             }
         },
@@ -61,78 +61,63 @@
                         
                         /* check for animated cursors (this is where we need the ids) */
 
-                        case("pointer"):
-                            a(`#${c.attr("id")}`,"/assets/cursors/pointer.ani");
-                            break;
+                        case("pointer"):a(`#${c.attr("id")}`,"/assets/cursors/pointer.ani");break;
 
-                        case("move"):
-                            a(`#${c.attr("id")}`,"/assets/cursors/move.ani");
-                            break;
+                        case("move"):a(`#${c.attr("id")}`,"/assets/cursors/move.ani"); break;
 
-                        case("progress"):
-                            a(`#${c.attr("id")}`,"/assets/cursors/progress.ani");
-                            break;
+                        case("progress"): a(`#${c.attr("id")}`,"/assets/cursors/progress.ani");break;
 
-                        case("wait"):
-                            a(`#${c.attr("id")}`,"/assets/cursors/wait.ani");
-                            break;
+                        case("wait"):a(`#${c.attr("id")}`,"/assets/cursors/wait.ani");break;
 
                         case("up"):
                             a(`#${c.attr("id")}`,"/assets/cursors/up.ani");
                             break;
 
-                        case("pen"):
-                            a(`#${c.attr("id")}`,"/assets/cursors/pen.ani");
-                            break;
+                        case("pen"):a(`#${c.attr("id")}`,"/assets/cursors/pen.ani");break;
 
-                        case("e-resize"):
-                            a(`#${c.attr("id")}`,"/assets/cursors/ew-resize.ani");
-                            break;
+                        case("e-resize"):a(`#${c.attr("id")}`,"/assets/cursors/ew-resize.ani");break;
 
-                        case("w-resize"):
-                            a(`#${c.attr("id")}`,"/assets/cursors/ew-resize.ani");
-                            break;
+                        case("w-resize"):a(`#${c.attr("id")}`,"/assets/cursors/ew-resize.ani");break;
 
-                        case("nw-resize"):
-                            a(`#${c.attr("id")}`,"/assets/cursors/nwse-resize.ani");
-                            break;
+                        case("nw-resize"):a(`#${c.attr("id")}`,"/assets/cursors/nwse-resize.ani");break;
 
-                        case("se-resize"):
-                            a(`#${c.attr("id")}`,"/assets/cursors/nwse-resize.ani");
-                            break;
+                        case("se-resize"):a(`#${c.attr("id")}`,"/assets/cursors/nwse-resize.ani");break;
 
-                        case("n-resize"):
-                            a(`#${c.attr("id")}`,"/assets/cursors/ns-resize.ani");
-                            break;
+                        case("n-resize"):a(`#${c.attr("id")}`,"/assets/cursors/ns-resize.ani");break;
 
                         /* check for non animated cursors */
 
-                        case("text"):
-                            c.css("cursor",`url("/assets/cursors/text.cur"),auto`);
-                            break;
+                        case("text"):c.css("cursor",`url("/assets/cursors/text.cur"),auto`);break;
 
-                        case("help"):
-                            c.css("cursor",`url("/assets/cursors/text.cur"),auto`);
-                            break;
+                        case("help"):c.css("cursor",`url("/assets/cursors/text.cur"),auto`);break;
 
-                        case("not-allowed"):
-                            c.css("cursor",`url("/assets/cursors/text.cur"),auto`);
-                            break;
+                        case("not-allowed"):c.css("cursor",`url("/assets/cursors/text.cur"),auto`);break;
 
-                        case("crosshair"):
-                            c.css("cursor",`url("/assets/cursors/text.cur"),auto`);
-                            break;
+                        case("crosshair"):c.css("cursor",`url("/assets/cursors/text.cur"),auto`);break;
 
                         /* either I havent put the cursor in either if statement or its the default cursor */
 
-                        default:
-                            c.css("cursor",`url("/assets/cursors/default.cur"),auto`);
-                            break;
+                        default:c.css("cursor",`url("/assets/cursors/default.cur"),auto`);break;
                     }
                 });
 
         },{"ani-cursor":1}]},{},[5]);
-    }
+        },
+        Emojis:async()=>{
+            /* WiP
+            data = await fetch("https://raw.githubusercontent.com/github/gemoji/master/db/emoji.json")
+            .then(response=>response.json())
+            .then(data=>{
+                return JSON.parse(JSON.stringify(data));
+            })
+            .catch(error=>{
+                console.error(error);
+            });
+            $("*").each(function(){text=$(this).text();
+                for (i = 0 ; i > data.length ; i++) {}
+            });
+            */
+        },
 }
 
     /* call previously set functions */
@@ -140,5 +125,6 @@
     await setThings.GitHub();
     await setThings.YouTube();
     await setThings.Cursors();
+    await setThings.Emojis();
 
-})();
+});
