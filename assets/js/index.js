@@ -103,20 +103,22 @@ $(document).ready(async()=>{
 
         },{"ani-cursor":1}]},{},[5]);
         },
-        Emojis:async()=>{
-            /* WiP
-            data = await fetch("https://raw.githubusercontent.com/github/gemoji/master/db/emoji.json")
+        Emojis:async()=>{var emojis={},data=await fetch("https://raw.githubusercontent.com/github/gemoji/master/db/emoji.json")
             .then(response=>response.json())
-            .then(data=>{
-                return JSON.parse(JSON.stringify(data));
-            })
-            .catch(error=>{
-                console.error(error);
-            });
+            .then(data=>{return JSON.parse(JSON.stringify(data));})
+            .catch(error=>{console.error(error);});
+
+            for (i = 0 ; i < data.length ; i++) {
+                for (x = 0 ; x < data[i].aliases.length ; x++) {
+                    $.extend(emojis, {[data[i].aliases[x]]: {"emoji":data[i].emoji}});
+                }
+            }
+
+            console.log(emojis)
+
             $("*").each(function(){text=$(this).text();
-                for (i = 0 ; i > data.length ; i++) {}
+                g
             });
-            */
         },
 }
 
