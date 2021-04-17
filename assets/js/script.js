@@ -43,9 +43,8 @@ $(document).ready(async () => {
         console.error(error);
       });
 
-      for (var i = 0; i < ((_data$items = data.items) === null || _data$items === void 0 ? void 0 : _data$items.length) - 1
-      /*using -1 so that it doesn't show my channel name*/
-      ; i++) {
+      for (var i = 0; i < ((_data$items = data.items) === null || _data$items === void 0 ? void 0 : _data$items.length) - 1 /*using -1 so that it doesn't show my channel name*/
+    ; i++) {
         var _data$items;
 
         var currentYouTube = data.items[i];
@@ -67,7 +66,7 @@ $(document).ready(async () => {
         }
         else {
             var errorMessage = currentYouTube?.errors[0]?.message;
-            if (errorMessage) $("#youtubeVids").append();
+            if (errorMessage) $("#youtubeVids").append(errorMessage);
         }
       }
     },
@@ -193,6 +192,7 @@ $(document).ready(async () => {
       });
     }
   };
+
   /* call previously set functions */
 
   await wrapElements();
