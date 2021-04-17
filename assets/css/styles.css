@@ -110,6 +110,10 @@ code {
     margin: 10px;
     color: lightblue;
     cursor: pointer;
+    margin: 16px;
+    padding: 10px;
+    border: 2px solid lightgrey;
+    border-radius: 25px;
 }
 
 .youtubeLinkContainer * {
@@ -118,10 +122,7 @@ code {
 }
 
 .youtubeImage {
-    border:hsl(0, 0%, 33%);
-    content:"wasd";
-}
-
-.youtubeImage::after {
-    content:"wasdwasd";
+    border: 5px solid grey;
+    border-radius: 25px;
+    margin: 8px;
 }

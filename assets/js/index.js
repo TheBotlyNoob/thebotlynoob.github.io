@@ -35,7 +35,7 @@ $(document).ready(async()=>{
                 });
             for (i = 0 ; i < data.items?.length-1 /*using -1 so that it doesn't show my channel name*/ ; i++) {
                 currentYouTube = data.items[i];
-                if(currentYouTube.id.videoId){$("#youtubeVids").append(`<div class="youtubeLinkContainer"><span><a class="youtubeLink" href="https://youtu.be/${currentYouTube.id.videoId}" target="_blank"><img class="youtubeImage" src="${currentYouTube.snippet.thumbnails.default.url}" alt="YouTube Thumbnail"></img>${currentYouTube.snippet.title}</a></span></div>`);} 
+                if(currentYouTube.id.videoId){$("#youtubeVids").append(`<div class="youtubeLinkContainer"><span><a class="youtubeLink" href="https://youtu.be/${currentYouTube.id.videoId}" target="_blank"><img class="youtubeImage" src="${currentYouTube.snippet.thumbnails.default.url}" alt="YouTube Thumbnail"></img><br>${currentYouTube.snippet.title}</a></span></div>`);} 
             }
         },
 
