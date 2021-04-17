@@ -3,15 +3,19 @@
   src: url("/assets/16-bit.ttf");
 }
 
+html * {
+    font-family: "Fira Code","times new roman",Consolas,Monaco,'Andale Mono';
+}
+
 span,h1,h2,h3,h4,h5,h6,br,i,p,hr,strong,big,em,code,sub,sup,del,pre,samp{cursor:text;}
 
 #about, #title {
+    font-family: "16 Bit","Fira Code","times new roman",Consolas,Monaco,"Andale Mono";
     color: green;
     text-shadow: 0 0 5px rgb(0, 155, 0);
 }
 
 header {
-    font-family: "16 Bit","Fira Code","times new roman",Consolas,Monaco,"Andale Mono";
     text-align: center;
     margin-bottom: 40px;
     white-space: pre;
@@ -22,10 +26,6 @@ html {
     text-shadow: 0 0 5px #C8C8C8;
     margin: 50px 100px 100px 100px;
     color: lightblue;
-}
-
-html * {
-    font-family: "Fira Code","times new roman",Consolas,Monaco,'Andale Mono';
 }
 
 .container {
@@ -71,33 +71,6 @@ html * {
     cursor: inherit;
 }
 
-pre {
-    display: inline-block;
-    padding: .5%;
-    text-align: center;
-    clear: both;
-    color: #fff;
-    background: #1b1b1b;
-    -moz-tab-size: 2;
-    -o-tab-size: 2;
-    tab-size: 2;
-    -ms-word-break: normal;
-    word-break: normal;
-    -webkit-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-    line-height: 28px;
-    border-radius: 8px;
-    min-width: 100px;
-    width: -webkit-max-content;
-    width: -moz-max-coo;
-}
-
-code {
-    font-family:"Fira Code",Menlo,Consolas,Monaco,monospace!important;
-    text-shadow: none;
-}
-
 #youtubeVids {
     border-radius: .5em;
     border: .3em solid hsl(0, 0%, 33%);
@@ -131,4 +104,31 @@ code {
 .youtubeDesc {
     padding: 3px;
     font-size: 10px;
+}
+
+pre {
+    display: inline-block;
+    padding: .5%;
+    text-align: center;
+    clear: both;
+    color: #fff;
+    background: #1b1b1b;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+    -ms-word-break: normal;
+    word-break: normal;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    line-height: 28px;
+    border-radius: 8px;
+    min-width: 100px;
+    width: -webkit-max-content;
+    width: -moz-max-coo;
+}
+
+code {
+    font-family:"Fira Code",Menlo,Consolas,Monaco,monospace!important;
+    text-shadow: none;
 }
