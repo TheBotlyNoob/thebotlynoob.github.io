@@ -19,10 +19,13 @@ header {
 
 html {
     background: black;
-    font-family: "Fira Code","times new roman",Consolas,Monaco,'Andale Mono';
     text-shadow: 0 0 5px #C8C8C8;
     margin: 50px 100px 100px 100px;
     color: lightblue;
+}
+
+html * {
+    font-family: "Fira Code","times new roman",Consolas,Monaco,'Andale Mono';
 }
 
 .container {
@@ -46,8 +49,6 @@ html {
 .githubStats {
     padding: .5%;
     text-align: center;
-    display: table;
-    margin: 0 auto;
 }
 
 #githubRepos {
@@ -125,4 +126,9 @@ code {
     border: 5px solid grey;
     border-radius: 25px;
     margin: 8px;
+}
+
+.youtubeDesc {
+    padding: 3px;
+    font-size: 10px;
 }
