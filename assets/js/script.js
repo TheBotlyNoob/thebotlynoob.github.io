@@ -159,7 +159,7 @@ $(document).ready(async () => {
         }
       }
 
-      $("*").not("body").not("header").not("div").each(function () {
+      $("*").not("body").not("header").not("div").not("style").not("script").each(function () {
         var _emojis$text;
 
         var text = $(this).text().match(":(.*):");
