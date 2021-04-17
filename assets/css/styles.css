@@ -64,11 +64,29 @@ html {
     margin: 10px;
     color: lightblue;
     cursor: pointer;
+    margin: 16px;
+    padding: 10px;
+    border: 2px solid lightgrey;
+    border-radius: 25px;
 }
 
 .githubLinkContainer * {
     color: inherit;
     cursor: inherit;
+}
+
+.githubImage {
+    border: 5px solid rgb(250, 248, 145);
+    border-radius: 10px;
+    margin: 8px;
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.githubDesc {
+    padding: 3px;
+    font-size: 10px;
+    color: rgb(16, 99, 148);
 }
 
 #youtubeVids {
@@ -96,9 +114,11 @@ html {
 }
 
 .youtubeImage {
-    border: 5px solid grey;
-    border-radius: 25px;
+    border: 5px solid rgb(250, 248, 145);
+    border-radius: 10px;
     margin: 8px;
+    max-width: 70px;
+    max-height: 70px;
 }
 
 .youtubeDesc {

@@ -23,7 +23,17 @@ $(document).ready(async () => {
         var _currentGitHub$descri;
 
         var currentGitHub = data[i];
-        $("#githubRepos").append(`<div class="githubLinkContainer"><span><a class="githubLink" href="${currentGitHub.html_url}" target="_blank">${currentGitHub.name}, Issues: ${currentGitHub.open_issues}, Forks: ${currentGitHub.forks}</span><br><span class="githubDesc">${(_currentGitHub$descri = currentGitHub.description) !== null && _currentGitHub$descri !== void 0 ? _currentGitHub$descri : ''}</span></a>`);
+        $("#githubRepos").append(`<div class="githubLinkContainer">
+        <a class="githubLink" href="${currentGitHub.html_url}" target="_blank">
+        <img src="${currentGitHub.owner.avatar_url}" class="githubImage" alt="GitHub Image"></img>
+        <br>
+        <span>
+        ${currentGitHub.name}, Issues: ${currentGitHub.open_issues}, Forks: ${currentGitHub.forks}
+        </span>
+        <br>
+        <span class="githubDesc">
+        ${(_currentGitHub$descri = currentGitHub.description) !== null && _currentGitHub$descri !== void 0 ? _currentGitHub$descri : ''}
+        </span></a>`);
       }
     },
     YouTube: async () => {
@@ -43,7 +53,21 @@ $(document).ready(async () => {
         if (currentYouTube.id.videoId) {
           var _currentYouTube$snipp;
 
-          $("#youtubeVids").append(`<div class="youtubeLinkContainer"><span><a class="youtubeLink" href="https://youtu.be/${currentYouTube.id.videoId}" target="_blank"><img class="youtubeImage" src="${currentYouTube.snippet.thumbnails.default.url}" alt="YouTube Thumbnail"></img><br>${currentYouTube.snippet.title}</span><br><span class="youtubeDesc">${(_currentYouTube$snipp = currentYouTube.snippet.description) !== null && _currentYouTube$snipp !== void 0 ? _currentYouTube$snipp : ''}</span></a></div>`);
+          $("#youtubeVids").append(`<div class="youtubeLinkContainer">
+          <a class="youtubeLink" href="https://youtu.be/${currentYouTube.id.videoId}" target="_blank">
+          <span>
+          <img class="youtubeImage" src="${currentYouTube.snippet.thumbnails.default.url}" alt="YouTube Thumbnail"></img>
+          <br>
+          ${currentYouTube.snippet.title}
+          </span>
+          <br>
+          <span class="youtubeDesc">
+          ${(_currentYouTube$snipp = currentYouTube.snippet.description) !== null && _currentYouTube$snipp !== void 0 ? _currentYouTube$snipp : ''}
+          </span></a></div>`);
+        }
+        else {
+            var errorMessage = currentYouTube?.errors[0]?.message;
+            if (errorMessage) $("#youtubeVids").append();
         }
       }
     },
