@@ -11,8 +11,8 @@ const js = babel.transformFileSync("assets/js/script.js").code,
         html = fs.readFileSync("index.dev.html").toString();
 
 const jsMinified = jsmini(js).toString(),
-      cssMinified = cssmini(css, crushOpts).result,
-      htmlMinified = htmlmini(html, crushOpts).result;
+      cssMinified = cssmini(css).result,
+      htmlMinified = htmlmini(html).result;
 
 console.log(jsMinified)
 fs.writeFileSync("assets/js/script.min.js", jsMinified);
