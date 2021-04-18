@@ -14,7 +14,7 @@ const jsMinified = jsmini(js).toString(),
       cssMinified = cssmini(css).result,
       htmlMinified = htmlmini(html).result;
 
-console.log(jsMinified)
+console.log(JSON.stringify(jsMinified));
 fs.writeFileSync("assets/js/script.min.js", jsMinified);
 console.log("Minified JavaScript Saved!");
 
