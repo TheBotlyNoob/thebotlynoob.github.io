@@ -1,5 +1,7 @@
 "use strict";
 
+
+
 const fs = require("fs"),
         babel = require("@babel/core"),
         jsmini = require("javascript-minifier").minify,
@@ -13,7 +15,7 @@ const js = babel.transformFileSync("assets/js/script.js").code,
 const cssMinified = cssmini(css).css,
       htmlMinified = htmlmini(html).result;
 
-jsmini(js).then(code => fs.writeFileSync("assets/js/script.min.js", code))
+jsmini(js).then(code => fs.writeFileSync("assets/js/script.min.js", code)).catch(err => console.error(err))
 
 fs.writeFileSync("assets/css/styles.min.css", cssMinified);
 fs.writeFileSync("index.html", htmlMinified);
