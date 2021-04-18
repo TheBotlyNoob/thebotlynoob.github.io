@@ -23,9 +23,9 @@ const js = babel.transformFileSync("assets/js/script.js").code,
         css = fs.readFileSync("assets/css/styles.css").toString(),
         html = fs.readFileSync("index.dev.html").toString();
 
-const jsMinified = jsmini(js, htmlminiOpts).code.toString(),
+const jsMinified = jsmini(js).code.toString(),
       cssMinified = cssmini(css).css.toString(),
-      htmlMinified = htmlmini(html).toString();
+      htmlMinified = htmlmini(html, htmlminiOpts).toString();
 
 fs.writeFileSync("assets/js/script.min.js", jsMinified);
 console.log("Minified JavaScript Saved!");
