@@ -4,7 +4,7 @@ const fs = require("fs"),
         babel = require("@babel/core"),
         jsmini = require("uglify-js").minify,
         cssmini = require("csso").minify,
-        htmlmini = require("html-minifier").crush;
+        htmlmini = require("html-minifier").minify;
 
 const js = babel.transformFileSync("assets/js/script.js").code,
         css = fs.readFileSync("assets/css/styles.css").toString(),
