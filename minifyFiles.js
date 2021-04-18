@@ -3,8 +3,8 @@
 const fs = require("fs"),
         babel = require("@babel/core"),
         jsmini = require("uglify-js").minify,
-        cssmini = require("html-crush").crush,
-        htmlmini = require("html-crush").crush;
+        cssmini = require("csso").minify,
+        htmlmini = require("html-minifier").crush;
 
 const js = babel.transformFileSync("assets/js/script.js").code,
         css = fs.readFileSync("assets/css/styles.css").toString(),
