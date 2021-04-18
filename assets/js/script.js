@@ -66,7 +66,7 @@ $(document).ready(async () => {
           </span></a></div>`);
         }
         else {
-            var errorMessage = currentYouTube?.errors[0]?.message;
+            var errorMessage = currentYouTube.errors[0].message;
             if (errorMessage) $("#youtubeVids").append(errorMessage);
         }
       }

@@ -15,7 +15,7 @@ const js = babel.transformFileSync("assets/js/script.js").code,
 const cssMinified = cssmini(css).css,
       htmlMinified = htmlmini(html).result;
 
-jsmini(js).then(code => fs.writeFileSync("assets/js/script.min.js", code)).catch(err => console.error(err))
+jsmini(js).then(code => fs.writeFileSync("assets/js/script.min.js", code)).catch(err => {throw err})
 
 fs.writeFileSync("assets/css/styles.min.css", cssMinified);
 fs.writeFileSync("index.html", htmlMinified);
