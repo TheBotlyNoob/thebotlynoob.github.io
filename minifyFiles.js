@@ -3,7 +3,7 @@
 const crushOpts = {
   "lineLengthLimit": 1000,
   "removeHTMLComments": true
-};
+},
         fs = require("fs"),
         babel = require("@babel/core"),
         jsmini = require("uglify-js").minify,

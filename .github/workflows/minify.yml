@@ -22,7 +22,7 @@ jobs:
       
     - name: Minify Files
       run: |
-        npm i @babel/core html-crush javascript-minifier
+        npm i @babel/core html-crush uglify-js javascript-minifier
         node --trace-warnings minifyFiles.js
 
     - name: Push
