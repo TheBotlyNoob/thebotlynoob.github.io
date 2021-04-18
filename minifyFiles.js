@@ -39,11 +39,11 @@ console.log("Minified HTML Contents:");
 console.log("---------------");
 console.log(htmlMinified);
 
-fs.openSync("assets/js/script.min.js", jsMinified, "w");
+fs.writeFileSync(fs.openSync("assets/js/script.min.js", "w"), jsMinified);
 console.log("Minified JavaScript Saved!");
 
-fs.openSync("assets/css/styles.min.css", cssMinified, "w");
+fs.writeFileSync(fs.openSync("assets/css/styles.min.css", "w"), cssMinified);
 console.log("Minified CSS Saved!");
 
-fs.openSync("index.html", htmlMinified, "w");
+fs.writeFileSync(fs.openSync("index.html", "w"), htmlMinified);
 console.log("Minified HTML Saved!");
