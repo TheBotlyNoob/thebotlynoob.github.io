@@ -8,32 +8,26 @@ on:
   push:
     branches: [ main ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
       
-      - name: Minify Files
-        run: |
-          curl -X POST -s --data-urlencode 'input@assets/js/script.js' https://javascript-minifier.com/raw > assets/js/script.min.js
-          curl -X POST -s --data-urlencode 'input@assets/css/script.css' https://javascript-minifier.com/raw > assets/css/styles.min.css
+    - name: Minify Files
+      run: node minifyFiles.js
 
-      # Runs a set of commands using the runners shell
-      - name: Push
-        run: |
-          git config --global user.name "minifier[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add -A
-          git commit -m "Minify Files"
-          git push
+    - name: Push
+      run: |
+        rm package-lock.json
+        git config --global user.name "minifier[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add -A
+        git commit -m "Minify Files"
+        git push
