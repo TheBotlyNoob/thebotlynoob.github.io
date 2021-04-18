@@ -7,8 +7,8 @@ const fs = require("fs"),
         htmlmini = require("html-crush").crush;
 
 const js = babel.transformFileSync("assets/js/script.js").code,
-        css = fs.readFileSync("assets/css/styles.css"),
-        html = fs.readFileSync("index.dev.html");
+        css = fs.readFileSync("assets/css/styles.css").toString(),
+        html = fs.readFileSync("index.dev.html").toString();
 
 console.log(js);
 console.log("----");
