@@ -1,47 +1,19 @@
 "use strict";
 
 const fs = require("fs"),
-        minify = require('minify');
+        babel = require("@babel/core"),
+        jsmini = require("uglify-js").minify,
+        cssmini = require("csso").minify,
+        htmlmini = require('html-minifier').minify;
 
-const minifierOptions = {
-    html: {
-        removeAttributeQuotes: false,
-    },
-    css: {
-        compatibility: '*',
-    },
-    js: {
-        ecma: 5,
-    },
-};
+const js = babel.transformFileSync("assets/js/script.js").code,
+        css = fs.readFileSync("assets/css/styles.css"),
+        html = fs.readFileSync("index.dev.html");
 
-minify.js('assets/js/script.js', minifierOptions, (error, stream) => {
+const jsMinified = jsmini(js).code,
+      cssMinified = cssmini(css).css,
+      htmlMinified = htmlmini(html);
 
-  var streamWrite = fs.createWriteStream('assets/js/script.min.js');
-
-  if (error)
-      throw error.message;
-  else
-      stream.pipe(streamWrite);
-      console.log("Minified Javascript Saved!")
-});
-
-minify.css('assets/css/styles.css', minifierOptions, (error, stream) => {
-
-  if (error) throw error.message;
-
-  var streamWrite = fs.createWriteStream('assets/css/styles.min.css');
-
-      stream.pipe(streamWrite);
-      console.log("Minified CSS Saved!")
-});
-
-minify.html('index.dev.html', minifierOptions, (error, stream) => {
-
-  if (error) throw error.message;
-
-  var streamWrite = fs.createWriteStream('index.html');
-
-      stream.pipe(streamWrite);
-      console.log("Minified HTML Saved!")
-});
+fs.writeFileSync("assets/js/script.min.js", jsMinified);
+fs.writeFileSync("assets/css/styles.css", cssMinified);
+fs.writeFileSync("index.html", htmlMinified);

@@ -22,7 +22,7 @@ jobs:
       
     - name: Minify Files
       run: |
-        npm i minify
+        npm i babel-core html-minifier csso uglify-js
         node minifyFiles.js
 
     - name: Push
