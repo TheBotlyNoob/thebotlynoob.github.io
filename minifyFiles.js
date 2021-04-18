@@ -1,21 +1,25 @@
 "use strict";
 
-
-
-const fs = require("fs"),
+const crushOpts = {
+  "lineLengthLimit": 1000,
+  "removeHTMLComments": true
+};
+        fs = require("fs"),
         babel = require("@babel/core"),
-        jsmini = require("javascript-minifier").minify,
-        cssmini = require("csso").minify,
+        jsmini = require("uglify-js").minify,
+        cssmini = require("html-crush").crush,
         htmlmini = require("html-crush").crush;
 
 const js = babel.transformFileSync("assets/js/script.js").code,
         css = fs.readFileSync("assets/css/styles.css").toString(),
         html = fs.readFileSync("index.dev.html").toString();
 
-const cssMinified = cssmini(css).css,
-      htmlMinified = htmlmini(html).result;
+const jsMinified = jsmini(js),
+      cssMinified = cssmini(css, crushOpts).result,
+      htmlMinified = htmlmini(html, crushOpts).result;
 
-jsmini(js).then(code => {fs.writeFileSync("assets/js/script.min.js", code);console.log("Minified JavaScript Saved!")}).catch(err => {throw err})
+fs.writeFileSync("assets/js/script.min.js", jsMinified);
+console.log("Minified JavaScript Saved!");
 
 fs.writeFileSync("assets/css/styles.min.css", cssMinified);
 console.log("Minified CSS Saved!");
