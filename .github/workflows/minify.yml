@@ -23,7 +23,7 @@ jobs:
     - name: Minify Files
       run: |
         npm i @babel/core html-crush csso javascript-minifier
-        node minifyFiles.js
+        node --trace-warnings minifyFiles.js
 
     - name: Push
       run: |

@@ -15,5 +15,5 @@ const cssMinified = cssmini(css).css,
 
 jsmini(js).then(code => fs.writeFileSync("assets/js/script.min.js", code))
 
-fs.writeFileSync("assets/css/styles.css", cssMinified);
+fs.writeFileSync("assets/css/styles.min.css", cssMinified);
 fs.writeFileSync("index.html", htmlMinified);
