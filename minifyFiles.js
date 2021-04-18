@@ -28,12 +28,15 @@ const jsMinified = jsmini(js).code.toString(),
       htmlMinified = htmlmini(html, htmlminiOpts).toString();
 
 console.log("Minified JavaScript Contents:");
+console.log("---------------");
 console.log(jsMinified);
 console.log("---------------");
 console.log("Minified CSS Contents:");
+console.log("---------------");
 console.log(cssMinified);
 console.log("---------------");
 console.log("Minified HTML Contents:");
+console.log("---------------");
 console.log(htmlMinified);
 
 
