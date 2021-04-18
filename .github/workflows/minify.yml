@@ -22,6 +22,9 @@ jobs:
       
     - name: Minify Files
       run: |
+        rm -f assets/css/styles.min.css
+        rm -f assets/js/script.min.js
+        rm -f index.html
         npm i @babel/core html-minifier uglify-js csso
         node --trace-warnings minifyFiles.js
 
