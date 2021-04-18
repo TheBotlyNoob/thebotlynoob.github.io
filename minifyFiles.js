@@ -30,11 +30,11 @@ const jsMinified = jsmini(js).code.toString(),
 console.log("Minified JavaScript Contents:");
 console.log(jsMinified);
 console.log("---------------");
-console.log("Minified JavaScript Contents:");
-console.log(jsMinified);
+console.log("Minified CSS Contents:");
+console.log(cssMinified);
 console.log("---------------");
-console.log("Minified JavaScript Contents:");
-console.log(jsMinified);
+console.log("Minified HTML Contents:");
+console.log(htmlMinified);
 
 
 fs.writeFileSync("assets/js/script.min.js", jsMinified);
