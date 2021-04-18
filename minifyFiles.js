@@ -10,9 +10,9 @@ const js = babel.transformFileSync("assets/js/script.js").code,
         css = fs.readFileSync("assets/css/styles.css").toString(),
         html = fs.readFileSync("index.dev.html").toString();
 
-const jsMinified = jsmini(js).toString(),
-      cssMinified = cssmini(css).result,
-      htmlMinified = htmlmini(html).result;
+const jsMinified = jsmini(js).code.toString(),
+      cssMinified = cssmini(css).result.toString(),
+      htmlMinified = htmlmini(html).result.toString();
 
 console.log(JSON.stringify(jsMinified));
 fs.writeFileSync("assets/js/script.min.js", jsMinified);
