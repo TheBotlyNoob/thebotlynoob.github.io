@@ -39,7 +39,7 @@ console.log("Minified HTML Contents:");
 console.log("---------------");
 console.log(htmlMinified);
 
-fs.writeFileSync("assets/js/script.min.js", jsMinified, {encoding:'base64'});
+fs.writeFileSync("assets/js/script.min.js", jsMinified);
 console.log("Minified JavaScript Saved!");
 
 fs.writeFileSync("assets/css/styles.min.css", cssMinified);
