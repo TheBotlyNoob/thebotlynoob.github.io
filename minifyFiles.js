@@ -1,10 +1,6 @@
 "use strict";
 
-const crushOpts = {
-  "lineLengthLimit": 1000,
-  "removeHTMLComments": true
-},
-        fs = require("fs"),
+const fs = require("fs"),
         babel = require("@babel/core"),
         jsmini = require("uglify-js").minify,
         cssmini = require("html-crush").crush,
@@ -18,6 +14,7 @@ const jsMinified = jsmini(js).toString(),
       cssMinified = cssmini(css, crushOpts).result,
       htmlMinified = htmlmini(html, crushOpts).result;
 
+console.log(jsMinified)
 fs.writeFileSync("assets/js/script.min.js", jsMinified);
 console.log("Minified JavaScript Saved!");
 
@@ -25,4 +22,4 @@ fs.writeFileSync("assets/css/styles.min.css", cssMinified);
 console.log("Minified CSS Saved!");
 
 fs.writeFileSync("index.html", htmlMinified);
-console.log("Minified HTML Saved!")
+console.log("Minified HTML Saved!");
