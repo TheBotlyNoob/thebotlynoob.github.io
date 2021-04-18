@@ -10,6 +10,12 @@ const js = babel.transformFileSync("assets/js/script.js").code,
         css = fs.readFileSync("assets/css/styles.css"),
         html = fs.readFileSync("index.dev.html");
 
+console.log(js);
+console.log("----");
+console.log(css);
+console.log("----");
+console.log(html);
+
 const jsMinified = jsmini(js).code,
       cssMinified = cssmini(css).css,
       htmlMinified = htmlmini(html).result;
