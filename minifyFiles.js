@@ -22,7 +22,7 @@ const getFilesFromPath = (path, extension) => {
   return fs.readdirSync(path).filter(file => file.match(new RegExp(`.*\.(${extension})$`, 'ig')));
 },
       readFile = filePath => {
-  return fs.Sync(filePath).toString();
+  return fs.readFileSync(filePath).toString();
 };
 
 const jsFiles = getFilesFromPath("assets/js", ".js"),
