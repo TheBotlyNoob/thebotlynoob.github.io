@@ -10,48 +10,43 @@ const htmlminiOpts = {
   "continueOnParseError": true,
   "minifyCSS": true,
   "minifyJS": true,
-  "minifyURLs": true,
-}
+  "minifyURLs": true
+};
 
 const fs = require("fs"),
-        jsmini = require("uglify-js").minify,
-        cssmini = require("csso").minify,
-        htmlmini = require("html-minifier").minify;
+      jsmini = require("uglify-js").minify,
+      cssmini = require("csso").minify,
+      htmlmini = require("html-minifier").minify;
 
 const getFilesFromPath = (path, extension) => {
-    return fs.readdirSync(path).filter(file => file.match(new RegExp(`.*\.(${extension})$`, 'ig')));
-}
+  return fs.readdirSync(path).filter(file => file.match(new RegExp(`.*\.(${extension})$`, 'ig')));
+},
+      readFile = filePath => {
+  return fs.Sync(filePath).toString();
+};
 
 const jsFiles = getFilesFromPath("assets/js", ".js"),
-        cssFiles = getFilesFromPath("assets/css", ".css"),
-        html = fs.readFileSync("index.dev.html").toString();
+      cssFiles = getFilesFromPath("assets/css", ".css"),
+      html = readFile("index.dev.html").toString();
 
-console.log(jsFiles);
-console.log(cssFiles);
+for (var i of jsFiles) {
+  if (!i.endsWith(".min.js")) {
+    var filePath = `assets/js/${i}`;
+    fs.writeFileSync(filePath.replace(".js", ".min.js"), jsmini(readFile(filePath)).code.toString());
+  }
+}
 
-/*
-const jsMinified = jsmini(js).code.toString(),
-      cssMinified = cssmini(css).css.toString(),
-      htmlMinified = htmlmini(html, htmlminiOpts).toString();
-
-console.log("Minified JavaScript Contents:");
-console.log("---------------");
-console.log(jsMinified);
-console.log("---------------");
-console.log("Minified CSS Contents:");
-console.log("---------------");
-console.log(cssMinified);
-console.log("---------------");
-console.log("Minified HTML Contents:");
-console.log("---------------");
-console.log(htmlMinified);
-
-fs.writeFileSync(fs.openSync("assets/js/script.min.js", "w"), jsMinified);
 console.log("Minified JavaScript Saved!");
 
-fs.writeFileSync(fs.openSync("assets/css/styles.min.css", "w"), cssMinified);
+for (var i of cssFiles) {
+    if (!i.endsWith(".min.css")) {
+      var filePath = `assets/css/${i}`;
+      fs.writeFileSync(filePath.replace(".css", ".min.css"), cssmini(readFile(filePath)).code.toString());
+    }
+}
+
 console.log("Minified CSS Saved!");
 
-fs.writeFileSync(fs.openSync("index.html", "w"), htmlMinified);
-console.log("Minified HTML Saved!");
-*/
+fs.writeFileSync("index.html", htmlmini(html, htmlminiOpts).toString());
+
+console.log("Minified HTML Saved!")
