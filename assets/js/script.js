@@ -66,9 +66,14 @@ $(document).ready(async () => {
           </span></a></div>`);
         }
         else {
-            var _currentYouTube$error, currentYouTube, errorMessage;
-            errorMessage = currentYouTube === null || currentYouTube === void 0 ? void 0 : (_currentYouTube$error = currentYouTube.errors[0]) === null || _currentYouTube$error === void 0 ? void 0 : _currentYouTube$error.message;
-            if (errorMessage) $("#youtubeVids").append(errorMessage);
+            try {
+                var _currentYouTube$error, currentYouTube, errorMessage;
+                errorMessage = currentYouTube === null || currentYouTube === void 0 ? void 0 : (_currentYouTube$error = currentYouTube.errors[0]) === null || _currentYouTube$error === void 0 ? void 0 : _currentYouTube$error.message;
+                if (errorMessage) $("#youtubeVids").append(errorMessage);
+            }
+            catch (e) {
+                if (!e instanceof TypeError) throw e;
+            }
         }
       }
     },
