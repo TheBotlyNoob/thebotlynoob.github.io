@@ -14,12 +14,11 @@ const htmlminiOpts = {
 }
 
 const fs = require("fs"),
-        babel = require("@babel/core"),
         jsmini = require("uglify-js").minify,
         cssmini = require("csso").minify,
         htmlmini = require("html-minifier").minify;
 
-const js = babel.transformFileSync("assets/js/script.js").code,
+const js = fs.readFileSync("assets/js/script.js").toString(),
         css = fs.readFileSync("assets/css/styles.css").toString(),
         html = fs.readFileSync("index.dev.html").toString();
 
