@@ -165,12 +165,12 @@ code {
   text-decoration: none;
   background-color: rgb(17, 29, 44);
   border-radius: 6px;
-  font-size: 12px;
+  font-size: 15px;
   transition: 0.5s !important;
 }
 
 .githubBadge img {
-  width: 20px;
+  width: 25px;
   margin-right: 4px;
   height: auto;
 }
