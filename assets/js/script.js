@@ -22,7 +22,7 @@ $(document).ready(async () => {
       for (var i of data) {
         var _currentGitHub$descri;
 
-        var currentGitHub = data[i];
+        var currentGitHub = i;
         $("#githubRepos").append(`<div class="githubLinkContainer">
         <a class="githubLink" href="${currentGitHub.html_url}" target="_blank">
         <img src="${currentGitHub.owner.avatar_url}" class="githubImage" alt="GitHub Image"></img>
@@ -177,7 +177,7 @@ $(document).ready(async () => {
         return JSON.parse(JSON.stringify(data));
       }).catch(error => console.error(error));
 
-      for (var i of data) {
+      for (var i = 0 ; i < data.length ; i++) {
         for (var x = 0; x < ((_data$i = data[i]) === null || _data$i === void 0 ? void 0 : (_data$i$aliases = _data$i.aliases) === null || _data$i$aliases === void 0 ? void 0 : _data$i$aliases.length); x++) {
           var _data$i, _data$i$aliases, _data$i2, _data$i3;
 

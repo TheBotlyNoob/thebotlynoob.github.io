@@ -181,7 +181,7 @@ code {
 
 .githubBadge:hover {
 	cursor: pointer !important;
-	font-size: 13.5px !important;
+	font-size: 16.5px !important;
 }
 
 @keyframes rotation {
