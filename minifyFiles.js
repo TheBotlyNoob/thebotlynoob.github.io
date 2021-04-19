@@ -41,7 +41,7 @@ console.log("Minified JavaScript Saved!");
 for (var i of cssFiles) {
     if (!i.endsWith(".min.css")) {
       var filePath = `assets/css/${i}`;
-      fs.writeFileSync(filePath.replace(".css", ".min.css"), cssmini(readFile(filePath)).code.toString());
+      fs.writeFileSync(filePath.replace(".css", ".min.css"), cssmini(readFile(filePath)).css.toString());
     }
 }
 
