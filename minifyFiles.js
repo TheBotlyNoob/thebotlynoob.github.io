@@ -49,4 +49,4 @@ console.log("Minified CSS Saved!");
 
 fs.writeFileSync("index.html", htmlmini(html, htmlminiOpts).toString());
 
-console.log("Minified HTML Saved!")
+console.log("Minified HTML Saved!");

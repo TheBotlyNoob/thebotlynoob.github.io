@@ -152,3 +152,47 @@ code {
     font-family:"Fira Code",Menlo,Consolas,Monaco,monospace!important;
     text-shadow: none;
 }
+
+.githubBadge, .githubBadge:hover, .githubBadge:active {
+  font-family: "Fira Code","times new roman",Consolas,Monaco,'Andale Mono';
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: inline-flex;
+  padding: 8px 12px;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(17, 29, 44);
+  border-radius: 6px;
+  font-size: 12px;
+  transition: 0.5s !important;
+}
+
+.githubBadge img {
+  width: 20px;
+  margin-right: 4px;
+  height: auto;
+}
+
+.githubBadge img:hover, .githubBadge:hover > img {
+	animation: rotation 2s infinite linear;
+}
+
+.githubBadge:hover {
+	cursor: pointer !important;
+	font-size: 13.5px !important;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.no-animate, .no-animate:hover, .no-animate:active, .no-animate > img, .no-animate:hover > img, .no-animate:active > img {
+	animation: none !important;
+}
