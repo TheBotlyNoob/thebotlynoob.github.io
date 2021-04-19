@@ -18,9 +18,17 @@ const fs = require("fs"),
         cssmini = require("csso").minify,
         htmlmini = require("html-minifier").minify;
 
-const js = fs.readFileSync("assets/js/script.js").toString(),
-        css = fs.readFileSync("assets/css/styles.css").toString(),
+const getFilesFromPath = (path, extension) => {
+    return fs.readdirSync(path).filter(file => file.match(new RegExp(`.*\.(${extension})$`, 'ig'))).toString();
+}
+
+const jsFiles = getFilesFromPath("assets/js", ".js"),
+        cssFiles = getFilesFromPath("assets/css", ".css"),
         html = fs.readFileSync("index.dev.html").toString();
+
+console.log(jsFiles);
+console.log(cssFiles);
+
 
 const jsMinified = jsmini(js).code.toString(),
       cssMinified = cssmini(css).css.toString(),
