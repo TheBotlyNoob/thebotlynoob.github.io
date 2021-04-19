@@ -19,7 +19,7 @@ const fs = require("fs"),
         htmlmini = require("html-minifier").minify;
 
 const getFilesFromPath = (path, extension) => {
-    return fs.readdirSync(path).filter(file => file.match(new RegExp(`.*\.(${extension})$`, 'ig'))).toString();
+    return fs.readdirSync(path).filter(file => file.match(new RegExp(`.*\.(${extension})$`, 'ig')));
 }
 
 const jsFiles = getFilesFromPath("assets/js", ".js"),
@@ -29,7 +29,7 @@ const jsFiles = getFilesFromPath("assets/js", ".js"),
 console.log(jsFiles);
 console.log(cssFiles);
 
-
+/*
 const jsMinified = jsmini(js).code.toString(),
       cssMinified = cssmini(css).css.toString(),
       htmlMinified = htmlmini(html, htmlminiOpts).toString();
@@ -54,3 +54,4 @@ console.log("Minified CSS Saved!");
 
 fs.writeFileSync(fs.openSync("index.html", "w"), htmlMinified);
 console.log("Minified HTML Saved!");
+*/
