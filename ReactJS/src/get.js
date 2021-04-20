@@ -1,3 +1,5 @@
+import React, { Component } from 'react';
+
 class getJSON extends React.Component {
     constructor(props) {
       super(props);
