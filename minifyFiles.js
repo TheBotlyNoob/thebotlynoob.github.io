@@ -13,7 +13,7 @@ const htmlminiOpts = {
   "minifyURLs": true
 };
 
-const fs = require("fs"),
+const fs = require("fs-extra"),
       jsmini = require("uglify-js").minify,
       cssmini = require("csso").minify,
       htmlmini = require("html-minifier").minify;
@@ -50,3 +50,6 @@ console.log("Minified CSS Saved!");
 fs.writeFileSync("index.html", htmlmini(html, htmlminiOpts).toString());
 
 console.log("Minified HTML Saved!");
+
+
+fs.copySync("ReactJS/build", "react", { overwrite: true })
