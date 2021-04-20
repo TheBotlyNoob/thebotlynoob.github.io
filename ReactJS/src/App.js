@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import './get';
+import Get from './get';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         >
           Learn React
         </a>
-        <get src="https://www.googleapis.com/youtube/v3/search?key=AIzaSyB5rUUrK222E9xTv_nd4cX1y87JP7t0z70&channelId=UCBpQy7-ZNMHhRBQ0gcHGcBw&part=snippet,id&order=date&maxResults=20" item="kind" />
+        <Get src="https://gist.githubusercontent.com/MattIPv4/045239bc27b16b2bcf7a3a9a4648c08a/raw/2411e31293a35f3e565f61e7490a806d4720ea7e/bee%2520movie%2520script" />
       </header>
     </div>
   );

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class getJSON extends Component {
-    constructor(props) {
+export default class Get extends React.Component {
+    constructor (props) {
       super(props);
       this.state = {
         error: null,
@@ -11,11 +11,11 @@ export default class getJSON extends Component {
     }
   
     componentDidMount() {
-      if (!this.props.src || !this.props.item) {
-        console.error(new Error("getJSON Requires The: item, & src Attribute!"));
+      if (!this.props.src) {
+        console.error(new Error("Get Requires The src Attribute!"));
       }
       fetch(this.props.src)
-        .then(res => res.json())
+        .then(res => res.text())
         .then(
           (result) => {
             this.setState({
@@ -32,18 +32,14 @@ export default class getJSON extends Component {
         )
     }
   
-    render() {
-      const { error, isLoaded, items } = this.state;
+    render () {
+      const {error, isLoaded, items} = this.state;
       if (error) {
-        return <div>Error: {error.message}</div>;
+        return (`Error: ${error.message}`);
       } else if (!isLoaded) {
-        return <div>Loading...</div>;
-      } else if (!JSON.parse(items) === Object) {
-        return (new Error("The URL Does Not Return A JSON Object. Try Using The get Element!"));
+        return ("Loading...");
       } else {
-        return (
-          items[this.props.item]
-        );
+        return (items);
       }
     }
-  }
+}

@@ -11,4 +11,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-reportWebVitals(vitals => console.log(JSON.stringify(vitals)));
+reportWebVitals(console.log());
