@@ -20,7 +20,7 @@ jobs:
       with:
         node-version: '14'
 
-    -name: Build ReactJS
+    - name: Build ReactJS
       run: |
         npm --prefix ./ReactJS i ./ReactJS 
         npm run build --prefix ./ReactJS
