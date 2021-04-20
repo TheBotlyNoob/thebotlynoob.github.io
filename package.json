@@ -2,32 +2,24 @@
   "name": "thebotlynoob.github.io",
   "description": "My personal website",
   "main": "minifyFiles.js",
-
   "scripts": {
     "start": "npm i && node --trace-warnings minifyFiles.js"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TheBotlyNoob/TheBotlyNoob.github.io.git"
   },
-
   "keywords": [],
-
   "author": "TheBotlyNoob",
-
   "license": "MIT",
-
   "bugs": {
     "url": "https://github.com/TheBotlyNoob/TheBotlyNoob.github.io/issues"
   },
-
   "homepage": "https://github.com/TheBotlyNoob/TheBotlyNoob.github.io#readme",
-
   "dependencies": {
-        "fs-extra": "*",
-        "html-minifier": "*", 
-        "uglify-js": "*",
-        "csso": "*"
+    "fs-extra": "*",
+    "html-minifier": "*",
+    "uglify-js": "*",
+    "csso": "*"
   }
 }
