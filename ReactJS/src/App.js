@@ -4,9 +4,9 @@ import './bootstrap.min.css';
 import {Button} from 'reactstrap';
 import './App.css';
 
-// eslint-disable-next-line
-export default () => {
-  var vars = {};
+const vars = {};
+
+export default function App () {
   return (
     <div className="App">
       <header className="App-header">
