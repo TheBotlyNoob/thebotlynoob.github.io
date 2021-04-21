@@ -3,18 +3,23 @@ import * as flatted from 'flatted';
 
 export default class Var extends React.Component {
     constructor (props) {
-      super(props);
+      super (props);
       this.state = {
+        error: null,
         isLoaded: false,
         variable: null,
       };
     }
   
-    componentDidMount() {
+    componentDidMount () {
       let vari = this.props.var, setto = this.props.set;
-      if (!vari) {
-        console.error(new Error("Var Requires The var Attribute!"));
-      } else if (!setto) {
+      console.log(vari);console.log(setto);
+      if (vari) {
+        this.setState({
+            isLoaded: true,
+            error: "Var Requires The var Attribute!",
+          });
+      } else if (setto) {
           this.setState({
               isLoaded: true,
               variable: sessionStorage[vari],
@@ -29,11 +34,14 @@ export default class Var extends React.Component {
     }
   
     render () {
-      const {isLoaded, variable} = this.state;
-      if (!isLoaded) {
-        return (<span className={"loading " + this.props?.className} id={this.props?.id} name={this.props?.name}>Loading...</span>);
+      const {error, isLoaded, variable} = this.state;
+      if (error) {
+          return(`Error: ${error.message}`)
+      }
+      else if (!isLoaded) {
+        return ("Loading...");
       } else {
-        return (<span className={this.props?.className} id={this.props?.id} name={this.props?.name}>{variable}</span>);
+        return (variable);
       }
     }
 }

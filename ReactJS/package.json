@@ -14,10 +14,10 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "npm i && react-scripts start",
+    "build": "npm i && react-scripts build",
+    "test": "npm i && react-scripts test",
+    "eject": "npm i && react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

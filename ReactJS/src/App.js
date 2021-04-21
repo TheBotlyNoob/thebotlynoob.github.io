@@ -5,7 +5,8 @@ import {Button} from 'reactstrap';
 import Var from './Var'
 import './App.css';
 
-const App = () => {
+// eslint-disable-next-line
+export default () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -26,13 +27,11 @@ const App = () => {
         <br />
         <b><u>Bee Movie Script</u></b>
         <br />
-        <Var var="beeMovieScript" set={<Get src="https://gist.githubusercontent.com/MattIPv4/045239bc27b16b2bcf7a3a9a4648c08a/raw/2411e31293a35f3e565f61e7490a806d4720ea7e/bee%2520movie%2520script" />} />
+        {const beeMovieScript = <Get src="https://gist.githubusercontent.com/MattIPv4/045239bc27b16b2bcf7a3a9a4648c08a/raw/2411e31293a35f3e565f61e7490a806d4720ea7e/bee%2520movie%2520script" />}
         <code id="beeMovieScript">
-            <Var var="beeMovieScript" />
+            {beeMovieScript}
         </code>
       </header>
     </div>
   );
 }
-
-export default App;

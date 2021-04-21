@@ -23,7 +23,6 @@ jobs:
     - name: Build ReactJS
       run: |
         npm cache clean --force
-        npm --prefix ./ReactJS i ./ReactJS 
         npm run build --prefix ./ReactJS
         
     - name: Minify Files

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class Get extends React.Component {
     constructor (props) {
-      super(props);
+      super (props);
       this.state = {
         error: null,
         isLoaded: false,
@@ -10,12 +10,12 @@ export default class Get extends React.Component {
       };
     }
   
-    componentDidMount() {
+    componentDidMount () {
       if (!this.props.src) {
-        console.error(new Error("Get Requires The src Attribute!"));
+        console.error (new Error ("Get Requires The src Attribute!"));
       }
       fetch(this.props.src)
-        .then(res => res.text())
+        .then(res => res.text ())
         .then(
           (result) => {
             this.setState({
