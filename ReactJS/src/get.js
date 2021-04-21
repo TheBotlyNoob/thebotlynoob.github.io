@@ -35,11 +35,11 @@ export default class Get extends React.Component {
     render () {
       const {error, isLoaded, items} = this.state;
       if (error) {
-        return (`Error: ${error.message}`);
+        return (<span className={"error " + this.props?.className} id={this.props?.id} name={this.props?.name}>Error: {error.message}</span>);
       } else if (!isLoaded) {
-        return ("Loading...");
+        return (<span className={"loading " + this.props?.className} id={this.props?.id} name={this.props?.name}>Loading...</span>);
       } else {
-        return (items);
+        return (<span class={this.props?.className} id={this.props?.id} name={this.props?.name}>{items}</span>);
       }
     }
 }
