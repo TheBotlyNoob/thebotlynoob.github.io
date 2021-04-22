@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import Get from './Get';
+import GithubBadge from 'react-github-badge'
 import './bootstrap.min.css';
 import {Button} from 'reactstrap';
 import './App.css';
@@ -32,6 +33,12 @@ export default function App () {
             {vars.beeMovieScript}
         </code>
       </header>
+      <footer>
+        <GithubBadge
+          title='View It On GitHub!'
+          url='https://github.com/TheBotlyNoob/TheBotlyNoob.github.io'
+        />
+      </footer>
     </div>
   );
 }
