@@ -22,11 +22,11 @@ jobs:
 
     - name: Build ReactJS
       run: |
+        cd dev
         npm cache clean --force
-        npm run build --prefix ./ReactJS
-        
-    - name: Minify Files
-      run: npm start
+        npm i
+        react-scripts build
+        mv build/* ..
 
     - name: Push
       run: |
