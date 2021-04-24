@@ -24,8 +24,7 @@ jobs:
       run: |
         cd dev
         npm cache clean --force
-        npm i
-        react-scripts build
+        npm run build
         mv build/* ..
 
     - name: Push
