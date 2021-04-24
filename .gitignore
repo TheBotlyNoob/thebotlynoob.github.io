@@ -1,10 +1,2 @@
-/node_modules
-/build
-/robots.txt
-/manifest.json
-/logo512.png
-/logo192.png
-/index.html
-/static
-/favicon.ico
-/asset-manifest.json
+node_modules/
+build/
