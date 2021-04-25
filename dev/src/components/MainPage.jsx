@@ -1,11 +1,8 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import logo from "./logo.svg";
-//import Get from "./Get";
 import "./bootstrap.min.css";
 import "./App.css";
-
-//const vars = {};
 
 export default function Main () {
   return (
