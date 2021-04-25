@@ -1,15 +1,15 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import logo from './logo.svg';
-//import Get from './Get';
-import './bootstrap.min.css';
-import './App.css'
+import React from "react";
+import Button from "react-bootstrap/Button";
+import logo from "./logo.svg";
+//import Get from "./Get";
+import "./bootstrap.min.css";
+import "./App.css";
 
 //const vars = {};
 
 export default function Main () {
   return (
-    <div className="App"  style={{'overflowwrap': 'breakword', 'width': '100%', 'height': '100%'}}>
+    <div className="App"  style={{"overflowwrap": "breakword", "width": "100%", "height": "100%"}}>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -25,5 +25,5 @@ export default function Main () {
           </Button>
         </a>
     </div>
-);
+  );
 }

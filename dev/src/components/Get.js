@@ -1,6 +1,6 @@
-import {Component} from 'react';
-import PropTypes from 'prop-types'; 
-import axios from 'axios';
+import {Component} from "react";
+import PropTypes from "prop-types"; 
+import axios from "axios";
 
 export default class Get extends Component {
     constructor (props) {
@@ -31,7 +31,7 @@ export default class Get extends Component {
         const { data, isLoading, error } = this.state;
      
         if (error) {
-          return <span style={{color: 'white'}}>{error?.name}: <code>{error?.message}</code></span>;
+          return <span style={{color: "white"}}>{error?.name}: <code>{error?.message}</code></span>;
         }
      
         if (isLoading) {
