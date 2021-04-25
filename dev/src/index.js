@@ -8,7 +8,6 @@ import ReactDOM from "react-dom";
 
 ReactDOM.render (
   <Router basename={process.env.PUBLIC_URL}>
-    <SetVars />
       <Switch>
         <Route exact path="/" component={MainPage} />
         <Route path="/GitHub" component={GitHubPage} />
