@@ -24,6 +24,7 @@ jobs:
       run: |
         cd dev
         npm cache clean --force
+        rm -rf static robots.txt asset-manifest.json favicon.ico index.html logo512.png logo192.png manifest.json
         npm run build
         mv build/* ..
 
