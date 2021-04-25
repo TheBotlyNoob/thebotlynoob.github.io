@@ -1,8 +1,14 @@
 import React from "react";
-import Routes from "./Routes";
 import ReactDOM from "react-dom";
 
 ReactDOM.render (
-  <Routes />,
+  <Router basename={process.env.PUBLIC_URL}>
+    <Switch>
+      <Route exact path="/" component={MainPage} />
+      <Route path="/GitHub" component={GitHubPage} />
+      <Route path="/YouTube" component={YouTubePage} />
+      <Route path="*" component={NotFoundPage} />
+    </Switch>
+  </Router>,
   document.getElementById ("root")
 );
