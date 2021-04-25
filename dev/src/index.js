@@ -7,20 +7,12 @@ import NotFoundPage from './components/404';
 import ReactDOM from 'react-dom';
 
 ReactDOM.render (
-  <Router basename={`/${process.env.PUBLIC_URL}`}>
+  <Router basename={process.env.PUBLIC_URL}>
       <Switch>
-        <Route exact path="/">
-          <MainPage />
-        </Route>
-        <Route path="/GitHub">
-          <GitHubPage />
-        </Route>
-        <Route path="/YouTube">
-          <YouTubePage />
-        </Route>
-        <Route path="*">
-          <NotFoundPage />
-        </Route>
+        <Route exact path="/" component={MainPage} />
+        <Route path="/GitHub" component={GitHubPage} />
+        <Route path="/YouTube" component={YouTubePage} />
+        <Route path="*" component={NotFoundPage} />
       </Switch>
   </Router>,
   document.getElementById ('root')
