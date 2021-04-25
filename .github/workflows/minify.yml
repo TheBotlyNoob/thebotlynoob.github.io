@@ -26,6 +26,7 @@ jobs:
         npm cache clean --force
         npm run build
         rm -rf static robots.txt asset-manifest.json favicon.ico index.html logo512.png logo192.png manifest.json
+        ls
         mv -f build/* ..
 
     - name: Push
