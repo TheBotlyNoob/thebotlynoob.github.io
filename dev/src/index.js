@@ -7,7 +7,7 @@ import NotFoundPage from './components/404';
 import ReactDOM from 'react-dom';
 
 ReactDOM.render (
-  <Router basename={process.env.PUBLIC_URL}>
+  <Router basename={`/${process.env.PUBLIC_URL}`}>
       <Switch>
         <Route exact path="/">
           <MainPage />
