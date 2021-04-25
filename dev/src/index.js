@@ -6,7 +6,7 @@ import YouTubePage from './components/YouTube';
 import NotFoundPage from './components/404';
 import ReactDOM from 'react-dom';
 
-ReactDOM.render(
+ReactDOM.render (
   <Router>
       <Switch>
         <Route exact path="/">
@@ -23,5 +23,5 @@ ReactDOM.render(
         </Route>
       </Switch>
   </Router>,
-  document.getElementById('root')
+  document.getElementById ('root')
 );
