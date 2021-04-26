@@ -3,26 +3,27 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="My Website, Made With ReactJS! Check It Out At: jj.is-a.dev!"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>React App</title>
+    <title>JJ</title>
     <script type="text/javascript">
-    (function(l) {
+    (l => {
         if (l.search[1] === "/" ) {
-          var decoded = l.search.slice(1).split("&").map(function(s) { 
+          var decoded = l.search.slice(1).split("&").map(s => { 
             return s.replace(/~and~/g, "&")
           }).join("?");
           window.history.replaceState(null, null,
               l.pathname.slice(0, -1) + decoded + l.hash
           );
         }
-      }(window.location))
+      }, (window.location))
     </script>
   </head>
   <body>
@@ -40,4 +41,5 @@
       </script>
     <code>This Page Is Open Source On GitHub! <a href="https://github.com/TheBotlyNoob/TheBotlyNoob.github.io" target="_blank">Check It Out!</a></code>
   </footer>
+<script src="%PUBLIC_URL%/scripts.js"/>
 </html>
