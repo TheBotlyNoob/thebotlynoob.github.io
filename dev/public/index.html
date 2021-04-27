@@ -12,18 +12,18 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>JJ</title>
-    <script type="text/javascript">
-      (function(l) {
+    <!-- <script type="text/javascript">
+      (l => {
         if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
+          var decoded = l.search.slice(1).split('&').map(s => { 
             return s.replace(/~and~/g, '&')
           }).join('?');
           window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
+              l.pathname.slice(0, -1) + l.search.slice(1).split('&').map(s => {return s.replace(/~and~/g, '&' )}).join('?') + l.hash
           );
-        }
-      }(window.location))
-    </script>
+        };
+      }, (window.location));
+    </script> -->
     <style>
         @font-face {
           font-family: "16 Bit";
