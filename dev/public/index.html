@@ -25,14 +25,24 @@
       }, (window.location))
     </script>
     <style>
-        footer {
-            position: fixed;
-            padding: 10px 10px 0px 10px;
-            bottom: 6px;
-            width: 100%;
-        }   
+        @font-face {
+          font-family: "16 Bit";
+          src: url("%PUBLIC_URL%/16-bit.ttf");
+        }
+
+        #headerTitle {
+          font-family: "16 Bit";
+          position: absolute;
+          padding: 6px;
+          font-size: 50px;
+          text-decoration: underline;
+          color: lightblue;
+        }
     </style>    
   </head>
+  <header>
+    <a href="/" id="headerTitle" class="fixed-top">./ Jay Jackson</a>
+  </header>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
@@ -46,6 +56,6 @@
           indicator: true,
         })
       </script>
-    <code>This Page Is Open Source On GitHub! <a href="https://github.com/TheBotlyNoob/TheBotlyNoob.github.io" target="_blank">Check It Out!</a></code>
+    <code class="fixed-bottom">This Page Is Open Source On GitHub! <a href="https://github.com/TheBotlyNoob/TheBotlyNoob.github.io" target="_blank">Check It Out!</a></code>
   </footer>
 </html>
