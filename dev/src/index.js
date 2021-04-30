@@ -3,6 +3,7 @@ import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import MainPage from "./components/MainPage.jsx";
 import GitHubPage from "./components/GitHub.jsx";
 import YouTubePage from "./components/YouTube.jsx";
+import IsADevPage from "./components/Is-A.Dev.jsx"
 import NotFoundPage from "./components/404.jsx";
 import ReactDOM from "react-dom";
 
@@ -12,6 +13,7 @@ ReactDOM.render (
         <Route exact path="/" component={MainPage} />
         <Route path="/GitHub" component={GitHubPage} />
         <Route path="/YouTube" component={YouTubePage} />
+        <Route path="/Is-A.Dev" component={IsADevPage} />
         <Route path="*" component={NotFoundPage} />
       </Switch>
   </Router>,

@@ -12,22 +12,16 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>JJ</title>
-    <!-- <script type="text/javascript">
-      (l => {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(s => { 
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + l.search.slice(1).split('&').map(s => {return s.replace(/~and~/g, '&' )}).join('?') + l.hash
-          );
-        };
-      }, (window.location));
-    </script> -->
+    <script type="text/javascript">
+      var l = window.location;
+      if (l.search[1] === "/" ) {
+        window.history.replaceState(null, null, l.pathname.slice(0, -1) + l.search.slice(1).split("&").map(s => {return s.replace(/~and~/g, "&" )}).join("?") + l.hash);
+      };
+    </script>
     <style>
         @font-face {
           font-family: "16 Bit";
-          src: url("%PUBLIC_URL%/16-bit.woff2") format('woff2');
+          src: url("%PUBLIC_URL%/16-bit.woff2") format("woff2");
         }
 
         #headerTitle {
