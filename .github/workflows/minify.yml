@@ -16,7 +16,6 @@ jobs:
       run: |
         npm cache clean --force
         npm run build
-        mv -f build/* ..
     - name: Push
       run: |
         git config --global user.name "github-actions[bot]"
@@ -25,4 +24,4 @@ jobs:
         git checkout gh-pages
         git add build/
         git commit -m 'Build' || echo
-        git push
+        git push --set-upstream origin gh-pages
