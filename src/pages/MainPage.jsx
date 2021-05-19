@@ -1,9 +1,8 @@
-import './main.css';
 //import * as components from '../components';
 
 export default function MainPage () {
   return (
-    <div className="App">
+    <div id='main'>
       <header className="App-header">
         <p>
           Edit <code>src/App.js</code> and save to reload

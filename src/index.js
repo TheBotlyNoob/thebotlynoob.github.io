@@ -10,5 +10,5 @@ ReactDOM.render (
           <Route path='*' component={NotFoundPage} />
         </Switch>
     </Router>,
-  document.getElementById ('root')
+  document.querySelector ('#root')
 );
