@@ -1,5 +1,5 @@
 import './main.css';
-import * as components from '../components';
+//import * as components from '../components';
 
 export default function MainPage () {
   return (
