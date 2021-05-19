@@ -27,14 +27,3 @@ footer {
     margin-right: auto;
     font-size: 10px;
 }
-
-#root {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    margin: 0; 
-    padding: 0; 
-    display: flex;
-    justify-content: center;
-}
