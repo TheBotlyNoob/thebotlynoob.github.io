@@ -21,6 +21,7 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         cp -r build/ ../build/
+        mv CNAME 404.html -t ../build/
         git checkout --orphan gh-pages
         git rm -fr .
         mv ../build/* .
