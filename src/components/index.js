@@ -1,3 +1,3 @@
-import loading from './loading.jsx';
+import loading from './loading.jsx';import * as boot from 'react-bootstrap';
 
-export { loading }
+export { loading, boot }

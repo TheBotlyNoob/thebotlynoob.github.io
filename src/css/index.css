@@ -1,4 +1,5 @@
 @import url('https://cdn.mtgsquad-dev.com/TheBotlyNoob/Operator-Mono/main.css');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
 
 * {
     font-family: 'Operator Mono', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -15,6 +16,11 @@ code {
 
 a {
     color: #45aaf2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 footer {
@@ -27,3 +33,4 @@ footer {
     margin-right: auto;
     font-size: 10px;
 }
+
