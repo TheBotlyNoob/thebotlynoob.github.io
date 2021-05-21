@@ -1,5 +1,4 @@
 import React from 'react';
-import './css/bootstrap.css';
 import './css/index.css';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import { MainPage, NotFoundPage } from './pages';

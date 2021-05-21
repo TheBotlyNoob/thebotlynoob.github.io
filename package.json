@@ -6,24 +6,27 @@
   "description": "My Personal Website!",
   "homepage": ".",
   "dependencies": {
+    "@craco/craco": "^6.1.2",
+    "@material-ui/core": "^5.0.0-alpha.34",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "autoprefixer": "^9.8.6",
     "history": "^5.0.0",
-    "node-sass": "^5.0.0",
+    "postcss": "^7.0.35",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
-    "react-bootstrap": "^1.6.0",
     "react-dom": "^17.0.2",
     "react-loading-io": "^2.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "start": "npm i && react-scripts start",
-    "build": "npm i && react-scripts build",
-    "test": "npm i && react-scripts test",
+    "start": "npm i && craco start",
+    "build": "npm i && craco build",
+    "test": "npm i && craco test",
     "eject": "npm i && react-scripts eject"
   },
   "eslintConfig": {
@@ -43,5 +46,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {}
 }

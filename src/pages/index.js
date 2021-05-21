@@ -1,3 +1,3 @@
-import MainPage from "./MainPage.jsx";import NotFoundPage from "./404.jsx";
+import MainPage from "./MainPage";import NotFoundPage from "./404";
 
 export { MainPage, NotFoundPage }

@@ -1,3 +1,8 @@
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://cdn.mtgsquad-dev.com/TheBotlyNoob/Operator-Mono/main.css');
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons');
 
