@@ -47,5 +47,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "stylelint-config-recommended": "^5.0.0"
+  }
 }
