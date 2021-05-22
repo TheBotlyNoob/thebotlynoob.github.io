@@ -5,7 +5,7 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extends: {}
   },
   plugins: []
 }

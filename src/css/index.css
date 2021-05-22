@@ -13,7 +13,7 @@
     font-size: 18px;
 }
 
-html,body{margin:0;padding:0;height:100%;width:100%;}
+html,body{margin:0;padding:0;height:100%;width:100%;@apply text-black bg-white dark:text-white dark:bg-black;}
 
 code {
     color: #e66767;
@@ -38,4 +38,3 @@ footer {
     margin-right: auto;
     font-size: 10px;
 }
-
