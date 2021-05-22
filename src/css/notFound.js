@@ -19,7 +19,6 @@ export default function notFound () {
             }
             
             body {
-                margin: 10px;
                 background-color: #000084;
                 color: #bbb;
                 font-family: 'more_perfect_dos_vgaregular', 'Courier New', monospace;
