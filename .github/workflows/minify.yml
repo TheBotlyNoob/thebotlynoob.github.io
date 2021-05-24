@@ -13,9 +13,10 @@ jobs:
       with:
         node-version: "14"
 
-    - name: Build ReactJS
+    - name: Build Gatsby
       run: |
         npm cache clean --force
+        npm i
         npm run build
     - name: Push
       run: |
