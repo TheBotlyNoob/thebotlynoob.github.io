@@ -1,8 +1,8 @@
-@import url('https://cdn.mtgsquad-dev.com/TheBotlyNoob/Operator-Mono/main.css');
+@import url('https://raw.githack.com/TheBotlyNoob/Operator-Font-Mono/master/index.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons');
 
 * {
-    font-family: 'Operator Mono', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Operator Mono SSm Lig', monospace!important;
     text-align: center;
     box-sizing: border-box;
     font-size: 18px;

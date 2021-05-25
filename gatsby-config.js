@@ -10,19 +10,24 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
-      resolve: `gatsby-remark-prismjs`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        classPrefix: "language-",
-        inlineCodeMarker: null,
-        showLineNumbers: true,
-        noInlineHighlight: false,
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              aliases:{sh: "bash", js:"javascript"},
+              showLineNumbers: true,
+            }
+          }
+        ],
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
       },
     },
     `gatsby-transformer-sharp`,
