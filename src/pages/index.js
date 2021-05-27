@@ -3,9 +3,11 @@ import { Seo } from '../components';
 import { octokit, log } from '../utils';
 import '../styles/main.css';
 
+const gh = octokit();
+
 export default function MainPage () {
-  useEffect(()=>{
-    log.debug(`User Is: ${octokit().rest.users.getByUsername('TheBotlyNoob').then(i => console.log(i))}`);
+  useEffect(() => {
+    gh.rest.users.getAuthenticated().then((i) => log.info(`Authenticated User Is: ${i.data.login}`));
   }, [])
   return (
     <div id='main'>
