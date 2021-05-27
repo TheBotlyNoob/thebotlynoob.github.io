@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { Seo } from '../components';
-import { octokit, log } from '../utils';
+import { octokit as Octokit, log } from '../utils';
 import '../styles/main.css';
 
-const gh = octokit();
+const octokit = Octokit();
 
 export default function MainPage () {
   useEffect(() => {
-    gh.rest.users.getAuthenticated().then((i) => log.info(`Authenticated User Is: ${i.data.login}`));
+    octokit.rest.users.getAuthenticated().then(i => log.info(`Authenticated User Is: ${i.data.login}`));
   }, [])
   return (
     <div id='main'>
