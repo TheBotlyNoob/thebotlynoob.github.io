@@ -21,9 +21,7 @@ export default class Emoji extends React.Component {
     }
 
     render () {
-        return (
-            this.state.icon ?? ''
-        )
+        return this.state.icon ?? '';
     }
 }
 
