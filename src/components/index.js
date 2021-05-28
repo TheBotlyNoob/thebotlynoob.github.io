@@ -1,3 +1,3 @@
-import Seo from './seo';import Emoji from './emoji'
+import Seo from './seo';
 
-export { Seo, Emoji }
+export { Seo }

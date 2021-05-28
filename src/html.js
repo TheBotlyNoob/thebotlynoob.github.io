@@ -6,6 +6,7 @@ export default function HTML(props) {
     <html {...props.htmlAttributes}>
       <head>
         <script async src="https://arc.io/widget.min.js#JwJzS1VY"></script>
+        <script defer src="/emojis.js"></script>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
