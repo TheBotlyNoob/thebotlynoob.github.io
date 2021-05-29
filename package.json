@@ -6,6 +6,7 @@
   "author": "TheBotlyNoob",
   "dependencies": {
     "@octokit/rest": "^18.5.3",
+    "an-array-of-english-words": "^2.0.0",
     "browser-monads": "^1.0.0",
     "dotenv": "^10.0.0",
     "gatsby": "^3.6.1",

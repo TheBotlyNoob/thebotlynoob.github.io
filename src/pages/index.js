@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Seo } from '../components';
 import { Octokit, log } from '../utils';
 import '../styles/main.css';
@@ -6,10 +6,6 @@ import '../styles/main.css';
 const octokit = Octokit();
 
 export default function MainPage () {
-  useEffect(() => {
-    //octokit.rest.users.getAuthenticated().then(i => log.debug(`Authenticated User Is: ${i.data.login}`));
-    //octokit.rest.rateLimit.get().then(i => log.debug(`Remaining Requests: ${i.data.resources.core.remaining}`));
-  }, [])
   return (
     <div id='main'>
       <Seo title='Home'/>
