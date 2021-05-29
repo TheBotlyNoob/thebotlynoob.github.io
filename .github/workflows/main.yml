@@ -1,0 +1,32 @@
+name: Minify Files
+
+on:
+  push:
+
+jobs:
+  run:
+    if: github.repository == 'TheBotlyNoob/TheBotlyNoob.github.io'
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: "14"
+
+    - name: Build Gatsby
+      run: |
+        npm cache clean --force
+        npm i
+        npm run build
+    - name: Push
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        cp -r public/ ../build/
+        mv CNAME ../build/
+        git checkout --orphan gh-pages
+        git rm -fr .
+        mv ../build/* .
+        git add .
+        git commit -m 'Build' || echo
+        git push -f --set-upstream origin gh-pages
