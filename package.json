@@ -6,7 +6,6 @@
   "author": "TheBotlyNoob",
   "dependencies": {
     "@octokit/rest": "^18.5.5",
-    "an-array-of-english-words": "^2.0.0",
     "browser-monads": "^1.0.0",
     "dotenv": "^10.0.0",
     "gatsby": "^3.6.1",
@@ -22,6 +21,7 @@
     "gatsby-transformer-remark": "^4.3.0",
     "gatsby-transformer-sharp": "^3.6.0",
     "glob": "^7.1.7",
+    "markdown-yaml-metadata-parser": "^3.0.0",
     "node-fetch": "^2.6.1",
     "prism-themes": "^1.7.0",
     "prismjs": "^1.23.0",

@@ -5,7 +5,6 @@ export default class fonts extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            loading: true,
             data: undefined,
         }
     }
@@ -14,13 +13,12 @@ export default class fonts extends React.Component {
         fetch('/fonts.json')
           .then(res => res.json())
           .then(data => this.setState({
-              loading: false,
-              data,
+              data
           }));
     }
 
     render() {
-        return(
+        return (
             <div>
                 <h1 id='title'>Fonts</h1>
                 <hr/>

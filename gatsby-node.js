@@ -2,9 +2,10 @@ require('dotenv').config({ path: '.env' });
 
 const fs = require('fs'),
   glob = require('glob').sync,
-  fetch = require('node-fetch');
+  fetch = require('node-fetch'),
+  metaParser = require('markdown-yaml-metadata-parser');
 
-(async () => {
+async function emojis() {
   // Set some data for the fonts
   fs.writeFileSync('static/fonts.json', JSON.stringify(fs.readdirSync('static/fonts')));
 
@@ -13,7 +14,17 @@ const fs = require('fs'),
 
   emojis.map(i => i.aliases.map(j => glob('src/**/*', { nodir: true }).map(file => {
     if (['css', 'js', 'html', 'ts', 'tsx', 'jsx'].includes(file.substring(file.lastIndexOf('.') + 1))) {
-      fs.writeFileSync(file, fs.readFileSync(file).toString().replace(new RegExp(`:${j.replace(/[#-.]|[[-^]|[?|{}]/g, '\\$&')}:`, 'g'), `<span role='img' aria-label='emoji'>${i.emoji}</span>`))
+      fs.writeFileSync(file, fs.readFileSync(file).toString().replace(new RegExp(`:${j.replace(/[#-.]|[[-^]|[?|{}]/g, '\\$&')}:`, 'g'), `<span role='img' aria-label='${j}'>${i.emoji}</span>`))
     }
   })))
-})();
+};
+
+function md() {
+  var data = [];
+
+  glob('src/posts/**/*').map(file => data.push(metaParser(fs.readFileSync(file, {encoding: 'utf8'})).metadata))
+  fs.writeFileSync('static/blogs.json', JSON.stringify(data))
+}
+
+md()
+//emojis()
