@@ -32,7 +32,7 @@ export default class Blog extends React.Component {
                 <div className='main-body'>
                   <h2 className='title'>{i.title}</h2>
                   <p className='desc'>{i.desc}</p>
-                  <a href={`${window.location.origin}${i.slug}`} className='learn-more'>Learn More
+                  <a href={i.slug} className='learn-more'>Learn More
                     <svg className='arrow' viewBox='0 0 24 24' stroke='currentColor' strokeWidth='2' fill='none' strokeLinecap='round' strokeLinejoin='round'>
                       <path d='M5 12h14'></path>
                       <path d='M12 5l7 7-7 7'></path>
@@ -42,8 +42,8 @@ export default class Blog extends React.Component {
               </div>
             </div>
           </div>
-        </section>)
-        }
+        </section>
+        )}
       </div>
     );
   }
