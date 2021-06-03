@@ -1,7 +1,6 @@
 name: Minify Files
 
 on:
-  push:
   workflow_dispatch:
 
 jobs:
