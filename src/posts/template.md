@@ -1,6 +1,6 @@
 ---
 slug: "/blog/template"
-date: 0000-00-00
+date: "0000-00-00"
 cat: "Code"
 desc: "This Is A Template I Made For Future Blog Posts"
 title: "Template"
