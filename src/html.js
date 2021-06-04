@@ -36,9 +36,11 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-      </body>
+        </body>
       <footer>
-        <span>This Website Is Made With <span role='img' aria-label='heart'>❤️</span> In: <a href='https://gatsbyjs.com/'>Gatsby.js</a>, And Is Open Source On: <a href='https://github.com/TheBotlyNoob/TheBotlyNoob.github.io/'>GitHub</a>!</span>
+        <div className='footerInner'>
+          <span>This Website Is Made With <span role='img' aria-label='heart'>❤️</span> In: <a href='https://gatsbyjs.com/'>Gatsby.js</a>, And Is Open Source On: <a href='https://github.com/TheBotlyNoob/TheBotlyNoob.github.io/'>GitHub</a>!</span>
+        </div>
       </footer>
     </html>
   )
