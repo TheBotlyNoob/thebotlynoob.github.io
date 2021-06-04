@@ -19,7 +19,7 @@
     @apply mt-1 text-gray-500 text-sm;
 }
 
-.main-body {
+.main-body, .blog-post-content {
     @apply md:flex-grow;
 }
 
@@ -45,4 +45,12 @@
 
 .middle-container {
     @apply -my-8 divide-y-2 divide-gray-100
+}
+
+.head {
+    margin: 0 20px 10px 0;
+}
+
+.comments {
+    margin: 200px 0 100px;
 }
