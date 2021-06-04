@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Disqus } from 'gatsby-plugin-disqus';
-import { Location } from '@reach/router';
+import { useLocation } from '@reach/router';
 import '../styles/blog.css';
 
 export default function Template({
@@ -25,7 +25,7 @@ export default function Template({
         />
       </div>
       <Disqus className='comments' config={{
-            url: `${Location}/${frontmatter.slug}`,
+            url: useLocation().href,
             identifier: frontmatter.num.toString(),
             title: frontmatter.title,
         }}
