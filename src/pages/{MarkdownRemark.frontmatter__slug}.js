@@ -16,8 +16,8 @@ export default function Template({
         <div className='head'>
           <h1 className='title'>{frontmatter.title}</h1>
           <h2 className='date'>{frontmatter.date}</h2>
-          <h3 className='category'>{frontmatter.cat}</h3>
-          <h4 className='num'>Blog Post #{frontmatter.num}</h4>
+          <h3 className='num'>Blog Post #{frontmatter.num}</h3>
+          <h4 className='category'>{frontmatter.cat}</h4>
         </div>
         <div
           className='blog-post-content'
