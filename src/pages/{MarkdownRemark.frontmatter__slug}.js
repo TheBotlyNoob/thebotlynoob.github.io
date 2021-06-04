@@ -1,7 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Disqus } from 'gatsby-plugin-disqus';
-import '../styles/blog.css'
+import { Location } from '@reach/router';
+import '../styles/blog.css';
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -24,7 +25,7 @@ export default function Template({
         />
       </div>
       <Disqus className='comments' config={{
-            url: frontmatter.slug,
+            url: `${Location}/${frontmatter.slug}`,
             identifier: frontmatter.num.toString(),
             title: frontmatter.title,
         }}
