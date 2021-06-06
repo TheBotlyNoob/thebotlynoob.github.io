@@ -1,4 +1,5 @@
 import React from 'react';
+import { Seo } from '../components';
 import { graphql } from 'gatsby';
 import { Disqus } from 'gatsby-plugin-disqus';
 import { useLocation } from '@reach/router';
@@ -12,6 +13,7 @@ export default function Template({
 
   return (
     <div className='blog-post-container'>
+      <Seo title={frontmatter.title}/>
       <div className='blog-post'>
         <div className='head'>
           <h1 className='title'>{frontmatter.title}</h1>

@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 * {
-    font-family: 'Operator Mono SSm Lig', monospace;
+    font-family: 'Operator Mono SSm Lig', monospace !important;
     text-align: center;
     box-sizing: border-box;
     font-size: 18px;
 }
 
-html,body{margin:0;padding:0;height:100%;width:100%;@apply text-black bg-white dark:bg-black dark:text-white !important}
+html,body{display:table;margin:0;padding:0;height:100%;width:100%;@apply text-black bg-white dark:bg-black dark:text-white !important}
 
 code {
     color: #e66767 !important;
@@ -25,12 +25,8 @@ a:hover {
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-height: 100vh;
-    justify-content: center;
-    text-align: center;
+    display: table-row;
+    height: 0;
 }
 
 .gatsby-highlight {
@@ -45,8 +41,4 @@ footer {
     padding: 0;
     padding-left: 2.8em;
     overflow: initial;
-}
-
-.footerInner {
-    margin-top: auto;
 }

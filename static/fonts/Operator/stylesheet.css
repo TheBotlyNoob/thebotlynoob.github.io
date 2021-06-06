@@ -1,0 +1,588 @@
+@font-face {
+    font-family: 'Operator Mono';
+    src: url('fonts/OperatorMono-Light.eot');
+    src: local('Operator Mono Light'), local('OperatorMono-Light'),
+        url('fonts/OperatorMono-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMono-Light.woff2') format('woff2'),
+        url('fonts/OperatorMono-Light.woff') format('woff'),
+        url('fonts/OperatorMono-Light.ttf') format('truetype'),
+        url('fonts/OperatorMono-Light.svg#OperatorMono-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono Lig';
+    src: url('fonts/OperatorMonoLig-Light.eot');
+    src: local('Operator Mono Lig Light'), local('OperatorMonoLig-Light'),
+        url('fonts/OperatorMonoLig-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoLig-Light.woff2') format('woff2'),
+        url('fonts/OperatorMonoLig-Light.woff') format('woff'),
+        url('fonts/OperatorMonoLig-Light.ttf') format('truetype'),
+        url('fonts/OperatorMonoLig-Light.svg#OperatorMonoLig-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono SSm';
+    src: url('fonts/OperatorMonoSSm-Bold.eot');
+    src: local('Operator Mono SSm Bold'), local('OperatorMonoSSm-Bold'),
+        url('fonts/OperatorMonoSSm-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoSSm-Bold.woff2') format('woff2'),
+        url('fonts/OperatorMonoSSm-Bold.woff') format('woff'),
+        url('fonts/OperatorMonoSSm-Bold.ttf') format('truetype'),
+        url('fonts/OperatorMonoSSm-Bold.svg#OperatorMonoSSm-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono';
+    src: url('fonts/OperatorMono-Medium.eot');
+    src: local('Operator Mono Medium'), local('OperatorMono-Medium'),
+        url('fonts/OperatorMono-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMono-Medium.woff2') format('woff2'),
+        url('fonts/OperatorMono-Medium.woff') format('woff'),
+        url('fonts/OperatorMono-Medium.ttf') format('truetype'),
+        url('fonts/OperatorMono-Medium.svg#OperatorMono-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono Lig';
+    src: url('fonts/OperatorMonoLig-Book.eot');
+    src: local('Operator Mono Lig Book'), local('OperatorMonoLig-Book'),
+        url('fonts/OperatorMonoLig-Book.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoLig-Book.woff2') format('woff2'),
+        url('fonts/OperatorMonoLig-Book.woff') format('woff'),
+        url('fonts/OperatorMonoLig-Book.ttf') format('truetype'),
+        url('fonts/OperatorMonoLig-Book.svg#OperatorMonoLig-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono Lig';
+    src: url('fonts/OperatorMonoLig-BookItalic.eot');
+    src: local('Operator Mono Lig Book Italic'), local('OperatorMonoLig-BookItalic'),
+        url('fonts/OperatorMonoLig-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoLig-BookItalic.woff2') format('woff2'),
+        url('fonts/OperatorMonoLig-BookItalic.woff') format('woff'),
+        url('fonts/OperatorMonoLig-BookItalic.ttf') format('truetype'),
+        url('fonts/OperatorMonoLig-BookItalic.svg#OperatorMonoLig-BookItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono';
+    src: url('fonts/OperatorMono-MediumItalic.eot');
+    src: local('Operator Mono Medium Italic'), local('OperatorMono-MediumItalic'),
+        url('fonts/OperatorMono-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMono-MediumItalic.woff2') format('woff2'),
+        url('fonts/OperatorMono-MediumItalic.woff') format('woff'),
+        url('fonts/OperatorMono-MediumItalic.ttf') format('truetype'),
+        url('fonts/OperatorMono-MediumItalic.svg#OperatorMono-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono';
+    src: url('fonts/OperatorMono-LightItalic.eot');
+    src: local('Operator Mono Light Italic'), local('OperatorMono-LightItalic'),
+        url('fonts/OperatorMono-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMono-LightItalic.woff2') format('woff2'),
+        url('fonts/OperatorMono-LightItalic.woff') format('woff'),
+        url('fonts/OperatorMono-LightItalic.ttf') format('truetype'),
+        url('fonts/OperatorMono-LightItalic.svg#OperatorMono-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono Lig';
+    src: url('fonts/OperatorMonoLig-LightItalic.eot');
+    src: local('Operator Mono Lig Light Italic'), local('OperatorMonoLig-LightItalic'),
+        url('fonts/OperatorMonoLig-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoLig-LightItalic.woff2') format('woff2'),
+        url('fonts/OperatorMonoLig-LightItalic.woff') format('woff'),
+        url('fonts/OperatorMonoLig-LightItalic.ttf') format('truetype'),
+        url('fonts/OperatorMonoLig-LightItalic.svg#OperatorMonoLig-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono SSm';
+    src: url('fonts/OperatorMonoSSm-LightItalic.eot');
+    src: local('Operator Mono SSm Light Italic'), local('OperatorMonoSSm-LightItalic'),
+        url('fonts/OperatorMonoSSm-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoSSm-LightItalic.woff2') format('woff2'),
+        url('fonts/OperatorMonoSSm-LightItalic.woff') format('woff'),
+        url('fonts/OperatorMonoSSm-LightItalic.ttf') format('truetype'),
+        url('fonts/OperatorMonoSSm-LightItalic.svg#OperatorMonoSSm-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono SSm';
+    src: url('fonts/OperatorMonoSSm-Light.eot');
+    src: local('Operator Mono SSm Light'), local('OperatorMonoSSm-Light'),
+        url('fonts/OperatorMonoSSm-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoSSm-Light.woff2') format('woff2'),
+        url('fonts/OperatorMonoSSm-Light.woff') format('woff'),
+        url('fonts/OperatorMonoSSm-Light.ttf') format('truetype'),
+        url('fonts/OperatorMonoSSm-Light.svg#OperatorMonoSSm-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono SSm Lig';
+    src: url('fonts/OperatorMonoSSmLig-Bold.eot');
+    src: local('Operator Mono SSm Lig Bold'), local('OperatorMonoSSmLig-Bold'),
+        url('fonts/OperatorMonoSSmLig-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoSSmLig-Bold.woff2') format('woff2'),
+        url('fonts/OperatorMonoSSmLig-Bold.woff') format('woff'),
+        url('fonts/OperatorMonoSSmLig-Bold.ttf') format('truetype'),
+        url('fonts/OperatorMonoSSmLig-Bold.svg#OperatorMonoSSmLig-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono SSm';
+    src: url('fonts/OperatorMonoSSm-Medium.eot');
+    src: local('Operator Mono SSm Medium'), local('OperatorMonoSSm-Medium'),
+        url('fonts/OperatorMonoSSm-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoSSm-Medium.woff2') format('woff2'),
+        url('fonts/OperatorMonoSSm-Medium.woff') format('woff'),
+        url('fonts/OperatorMonoSSm-Medium.ttf') format('truetype'),
+        url('fonts/OperatorMonoSSm-Medium.svg#OperatorMonoSSm-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono SSm';
+    src: url('fonts/OperatorMonoSSm-Book.eot');
+    src: local('Operator Mono SSm Book'), local('OperatorMonoSSm-Book'),
+        url('fonts/OperatorMonoSSm-Book.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoSSm-Book.woff2') format('woff2'),
+        url('fonts/OperatorMonoSSm-Book.woff') format('woff'),
+        url('fonts/OperatorMonoSSm-Book.ttf') format('truetype'),
+        url('fonts/OperatorMonoSSm-Book.svg#OperatorMonoSSm-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono SSm';
+    src: url('fonts/OperatorMonoSSm-BoldItalic.eot');
+    src: local('Operator Mono SSm Bold Italic'), local('OperatorMonoSSm-BoldItalic'),
+        url('fonts/OperatorMonoSSm-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoSSm-BoldItalic.woff2') format('woff2'),
+        url('fonts/OperatorMonoSSm-BoldItalic.woff') format('woff'),
+        url('fonts/OperatorMonoSSm-BoldItalic.ttf') format('truetype'),
+        url('fonts/OperatorMonoSSm-BoldItalic.svg#OperatorMonoSSm-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono';
+    src: url('fonts/OperatorMono-XLight.eot');
+    src: local('Operator Mono Extra Light'), local('OperatorMono-XLight'),
+        url('fonts/OperatorMono-XLight.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMono-XLight.woff2') format('woff2'),
+        url('fonts/OperatorMono-XLight.woff') format('woff'),
+        url('fonts/OperatorMono-XLight.ttf') format('truetype'),
+        url('fonts/OperatorMono-XLight.svg#OperatorMono-XLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono';
+    src: url('fonts/OperatorMono-Bold.eot');
+    src: local('Operator Mono Bold'), local('OperatorMono-Bold'),
+        url('fonts/OperatorMono-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMono-Bold.woff2') format('woff2'),
+        url('fonts/OperatorMono-Bold.woff') format('woff'),
+        url('fonts/OperatorMono-Bold.ttf') format('truetype'),
+        url('fonts/OperatorMono-Bold.svg#OperatorMono-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono';
+    src: url('fonts/OperatorMono-XLightItalic.eot');
+    src: local('Operator Mono Extra Light Italic'), local('OperatorMono-XLightItalic'),
+        url('fonts/OperatorMono-XLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMono-XLightItalic.woff2') format('woff2'),
+        url('fonts/OperatorMono-XLightItalic.woff') format('woff'),
+        url('fonts/OperatorMono-XLightItalic.ttf') format('truetype'),
+        url('fonts/OperatorMono-XLightItalic.svg#OperatorMono-XLightItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono SSm Lig';
+    src: url('fonts/OperatorMonoSSmLig-LightItalic.eot');
+    src: local('Operator Mono SSm Lig Light Italic'), local('OperatorMonoSSmLig-LightItalic'),
+        url('fonts/OperatorMonoSSmLig-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoSSmLig-LightItalic.woff2') format('woff2'),
+        url('fonts/OperatorMonoSSmLig-LightItalic.woff') format('woff'),
+        url('fonts/OperatorMonoSSmLig-LightItalic.ttf') format('truetype'),
+        url('fonts/OperatorMonoSSmLig-LightItalic.svg#OperatorMonoSSmLig-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono SSm Lig';
+    src: url('fonts/OperatorMonoSSmLig-Medium.eot');
+    src: local('Operator Mono SSm Lig Medium'), local('OperatorMonoSSmLig-Medium'),
+        url('fonts/OperatorMonoSSmLig-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoSSmLig-Medium.woff2') format('woff2'),
+        url('fonts/OperatorMonoSSmLig-Medium.woff') format('woff'),
+        url('fonts/OperatorMonoSSmLig-Medium.ttf') format('truetype'),
+        url('fonts/OperatorMonoSSmLig-Medium.svg#OperatorMonoSSmLig-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono SSm Lig';
+    src: url('fonts/OperatorMonoSSmLig-Light.eot');
+    src: local('Operator Mono SSm Lig Light'), local('OperatorMonoSSmLig-Light'),
+        url('fonts/OperatorMonoSSmLig-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoSSmLig-Light.woff2') format('woff2'),
+        url('fonts/OperatorMonoSSmLig-Light.woff') format('woff'),
+        url('fonts/OperatorMonoSSmLig-Light.ttf') format('truetype'),
+        url('fonts/OperatorMonoSSmLig-Light.svg#OperatorMonoSSmLig-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono SSm';
+    src: url('fonts/OperatorMonoSSm-MediumItalic.eot');
+    src: local('Operator Mono SSm Medium Italic'), local('OperatorMonoSSm-MediumItalic'),
+        url('fonts/OperatorMonoSSm-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoSSm-MediumItalic.woff2') format('woff2'),
+        url('fonts/OperatorMonoSSm-MediumItalic.woff') format('woff'),
+        url('fonts/OperatorMonoSSm-MediumItalic.ttf') format('truetype'),
+        url('fonts/OperatorMonoSSm-MediumItalic.svg#OperatorMonoSSm-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono SSm Lig';
+    src: url('fonts/OperatorMonoSSmLig-BookItalic.eot');
+    src: local('Operator Mono SSm Lig Book Italic'), local('OperatorMonoSSmLig-BookItalic'),
+        url('fonts/OperatorMonoSSmLig-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoSSmLig-BookItalic.woff2') format('woff2'),
+        url('fonts/OperatorMonoSSmLig-BookItalic.woff') format('woff'),
+        url('fonts/OperatorMonoSSmLig-BookItalic.ttf') format('truetype'),
+        url('fonts/OperatorMonoSSmLig-BookItalic.svg#OperatorMonoSSmLig-BookItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono SSm Lig';
+    src: url('fonts/OperatorMonoSSmLig-MediumItalic.eot');
+    src: local('Operator Mono SSm Lig Medium Italic'), local('OperatorMonoSSmLig-MediumItalic'),
+        url('fonts/OperatorMonoSSmLig-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoSSmLig-MediumItalic.woff2') format('woff2'),
+        url('fonts/OperatorMonoSSmLig-MediumItalic.woff') format('woff'),
+        url('fonts/OperatorMonoSSmLig-MediumItalic.ttf') format('truetype'),
+        url('fonts/OperatorMonoSSmLig-MediumItalic.svg#OperatorMonoSSmLig-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono SSm Lig';
+    src: url('fonts/OperatorMonoSSmLig-BoldItalic.eot');
+    src: local('Operator Mono SSm Lig Bold Italic'), local('OperatorMonoSSmLig-BoldItalic'),
+        url('fonts/OperatorMonoSSmLig-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoSSmLig-BoldItalic.woff2') format('woff2'),
+        url('fonts/OperatorMonoSSmLig-BoldItalic.woff') format('woff'),
+        url('fonts/OperatorMonoSSmLig-BoldItalic.ttf') format('truetype'),
+        url('fonts/OperatorMonoSSmLig-BoldItalic.svg#OperatorMonoSSmLig-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono SSm Lig';
+    src: url('fonts/OperatorMonoSSmLig-Book.eot');
+    src: local('Operator Mono SSm Lig Book'), local('OperatorMonoSSmLig-Book'),
+        url('fonts/OperatorMonoSSmLig-Book.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoSSmLig-Book.woff2') format('woff2'),
+        url('fonts/OperatorMonoSSmLig-Book.woff') format('woff'),
+        url('fonts/OperatorMonoSSmLig-Book.ttf') format('truetype'),
+        url('fonts/OperatorMonoSSmLig-Book.svg#OperatorMonoSSmLig-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono SSm';
+    src: url('fonts/OperatorMonoSSm-BookItalic.eot');
+    src: local('Operator Mono SSm Book Italic'), local('OperatorMonoSSm-BookItalic'),
+        url('fonts/OperatorMonoSSm-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMonoSSm-BookItalic.woff2') format('woff2'),
+        url('fonts/OperatorMonoSSm-BookItalic.woff') format('woff'),
+        url('fonts/OperatorMonoSSm-BookItalic.ttf') format('truetype'),
+        url('fonts/OperatorMonoSSm-BookItalic.svg#OperatorMonoSSm-BookItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono';
+    src: url('fonts/OperatorMono-BookItalic.eot');
+    src: local('Operator Mono Book Italic'), local('OperatorMono-BookItalic'),
+        url('fonts/OperatorMono-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMono-BookItalic.woff2') format('woff2'),
+        url('fonts/OperatorMono-BookItalic.woff') format('woff'),
+        url('fonts/OperatorMono-BookItalic.ttf') format('truetype'),
+        url('fonts/OperatorMono-BookItalic.svg#OperatorMono-BookItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono';
+    src: url('fonts/OperatorMono-Book.eot');
+    src: local('Operator Mono Book'), local('OperatorMono-Book'),
+        url('fonts/OperatorMono-Book.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMono-Book.woff2') format('woff2'),
+        url('fonts/OperatorMono-Book.woff') format('woff'),
+        url('fonts/OperatorMono-Book.ttf') format('truetype'),
+        url('fonts/OperatorMono-Book.svg#OperatorMono-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator Mono';
+    src: url('fonts/OperatorMono-BoldItalic.eot');
+    src: local('Operator Mono Bold Italic'), local('OperatorMono-BoldItalic'),
+        url('fonts/OperatorMono-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorMono-BoldItalic.woff2') format('woff2'),
+        url('fonts/OperatorMono-BoldItalic.woff') format('woff'),
+        url('fonts/OperatorMono-BoldItalic.ttf') format('truetype'),
+        url('fonts/OperatorMono-BoldItalic.svg#OperatorMono-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator SSm';
+    src: url('fonts/OperatorSSm-BookItalic.eot');
+    src: local('Operator SSm Book Italic'), local('OperatorSSm-BookItalic'),
+        url('fonts/OperatorSSm-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorSSm-BookItalic.woff2') format('woff2'),
+        url('fonts/OperatorSSm-BookItalic.woff') format('woff'),
+        url('fonts/OperatorSSm-BookItalic.ttf') format('truetype'),
+        url('fonts/OperatorSSm-BookItalic.svg#OperatorSSm-BookItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator SSm';
+    src: url('fonts/OperatorSSm-Light.eot');
+    src: local('Operator SSm Light'), local('OperatorSSm-Light'),
+        url('fonts/OperatorSSm-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorSSm-Light.woff2') format('woff2'),
+        url('fonts/OperatorSSm-Light.woff') format('woff'),
+        url('fonts/OperatorSSm-Light.ttf') format('truetype'),
+        url('fonts/OperatorSSm-Light.svg#OperatorSSm-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator SSm';
+    src: url('fonts/OperatorSSm-Book.eot');
+    src: local('Operator SSm Book'), local('OperatorSSm-Book'),
+        url('fonts/OperatorSSm-Book.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorSSm-Book.woff2') format('woff2'),
+        url('fonts/OperatorSSm-Book.woff') format('woff'),
+        url('fonts/OperatorSSm-Book.ttf') format('truetype'),
+        url('fonts/OperatorSSm-Book.svg#OperatorSSm-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator SSm';
+    src: url('fonts/OperatorSSm-XLightItalic.eot');
+    src: local('Operator SSm Extra Light Italic'), local('OperatorSSm-XLightItalic'),
+        url('fonts/OperatorSSm-XLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorSSm-XLightItalic.woff2') format('woff2'),
+        url('fonts/OperatorSSm-XLightItalic.woff') format('woff'),
+        url('fonts/OperatorSSm-XLightItalic.ttf') format('truetype'),
+        url('fonts/OperatorSSm-XLightItalic.svg#OperatorSSm-XLightItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator SSm';
+    src: url('fonts/OperatorSSm-Bold.eot');
+    src: local('Operator SSm Bold'), local('OperatorSSm-Bold'),
+        url('fonts/OperatorSSm-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorSSm-Bold.woff2') format('woff2'),
+        url('fonts/OperatorSSm-Bold.woff') format('woff'),
+        url('fonts/OperatorSSm-Bold.ttf') format('truetype'),
+        url('fonts/OperatorSSm-Bold.svg#OperatorSSm-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator SSm';
+    src: url('fonts/OperatorSSm-XLight.eot');
+    src: local('Operator SSm Extra Light'), local('OperatorSSm-XLight'),
+        url('fonts/OperatorSSm-XLight.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorSSm-XLight.woff2') format('woff2'),
+        url('fonts/OperatorSSm-XLight.woff') format('woff'),
+        url('fonts/OperatorSSm-XLight.ttf') format('truetype'),
+        url('fonts/OperatorSSm-XLight.svg#OperatorSSm-XLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator SSm';
+    src: url('fonts/OperatorSSm-Medium.eot');
+    src: local('Operator SSm Medium'), local('OperatorSSm-Medium'),
+        url('fonts/OperatorSSm-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorSSm-Medium.woff2') format('woff2'),
+        url('fonts/OperatorSSm-Medium.woff') format('woff'),
+        url('fonts/OperatorSSm-Medium.ttf') format('truetype'),
+        url('fonts/OperatorSSm-Medium.svg#OperatorSSm-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator SSm';
+    src: url('fonts/OperatorSSm-BlackItalic.eot');
+    src: local('Operator SSm Black Italic'), local('OperatorSSm-BlackItalic'),
+        url('fonts/OperatorSSm-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorSSm-BlackItalic.woff2') format('woff2'),
+        url('fonts/OperatorSSm-BlackItalic.woff') format('woff'),
+        url('fonts/OperatorSSm-BlackItalic.ttf') format('truetype'),
+        url('fonts/OperatorSSm-BlackItalic.svg#OperatorSSm-BlackItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator SSm';
+    src: url('fonts/OperatorSSm-MediumItalic.eot');
+    src: local('Operator SSm Medium Italic'), local('OperatorSSm-MediumItalic'),
+        url('fonts/OperatorSSm-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorSSm-MediumItalic.woff2') format('woff2'),
+        url('fonts/OperatorSSm-MediumItalic.woff') format('woff'),
+        url('fonts/OperatorSSm-MediumItalic.ttf') format('truetype'),
+        url('fonts/OperatorSSm-MediumItalic.svg#OperatorSSm-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator SSm';
+    src: url('fonts/OperatorSSm-BoldItalic.eot');
+    src: local('Operator SSm Bold Italic'), local('OperatorSSm-BoldItalic'),
+        url('fonts/OperatorSSm-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorSSm-BoldItalic.woff2') format('woff2'),
+        url('fonts/OperatorSSm-BoldItalic.woff') format('woff'),
+        url('fonts/OperatorSSm-BoldItalic.ttf') format('truetype'),
+        url('fonts/OperatorSSm-BoldItalic.svg#OperatorSSm-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator SSm';
+    src: url('fonts/OperatorSSm-Black.eot');
+    src: local('Operator SSm Black'), local('OperatorSSm-Black'),
+        url('fonts/OperatorSSm-Black.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorSSm-Black.woff2') format('woff2'),
+        url('fonts/OperatorSSm-Black.woff') format('woff'),
+        url('fonts/OperatorSSm-Black.ttf') format('truetype'),
+        url('fonts/OperatorSSm-Black.svg#OperatorSSm-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Operator SSm';
+    src: url('fonts/OperatorSSm-LightItalic.eot');
+    src: local('Operator SSm Light Italic'), local('OperatorSSm-LightItalic'),
+        url('fonts/OperatorSSm-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OperatorSSm-LightItalic.woff2') format('woff2'),
+        url('fonts/OperatorSSm-LightItalic.woff') format('woff'),
+        url('fonts/OperatorSSm-LightItalic.ttf') format('truetype'),
+        url('fonts/OperatorSSm-LightItalic.svg#OperatorSSm-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+

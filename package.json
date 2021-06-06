@@ -5,6 +5,7 @@
   "version": "",
   "author": "TheBotlyNoob",
   "dependencies": {
+    "@babel/eslint-parser": "^7.14.4",
     "@octokit/rest": "^18.5.5",
     "dotenv": "^10.0.0",
     "gatsby": "^3.6.1",
@@ -32,7 +33,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
-    "babel-eslint": "^10.1.0",
     "gatsby-plugin-postcss": "^4.6.0",
     "postcss": "^8.3.0",
     "prettier": "2.3.0",
