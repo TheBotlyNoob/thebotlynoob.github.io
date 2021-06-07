@@ -12,7 +12,7 @@
 }
 
 .category {
-    @apply font-semibold text-gray-700 dark:text-gray-500;
+    @apply font-semibold text-indigo-500;
 }
 
 .date {
@@ -48,7 +48,7 @@
 }
 
 .head {
-    margin: 0 20px 10px 0;
+    margin-bottom: 60px;
 }
 
 .comments {

@@ -7,9 +7,11 @@
     text-align: center;
     box-sizing: border-box;
     font-size: 18px;
+    margin:0;
+    padding:0;
 }
 
-html,body{margin:0;padding:0;height:100%;width:100%;@apply text-black bg-white dark:bg-black dark:text-white !important}
+html,body{height:100%;width:100%;@apply text-black bg-white dark:bg-black dark:text-white !important}
 body{display:flex;flex-direction:column;}
 #___gatsby{flex:1 0 auto;}
 footer{flex-shrink:0;}
@@ -21,6 +23,10 @@ code {
 a {
     color: #74b9ff !important;
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .gatsby-highlight {

@@ -21,7 +21,7 @@ export default class Blog extends React.Component {
     return (
       <div>
         <Seo title='Blogs'/>
-        {this.state.data?.map((i, key) => <a href={i.slug} key={key} class='text-gray-600 flex justify-center'>
+        {this.state.data?.map((i, key) => <section key={key} class='text-gray-600 flex justify-center'>
           <div class='container px-5 py-24 mx-auto'>
             <div class='flex flex-wrap -mx-4 -my-8'>
               <div class='py-8 px-4 lg:w-1/3'>
@@ -32,14 +32,16 @@ export default class Blog extends React.Component {
                   </div>
                   <div class='flex-grow pl-6'>
                     <h2 class='tracking-widest text-xs title-font font-medium text-indigo-500 mb-1'>{i.cat}</h2>
-                    <h1 class='title-font text-xl font-medium text-gray-900 mb-3'>{i.title}</h1>
-                    <p class='leading-relaxed mb-5'>{i.desc}</p>
+                    <a href={i.slug}>
+                      <h1 class='title-font text-xl font-medium text-gray-900 mb-3'>{i.title}</h1>
+                      <p class='leading-relaxed mb-5'>{i.desc}</p>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </a>
+        </section>
         )}
       </div>
     );
