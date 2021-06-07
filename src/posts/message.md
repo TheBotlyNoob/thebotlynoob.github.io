@@ -1,10 +1,10 @@
 ---
-slug: "/blog/message"
-date: "06-04-2021"
+slug: '/blog/message'
+date: '06-04-2021'
 num: 1
-cat: "Talk"
-desc: "This Is A Message..."
-title: "A Message"
+cat: 'Talk'
+desc: 'This Is A Message...'
+title: 'A Message'
 ---
 
 # A Message

@@ -21,28 +21,25 @@ export default class Blog extends React.Component {
     return (
       <div>
         <Seo title='Blogs'/>
-        {this.state.data?.map((i, key) => <section key={key} className='blog-post'>
-          <div className='outer-container'>
-            <div className='middle-container'>
-              <div className='inner-container'>
-                <div className='left-info'>
-                  <span className='category'>{i.cat}</span>
-                  <span className='date'>{i.date}</span>
-                </div>
-                <div className='main-body'>
-                  <h2 className='title'>{i.title}</h2>
-                  <p className='desc'>{i.desc}</p>
-                  <a href={i.slug} className='learn-more'>Learn More
-                    <svg className='arrow' viewBox='0 0 24 24' stroke='currentColor' strokeWidth='2' fill='none' strokeLinecap='round' strokeLinejoin='round'>
-                      <path d='M5 12h14'></path>
-                      <path d='M12 5l7 7-7 7'></path>
-                    </svg>
-                  </a>
+        {this.state.data?.map((i, key) => <a href={i.slug} key={key} class='text-gray-600 flex justify-center'>
+          <div class='container px-5 py-24 mx-auto'>
+            <div class='flex flex-wrap -mx-4 -my-8'>
+              <div class='py-8 px-4 lg:w-1/3'>
+                <div class='h-full flex items-start'>
+                  <div class='w-12 flex-shrink-0 flex flex-col text-center leading-none'>
+                    <span class='text-gray-500 pb-2 mb-2 border-b-2 border-gray-200'>{new Date(i.date).toLocaleString('default', { month: 'short' })}</span>
+                    <span class='font-medium text-lg text-gray-800 title-font leading-none'>{i.date.split('-')[1]}</span>
+                  </div>
+                  <div class='flex-grow pl-6'>
+                    <h2 class='tracking-widest text-xs title-font font-medium text-indigo-500 mb-1'>{i.cat}</h2>
+                    <h1 class='title-font text-xl font-medium text-gray-900 mb-3'>{i.title}</h1>
+                    <p class='leading-relaxed mb-5'>{i.desc}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </a>
         )}
       </div>
     );

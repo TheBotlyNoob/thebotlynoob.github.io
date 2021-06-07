@@ -23,10 +23,6 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
 .gatsby-highlight {
     background-color: #1d1f21;
     border-radius: 0.3em;
@@ -35,7 +31,7 @@ a:hover {
     overflow: auto;
 }
 
-.gatsby-highlight pre[class*="language-"].line-numbers {
+.gatsby-highlight pre[class*='language-'].line-numbers {
     padding: 0;
     padding-left: 2.8em;
     overflow: initial;
