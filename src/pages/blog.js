@@ -11,7 +11,7 @@ export default class Blog extends React.Component {
   }
 
   componentDidMount() {
-      fetch('/blogs.json')
+      fetch('/api/blogs.json')
         .then(res => res.json())
         .then(data => this.setState({
           data

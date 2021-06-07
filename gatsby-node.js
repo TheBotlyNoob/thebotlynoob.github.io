@@ -7,7 +7,7 @@ const fs = require('fs'),
 
 async function emojis() {
   // Set some data for the fonts
-  fs.writeFileSync('static/fonts.json', JSON.stringify(fs.readdirSync('static/fonts')));
+  fs.writeFileSync('static/api/fonts.json', JSON.stringify(fs.readdirSync('static/fonts')));
 
   // Set the emojis
   const emojis = (await (await fetch('https://raw.githack.com/github/gemoji/master/db/emoji.json')).json());
@@ -23,8 +23,8 @@ function md() {
   var data = [];
 
   glob('src/posts/**/*').map(file => data.push(metaParser(fs.readFileSync(file, {encoding: 'utf8'})).metadata))
-  fs.writeFileSync('static/blogs.json', JSON.stringify(data))
+  fs.writeFileSync('static/api/blogs.json', JSON.stringify(data))
 }
 
+emojis()
 md()
-//emojis()

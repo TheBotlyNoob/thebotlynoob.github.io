@@ -1,11 +1,11 @@
 import { Octokit } from '@octokit/rest';
 import { log } from '.';
 
-export default function octokit (apiKey = process.env.GATSBY_GITHUB_API_KEY, ...data: any[]): Object {
+export default function octokit (...data: any[]): Object {
     return new Octokit ({
         userAgent: 'JJ',
+        auth: process.env.GATSBY_GITHUB_API_KEY,
         ...data,
-        auth: apiKey,
         log,
     })
 }

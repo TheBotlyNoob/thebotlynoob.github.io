@@ -9,7 +9,10 @@
     font-size: 18px;
 }
 
-html,body{display:table;margin:0;padding:0;height:100%;width:100%;@apply text-black bg-white dark:bg-black dark:text-white !important}
+html,body{margin:0;padding:0;height:100%;width:100%;@apply text-black bg-white dark:bg-black dark:text-white !important}
+body{display:flex;flex-direction:column;}
+#___gatsby{flex:1 0 auto;}
+footer{flex-shrink:0;}
 
 code {
     color: #e66767 !important;
@@ -22,11 +25,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-footer {
-    display: table-row;
-    height: 0;
 }
 
 .gatsby-highlight {

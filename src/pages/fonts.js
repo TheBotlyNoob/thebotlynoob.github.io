@@ -11,7 +11,7 @@ export default class fonts extends React.Component {
     }
 
     componentDidMount() {
-        fetch('/fonts.json')
+        fetch('/api/fonts.json')
           .then(res => res.json())
           .then(data => this.setState({
               data
