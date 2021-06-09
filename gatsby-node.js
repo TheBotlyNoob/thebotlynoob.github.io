@@ -3,7 +3,22 @@ require('dotenv').config({ path: '.env' });
 const fs = require('fs'),
   glob = require('glob').sync,
   fetch = require('node-fetch'),
-  metaParser = require('markdown-yaml-metadata-parser');
+  metaParser = require('markdown-yaml-metadata-parser'),
+  NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
+
+trainAI()
+emojis()
+md()
+
+/* Set WebPack Config */
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    plugins: [
+      new NodePolyfillPlugin()
+    ]
+  })
+}
 
 async function emojis() {
   // Set some data for the fonts
@@ -22,9 +37,6 @@ async function emojis() {
 function md() {
   var data = [];
 
-  glob('src/posts/**/*').map(file => data.push(metaParser(fs.readFileSync(file, {encoding: 'utf8'})).metadata))
+  glob('src/posts/**/*').map(file => data.push(metaParser(fs.readFileSync(file, { encoding: 'utf8' })).metadata))
   fs.writeFileSync('static/api/blogs.json', JSON.stringify(data))
 }
-
-emojis()
-md()
