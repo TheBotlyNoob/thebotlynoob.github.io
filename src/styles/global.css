@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-    font-family: 'Ristretto Pro', monospace !important;
+    font-family: 'Fabada', monospace !important;
     text-align: center;
     box-sizing: border-box;
     font-size: 18px;
@@ -22,7 +22,7 @@ code {
 }
 
 pre code {
-
+    font-size: 20px;
 }
 
 a {
