@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-    font-family: 'Operator Mono SSm Lig', monospace !important;
+    font-family: 'Ristretto Pro', monospace !important;
     text-align: center;
     box-sizing: border-box;
     font-size: 18px;
@@ -18,6 +18,11 @@ footer{flex-shrink:0;}
 
 code {
     color: #e66767 !important;
+    font-family: 'Operator Mono SSm Lig', monospace !important;
+}
+
+pre code {
+
 }
 
 a {

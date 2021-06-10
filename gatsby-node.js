@@ -1,14 +1,14 @@
 require('dotenv').config({ path: '.env' });
 
-const fs = require('fs'),
-  glob = require('glob').sync,
+const fs = require('fs').promises,
+  glob = require('glob-promise'),
   fetch = require('node-fetch'),
   metaParser = require('markdown-yaml-metadata-parser'),
   NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
-trainAI()
 emojis()
 md()
+fonts()
 
 /* Set WebPack Config */
 
@@ -21,22 +21,26 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 }
 
 async function emojis() {
-  // Set some data for the fonts
-  fs.writeFileSync('static/api/fonts.json', JSON.stringify(fs.readdirSync('static/fonts')));
-
   // Set the emojis
   const emojis = (await (await fetch('https://raw.githack.com/github/gemoji/master/db/emoji.json')).json());
 
-  emojis.map(i => i.aliases.map(j => glob('src/**/*', { nodir: true }).map(file => {
+  emojis.map(i => i.aliases.map(async j => (await glob('src/**/*', { nodir: true })).map(async file => {
     if (['css', 'js', 'html', 'ts', 'tsx', 'jsx'].includes(file.substring(file.lastIndexOf('.') + 1))) {
-      fs.writeFileSync(file, fs.readFileSync(file).toString().replace(new RegExp(`:${j.replace(/[#-.]|[[-^]|[?|{}]/g, '\\$&')}:`, 'g'), `<span role='img' aria-label='${j}'>${i.emoji}</span>`))
+      await fs.writeFile(file, await fs.readFile(file).toString().replace(new RegExp(`:${j.replace(/[#-.]|[[-^]|[?|{}]/g, '\\$&')}:`, 'g'), `<span role='img' aria-label='${j}'>${i.emoji}</span>`))
     }
   })))
 };
 
-function md() {
+async function md() {
   var data = [];
 
-  glob('src/posts/**/*').map(file => data.push(metaParser(fs.readFileSync(file, { encoding: 'utf8' })).metadata))
-  fs.writeFileSync('static/api/blogs.json', JSON.stringify(data))
+  (await glob('src/posts/**/*')).map(async file => data.push(metaParser(await fs.readFile(file, { encoding: 'utf8' })).metadata))
+  await fs.writeFile('static/api/blogs.json', JSON.stringify(data))
+}
+
+async function fonts() {
+    // Set some data for the fonts
+    const fonts = await fs.readdir('static/fonts');
+    await fs.writeFile('static/api/fonts.json', JSON.stringify(fonts));
+    await fs.writeFile('src/styles/fonts.css', fonts.map(font => `@import('/fonts/${font}/index.min.css')`).join(';'));
 }
