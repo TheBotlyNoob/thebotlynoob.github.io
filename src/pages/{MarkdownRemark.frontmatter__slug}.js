@@ -5,8 +5,11 @@ import { Disqus } from 'gatsby-plugin-disqus';
 import { useLocation } from '@reach/router';
 import '../styles/blog.css';
 
+if (document.documentElement.classList.contains('dark')) import('../styles/dark_md.css');
+else import('../styles/light_md.css');
+
 export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
+  data
 }) {
 
   const { frontmatter, html } = data.markdownRemark;

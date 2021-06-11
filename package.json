@@ -26,7 +26,6 @@
     "markdown-yaml-metadata-parser": "^3.0.0",
     "node-fetch": "^2.6.1",
     "node-polyfill-webpack-plugin": "^1.1.2",
-    "normalize.css": "^8.0.1",
     "prism-themes": "^1.7.0",
     "prismjs": "^1.23.0",
     "prop-types": "^15.7.2",
