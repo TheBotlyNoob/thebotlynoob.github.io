@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import doge from './images/doge.jpg';
+import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 
 export default function HTML(props) {
   return (
