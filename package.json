@@ -7,6 +7,7 @@
   "dependencies": {
     "@babel/eslint-parser": "^7.14.4",
     "@octokit/rest": "^18.5.6",
+    "browser-monads-ts": "^1.2.2",
     "dotenv": "^10.0.0",
     "gatsby": "^3.7.0",
     "gatsby-plugin-dark-mode": "^1.1.2",

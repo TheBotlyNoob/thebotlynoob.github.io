@@ -3,6 +3,7 @@ import { Seo } from '../components';
 import { graphql } from 'gatsby';
 import { Disqus } from 'gatsby-plugin-disqus';
 import { useLocation } from '@reach/router';
+import { document } from 'browser-monads-ts';
 import '../styles/blog.css';
 
 if (document.documentElement.classList.contains('dark')) import('../styles/dark_md.css');

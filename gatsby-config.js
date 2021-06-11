@@ -39,6 +39,11 @@ module.exports = {
     },
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-dark-mode`,
-    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        appendScript: require.resolve(`${__dirname}/src/arc-sw.js`),
+      },
+    },
   ],
 }
