@@ -1,7 +1,6 @@
 import React from 'react';
 import { Seo } from '../components';
 import { graphql } from 'gatsby';
-import { useLocation } from '@reach/router';
 import { document } from 'browser-monads-ts';
 import '../styles/blog.css';
 
