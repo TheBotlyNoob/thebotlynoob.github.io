@@ -1,7 +1,6 @@
 import React from 'react';
 import { Seo } from '../components';
 import { graphql } from 'gatsby';
-import { Disqus } from 'gatsby-plugin-disqus';
 import { useLocation } from '@reach/router';
 import { document } from 'browser-monads-ts';
 import '../styles/blog.css';
@@ -30,12 +29,6 @@ export default function Template({
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>
-      <Disqus className='comments' config={{
-            url: useLocation().href,
-            identifier: frontmatter.num.toString(),
-            title: frontmatter.title,
-        }}
-      />
     </div>
   )
 }

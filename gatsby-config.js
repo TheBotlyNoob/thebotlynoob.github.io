@@ -31,12 +31,6 @@ module.exports = {
         icon: `${__dirname}/src/images/doge.jpg`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-disqus`,
-      options: {
-          shortname: `jayj`
-      }
-    },
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-dark-mode`,
     {

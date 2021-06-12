@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-    font-family: 'Fabada', monospace !important;
+    font-family: 'Arimo', monospace !important;
     text-align: center;
     box-sizing: border-box;
     font-size: 18px;
@@ -28,6 +28,7 @@ pre code {
 a {
     color: #74b9ff !important;
     text-decoration: none;
+    font-size: inherit !important;
 }
 
 a:hover {
