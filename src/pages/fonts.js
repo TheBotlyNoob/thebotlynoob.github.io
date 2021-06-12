@@ -25,7 +25,7 @@ export default class fonts extends React.Component {
                 <h1 style={{ margin: '10px' }}>Fonts</h1>
                 <hr/>
                 {this.state.data?.map((i, key) => <div key={key}>
-                    <Link to={i.toString().replace('static', '')} style={{ margin: '5px' }}>{i.toString().replace('static/fonts', '')}</Link>
+                    <Link to={i.toString().replace('static', '')} style={{ margin: '5px' }}>{i.toString().split('/')[2]}</Link>
                     <br/>
                 </div>)}
             </div>
