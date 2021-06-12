@@ -40,7 +40,7 @@ async function md() {
 
 async function fonts() {
     // Set some data for the fonts
-    const fonts = await glob('src/fonts/*/');
+    const fonts = await glob('static/fonts/*/');
     fs.writeFileSync('static/api/fonts.json', JSON.stringify(fonts));
     fs.writeFileSync('src/styles/fonts.css', fonts.map(font => `@import url('../../static/fonts/${font}/index.min.css')`).join(';'));
 }
