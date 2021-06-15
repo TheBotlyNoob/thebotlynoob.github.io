@@ -2,6 +2,7 @@ import React from 'react';
 import { Seo } from '../components';
 import { graphql } from 'gatsby';
 import { document } from 'browser-monads-ts';
+import { Layout } from '../components';
 import '../styles/blog.css';
 
 if (document.documentElement.classList.contains('dark')) import('../styles/dark_md.css');
@@ -14,7 +15,7 @@ export default function Template({
   const { frontmatter, html } = data.markdownRemark;
 
   return (
-    <div className='blog-post-container'>
+    <Layout className='blog-post-container'>
       <Seo title={frontmatter.title}/>
       <div className='blog-post'>
         <div className='head'>
@@ -28,7 +29,7 @@ export default function Template({
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>
-    </div>
+    </Layout>
   )
 }
 export const pageQuery = graphql`

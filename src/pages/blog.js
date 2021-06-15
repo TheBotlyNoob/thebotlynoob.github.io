@@ -1,6 +1,7 @@
 import React from 'react';
 import { Seo } from '../components';
 import { Link } from 'gatsby';
+import { Layout } from '../components';
 import '../styles/blog.css';
 
 export default class Blog extends React.Component {
@@ -20,7 +21,7 @@ export default class Blog extends React.Component {
   }
   render() {
     return (
-      <div>
+      <Layout>
         <Seo title='Blogs'/>
         {this.state.data?.map((i, key) => <section key={key} className='text-gray-600 flex justify-center text-center'>
           <div className='container px-5 py-24 mx-auto'>
@@ -48,7 +49,7 @@ export default class Blog extends React.Component {
           </div>
         </section>
         )}
-      </div>
+      </Layout>
     );
   }
 };

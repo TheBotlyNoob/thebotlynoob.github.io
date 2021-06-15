@@ -1,11 +1,12 @@
 import React from 'react';
 import { Seo } from '../components';
 import { Link } from 'gatsby';
+import { Layout } from '../components';
 import '../styles/404.css';
 
 export default function notFound () {
   return (
-    <div id='notfound'>
+    <Layout id='notfound'>
       <Seo title='404'/>
       <div className='notfound'>
         <div>
@@ -16,6 +17,6 @@ export default function notFound () {
         </div>
         <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable. <Link to='/'>Back to homepage</Link></p>
       </div>
-    </div>
+    </Layout>
   );
 }

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-    font-family: 'Arimo', monospace;
+    font-family: 'Arimo', Arial;
     text-align: center;
     box-sizing: border-box;
     font-size: 18px;
@@ -11,14 +11,16 @@
     padding: 0;
 }
 
-html,body { height:100%;width:100%;@apply text-black bg-white dark:bg-black dark:text-white }
-body { display:flex;justify-content:center;flex-direction:column; }
-#___gatsby { flex:1 0 auto; }
+html,body { width:100%;height:100%;@apply text-black bg-white dark:bg-black dark:text-white text-center }
+header { max-height:100px; }
+#___gatsby,#gatsby-focus-wrapper { width:100%;height:100%; }
+#main { width:100%;height:100%;display:flex;flex-direction:column; }
+#body { flex: 1 0 auto; }
 footer { flex-shrink:0; }
 
 code {
     color: #e66767;
-    font-family: 'Operator Mono SSm Lig', monospace;
+    font-family: 'Operator Mono SSm Lig', Arial;
 }
 
 pre code {

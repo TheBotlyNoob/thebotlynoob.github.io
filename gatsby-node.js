@@ -9,6 +9,7 @@ const fs = require('graceful-fs'),
 emojis()
 md()
 fonts()
+pages()
 
 /* Set WebPack Config */
 
@@ -21,11 +22,11 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 }
 
 async function emojis() {
-  // Set the emojis
-  const emojis = (await (await fetch('https://raw.githack.com/github/gemoji/master/db/emoji.json')).json());
+ // Set the emojis
+ const emojis = (await (await fetch('https://raw.githack.com/github/gemoji/master/db/emoji.json')).json());
 
-  emojis.map(i => i.aliases.map(async j => (await glob('src/**/*', { nodir: true })).map(async file => {
-    if (['css', 'js', 'html', 'ts', 'tsx', 'jsx'].includes(file.substring(file.lastIndexOf('.') + 1))) {
+ emojis.map(i => i.aliases.map(async j => (await glob('src/**/*', { nodir: true })).map(async file => {
+   if (['css', 'js', 'html', 'ts', 'tsx', 'jsx'].includes(file.substring(file.lastIndexOf('.') + 1))) {
       fs.writeFileSync(file, fs.readFileSync(file).toString().replace(new RegExp(`:${j.replace(/[#-.]|[[-^]|[?|{}]/g, '\\$&')}:`, 'g'), `<span role='img' aria-label='${j}'>${i.emoji}</span>`))
     }
   })))
@@ -39,8 +40,13 @@ async function md() {
 }
 
 async function fonts() {
-    // Set some data for the fonts
-    const fonts = await glob('static/fonts/*/');
-    fs.writeFileSync('static/api/fonts.json', JSON.stringify(fonts));
-    fs.writeFileSync('src/styles/fonts.css', fonts.map(font => `@import url('../../${font}/index.min.css')`).join(';'));
+  // Set some data for the fonts
+  const fonts = await (await glob('static/fonts/*/')).map(font => font.replace('static/fonts/', ''));
+  fs.writeFileSync('static/api/fonts.json', JSON.stringify(fonts));
+  fs.writeFileSync('src/styles/fonts.css', fonts.map(font => `@import url('../../static/fonts/${font}/index.min.css')`).join(';'));
+}
+
+async function pages() {
+  const pages = await (await glob('src/pages/**/*.js')).map(page => page.replace('src/pages', '').replace('.js', '')).filter(page => (!(page.includes('{') || page.includes('index') || page.includes('404'))));
+  fs.writeFileSync('static/api/pages.json', JSON.stringify(pages));
 }
