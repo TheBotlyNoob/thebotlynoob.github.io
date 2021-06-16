@@ -12,7 +12,7 @@
 }
 
 .category {
-    @apply font-semibold text-indigo-500;
+    @apply tracking-widest text-xs font-medium text-indigo-500 mb-1;
 }
 
 .date {
@@ -20,11 +20,11 @@
 }
 
 .main-body, .blog-post-content {
-    @apply md:flex-grow;
+    @apply flex-grow pl-6;
 }
 
 .title {
-    @apply text-2xl font-medium text-black dark:text-gray-400 mb-2;
+    @apply text-xl font-medium text-gray-900 mb-3;
 }
 
 .desc {
@@ -32,21 +32,37 @@
 }
 
 .learn-more {
-    @apply text-indigo-500 inline-flex items-center mt-4;
+    @apply text-indigo-500 inline-flex items-center mt-4 mb-5;
 }
 
 .arrow {
-    @apply w-4 h-4 ml-2
+    @apply w-4 h-4 ml-2;
 }
 
 .inner-container {
-    @apply py-8 flex flex-wrap md:flex-nowrap
+    @apply h-full flex items-start;
 }
 
 .middle-container {
-    @apply -my-8 divide-y-2 divide-gray-100
+    @apply py-8 px-4;
 }
 
 .head {
     margin-bottom: 60px;
+}
+
+.blog-info {
+    @apply text-gray-600 flex justify-center text-center;
+}
+
+.dates {
+    @apply w-12 flex-shrink-0 flex flex-col text-center leading-none;
+}
+
+.month {
+    @apply text-gray-500 pb-2 mb-2 border-b-2 border-gray-200;
+}
+
+.day {
+    @apply font-medium text-lg text-gray-800 leading-none;
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import doge from '../images/doge.jpg';
 import { Link } from 'gatsby';
-//import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 
 export default class Header extends Component {
   constructor(props) {
@@ -23,7 +22,7 @@ export default class Header extends Component {
       <div id='main' {...this.props}>
         <header className='text-gray-600 body-font'>
           <div className='container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center'>
-            <Link to='/' className='flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0'>
+            <Link to='/' className='flex title-font font-medium items-center mb-4 md:mb-0'>
               <img className='w-10 h-10 text-white p-2 bg-indigo-500 rounded-full' src={doge} alt='doge'/>
               <span className='ml-3 text-xl'>JJ</span>
             </Link>
