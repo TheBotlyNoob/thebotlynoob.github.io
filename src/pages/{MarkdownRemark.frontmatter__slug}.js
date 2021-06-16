@@ -1,11 +1,10 @@
 import React from 'react';
 import { Seo } from '../components';
 import { graphql } from 'gatsby';
-import { document } from 'browser-monads-ts';
 import { Layout } from '../components';
 import '../styles/blog.css';
 
-if (document.documentElement.classList.contains('dark')) import('../styles/dark_md.css');
+if (matchMedia('(prefers-color-scheme: dark)').matches) import('../styles/dark_md.css');
 else import('../styles/light_md.css');
 
 export default function Template({

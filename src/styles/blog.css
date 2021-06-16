@@ -16,7 +16,7 @@
 }
 
 .date {
-    @apply mt-1 text-gray-500 text-sm;
+    @apply mt-1 text-gray-500 dark:text-gray-300 text-sm;
 }
 
 .main-body, .blog-post-content {
@@ -24,15 +24,15 @@
 }
 
 .title {
-    @apply text-xl font-medium text-gray-900 mb-3;
+    @apply text-xl font-medium text-gray-900 dark:text-gray-300 mb-3;
 }
 
 .desc {
-    @apply leading-relaxed;
+    @apply leading-relaxed dark:text-gray-400;
 }
 
 .learn-more {
-    @apply text-indigo-500 inline-flex items-center mt-4 mb-5;
+    @apply inline-flex items-center mt-4 mb-5;
 }
 
 .arrow {
@@ -64,5 +64,9 @@
 }
 
 .day {
-    @apply font-medium text-lg text-gray-800 leading-none;
+    @apply font-medium text-lg text-gray-800 dark:text-gray-400 leading-none;
+}
+
+.num {
+    @apply text-gray-400;
 }
