@@ -31,9 +31,7 @@ export default class MainPage extends Component {
           <hr/>
 
           <ul id='projects'>
-            {this.state.ghRepos.map((repo, key) => (
-              <li className='project' key={key}>{!repo.private ? <a href={repo.html_url}>{repo.full_name}</a> : <></>}</li>
-            ))}
+            {this.state.ghRepos.map((repo, key) => !repo.private ? <li className='project' key={key}><a href={repo.html_url}>{repo.full_name}</a></li> : <></>)}
           </ul>
 
           <footer style={{ marginTop: '200px' }}>PS: I Would Do Some Fancy Pants Animations, But I'm Not That Good...</footer>

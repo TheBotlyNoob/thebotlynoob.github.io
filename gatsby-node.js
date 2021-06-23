@@ -11,7 +11,7 @@ md()
 fonts()
 pages()
 
-/* Set WebPack Config */
+// Set webpack config
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -47,6 +47,7 @@ async function fonts() {
 }
 
 async function pages() {
-  const pages = (await glob('src/pages/**/*.js')).map(page => page.replace('src/pages', '').replace('.js', '')).filter(page => (!(page.includes('{') || page.includes('index') || page.includes('404'))));
+  // Add routes to pages.json
+  const pages = (await glob('src/pages/**/*', { nodir: true })).map(page => page.replace('src/pages', '').replace('.js', '')).filter(page => (!(page.includes('{') || page.includes('index') || page.includes('404'))));
   fs.writeFileSync('static/api/pages.json', JSON.stringify(pages));
 }

@@ -9,7 +9,7 @@
 }
 
 * {
-    font-family: 'Pragmata Pro', Arial;
+    font-family: 'Proxima Nova', 'Pragmata Pro', 'Dank Mono', Arial;
     text-align: center;
     box-sizing: border-box;
     font-size: 18px;
@@ -26,7 +26,7 @@ footer { flex-shrink:1; }
 
 code {
     color: #e66767;
-    font-family: 'Operator Mono SSm Lig', Arial;
+    font-family: 'Operator Mono SSm Lig', 'Proxima Nova', 'Pragmata Pro', 'Dank Mono', Arial;
 }
 
 pre code {
@@ -41,6 +41,10 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+hr {
+    margin: 20px;
 }
 
 .gatsby-highlight {
