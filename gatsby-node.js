@@ -1,4 +1,4 @@
-require('dotenv').config({ path: '.env' });
+require('dotenv').config({ path: `${__dirname}/.env` });
 
 const fs = require('graceful-fs'),
   glob = require('glob-promise'),
@@ -23,7 +23,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 
 async function emojis() {
  // Set the emojis
- const emojis = (await (await fetch('https://raw.githack.com/github/gemoji/master/db/emoji.json')).json());
+ const emojis = await (await fetch('https://raw.githack.com/github/gemoji/master/db/emoji.json')).json();
 
  emojis.map(i => i.aliases.map(async j => (await glob('src/**/*', { nodir: true })).map(async file => {
    if (['css', 'js', 'html', 'ts', 'tsx', 'jsx'].includes(file.substring(file.lastIndexOf('.') + 1))) {
@@ -41,12 +41,12 @@ async function md() {
 
 async function fonts() {
   // Set some data for the fonts
-  const fonts = await (await glob('static/fonts/*/')).map(font => font.replace('static/fonts/', ''));
+  const fonts = (await glob('static/fonts/*/')).map(font => font.replace('static/fonts/', ''));
   fs.writeFileSync('static/api/fonts.json', JSON.stringify(fonts));
   fs.writeFileSync('src/styles/fonts.css', fonts.map(font => `@import url('../../static/fonts/${font}/index.min.css')`).join(';'));
 }
 
 async function pages() {
-  const pages = await (await glob('src/pages/**/*.js')).map(page => page.replace('src/pages', '').replace('.js', '')).filter(page => (!(page.includes('{') || page.includes('index') || page.includes('404'))));
+  const pages = (await glob('src/pages/**/*.js')).map(page => page.replace('src/pages', '').replace('.js', '')).filter(page => (!(page.includes('{') || page.includes('index') || page.includes('404'))));
   fs.writeFileSync('static/api/pages.json', JSON.stringify(pages));
 }

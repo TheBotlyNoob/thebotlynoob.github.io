@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { Link } from 'gatsby';
+import React, { Component } from 'react';
 import { Seo } from '../components';
 import { Layout } from '../components';
 import { Octokit, log } from '../utils';
@@ -7,23 +6,38 @@ import '../styles/main.css';
 
 const octokit = Octokit();
 
-export default function MainPage () {
-  useEffect(() => {
-    octokit.rest.rateLimit.get().then(i => i.data.resources.core.limit ? log.info(`Requests: ${i.data.resources.core.limit}`) : log.error('Your Out Of GitHub Requests! Some Things Will Not Work!'));
-  })
-  return (
-    <Layout>
-      <Seo title='Home'/>
-        <h1>
-          Hi, I'm Jay!
-        </h1>
-        <h3>
-          I am a passionate developer, I like to use web technologies like React, CSS, And JavaScript. I've Worked On Many Projects, Here are my current ones:
-        </h3>
-        <ul>
-          <li>Freedom App - A Social Media Platform - <Link to="https://git.opensrc.services/molai.dev/freedom-app">Git Repository</Link></li>
-          <li>MolaiBOT - A Discord Bot - <Link to="https://github.com/mtgsquad/molaibot">Git Repository</Link></li>
-        </ul>
-    </Layout>
-  );
+export default class MainPage extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      ghRepos: []
+    }
+  }
+
+  async componentDidMount() {
+    const rateLimit = (await octokit.rest.rateLimit.get()).data.resources.core.limit
+    rateLimit ? log.info(`Requests: ${rateLimit}`) : log.error('Your Out Of GitHub Requests! Some Things Will Not Work!');
+    this.setState({ ghRepos: (await octokit.rest.repos.listForAuthenticatedUser()).data });
+  }
+
+  render() {
+    return (
+      <Layout>
+        <Seo title='Home'/>
+          <h1>Hi, I'm Jay!</h1>
+          <h3>I'm A Passionate Developer, I Like To Use Web Technologies Such As React, HTML, And JavaScript. I've Worked On Many Projects, Here Are My Current Projects</h3>
+
+          <hr/>
+
+          <ul id='projects'>
+            {this.state.ghRepos.map((repo, key) => (
+              <li className='project' key={key}>{!repo.private ? <a href={repo.html_url}>{repo.full_name}</a> : <></>}</li>
+            ))}
+          </ul>
+
+          <footer style={{ marginTop: '200px' }}>PS: I Would Do Some Fancy Pants Animations, But I'm Not That Good...</footer>
+      </Layout>
+    )
+  }
 };
