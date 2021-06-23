@@ -1,3 +1,3 @@
-import log from './log';import Octokit from './octokit';
+import log from './log.ts';import Octokit from './octokit.ts';import fetcher from './fetcher.ts';
 
-export { log, Octokit }
+export { log, Octokit, fetcher }

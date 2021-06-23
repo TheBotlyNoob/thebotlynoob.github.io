@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Seo } from '../components';
 import { Link } from 'gatsby';
 import { Layout } from '../components';
+import { fetcher } from '../utils';
 
 export default class fonts extends Component {
     constructor(props) {
@@ -11,11 +12,9 @@ export default class fonts extends Component {
             data: [],
         }
     }
-    componentDidMount() {
-      fetch('/api/fonts.json')
-        .then(res => res.json())
-        .then(data => this.setState({ data }))
-    }
+
+    componentDidMount = fetcher('/api/fonts.json', null, 'json', data => this.setState({ data }))
+
     render() {
       return (
         <Layout>

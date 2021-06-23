@@ -2,28 +2,25 @@ import React from 'react';
 import { Seo } from '../components';
 import { Link } from 'gatsby';
 import { Layout } from '../components';
+import { fetcher } from '../utils';
 import '../styles/blog.css';
 
 export default class Blog extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = {
-        data: undefined,
-    }
-  }
+    super(props);
 
-  componentDidMount() {
-      fetch('/api/blogs.json')
-        .then(res => res.json())
-        .then(data => this.setState({
-          data
-        }));
-  }
+    this.state = {
+        data: [],
+    }
+}
+
+componentDidMount = fetcher('/api/blogs.json', null, 'json', data => this.setState({ data }))
+
   render() {
     return (
       <Layout>
         <Seo title='Blogs'/>
-        {this.state.data?.map((i, key) => <section key={key} className='blog-info'>
+        {this.state.data.map((i, key) => <section key={key} className='blog-info'>
           <div className='outer-container'>
             <div className='medium-container'>
               <div className='inner-container'>
