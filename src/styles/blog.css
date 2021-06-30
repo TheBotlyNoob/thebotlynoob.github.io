@@ -1,72 +1,73 @@
 /* CSS For Blog Posts */
 .blog-post {
-    @apply text-gray-600 overflow-hidden;
+  @apply text-gray-600 overflow-hidden;
 }
 
 .outer-container {
-    @apply container px-5 py-24 mx-auto;
+  @apply container px-5 py-24 mx-auto;
 }
 
 .left-info {
-    @apply md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col;
+  @apply md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col;
 }
 
 .category {
-    @apply tracking-widest text-xs font-medium text-indigo-500 mb-1;
+  @apply tracking-widest text-xs font-medium text-indigo-500 mb-1;
 }
 
 .date {
-    @apply mt-1 text-gray-500 dark:text-gray-300 text-sm;
+  @apply mt-1 text-gray-500 dark:text-gray-300 text-sm;
 }
 
-.main-body, .blog-post-content {
-    @apply flex-grow pl-6;
+.main-body,
+.blog-post-content {
+  @apply flex-grow pl-6;
 }
 
 .title {
-    @apply text-xl font-medium text-gray-900 dark:text-gray-300 mb-3;
+  @apply text-xl font-medium text-gray-900 dark:text-gray-300 mb-3;
 }
 
 .desc {
-    @apply leading-relaxed dark:text-gray-400;
+  @apply leading-relaxed dark:text-gray-400;
 }
 
 .learn-more {
-    @apply inline-flex items-center mt-4 mb-5;
+  @apply inline-flex items-center mt-4 mb-5;
 }
 
 .arrow {
-    @apply w-4 h-4 ml-2;
+  @apply w-4 h-4 ml-2;
 }
 
 .inner-container {
-    @apply h-full flex items-start;
+  @apply h-full flex items-start;
 }
 
 .middle-container {
-    @apply py-8 px-4;
+  @apply py-8 px-4;
 }
 
 .head {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .blog-info {
-    @apply text-gray-600 flex justify-center text-center;
+  @apply text-gray-600 flex justify-center text-center;
 }
 
 .dates {
-    @apply w-12 flex-shrink-0 flex flex-col text-center leading-none;
+  @apply w-12 flex-shrink-0 flex flex-col text-center leading-none;
 }
 
 .month {
-    @apply text-gray-500 pb-2 mb-2 border-b-2 border-gray-200;
+  @apply text-gray-500 pb-2 mb-2 border-b-2 border-gray-200;
 }
 
 .day {
-    @apply font-medium text-lg text-gray-800 dark:text-gray-400 leading-none;
+  @apply font-medium text-lg text-gray-800 dark:text-gray-400 leading-none;
 }
 
 .num {
-    @apply text-gray-400;
+  @apply text-gray-400;
 }

@@ -39,7 +39,7 @@
     "autoprefixer": "^10.2.6",
     "gatsby-plugin-postcss": "^4.7.1",
     "postcss": "^8.3.4",
-    "prettier": "2.3.1",
+    "prettier": "^2.3.1",
     "tailwindcss": "^2.1.4"
   },
   "keywords": [
@@ -52,7 +52,7 @@
     "start": "node --max_old_space_size=8192 ./node_modules/gatsby/cli.js develop -p 80 -o",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "pretty": "prettier --write ."
   },
   "repository": {
     "type": "git",

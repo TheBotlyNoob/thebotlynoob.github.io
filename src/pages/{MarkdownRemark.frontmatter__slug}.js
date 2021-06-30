@@ -5,18 +5,16 @@ import { window } from 'browser-monads-ts';
 import { Layout } from '../components';
 import '../styles/blog.css';
 
-if (window.matchMedia('(prefers-color-scheme: dark)').matches) import('../styles/dark_md.css');
+if (window.matchMedia('(prefers-color-scheme: dark)').matches)
+  import('../styles/dark_md.css');
 else import('../styles/light_md.css');
 
-export default function Template({
-  data
-}) {
-
+export default function Template({ data }) {
   const { frontmatter, html } = data.markdownRemark;
 
   return (
     <Layout className='blog-post-container'>
-      <Seo title={frontmatter.title}/>
+      <Seo title={frontmatter.title} />
       <div className='blog-post'>
         <div className='head'>
           <h1 className='title'>{frontmatter.title}</h1>
@@ -30,10 +28,10 @@ export default function Template({
         />
       </div>
     </Layout>
-  )
+  );
 }
 export const pageQuery = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
@@ -45,4 +43,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

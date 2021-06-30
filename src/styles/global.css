@@ -9,54 +9,76 @@
 }
 
 * {
-    font-family: 'Proxima Nova', 'Pragmata Pro', 'Dank Mono', Arial;
-    text-align: center;
-    box-sizing: border-box;
-    font-size: 18px;
-    margin: 0;
-    padding: 0;
+  font-family: 'Brandon Grotesque', 'Proxima Nova', 'Pragmata Pro', 'Dank Mono',
+    Arial;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
 }
 
-html,body { width:100%;height:100%;@apply text-black bg-white dark:bg-black dark:text-white text-center; }
-header { max-height:100px; }
-#___gatsby,#gatsby-focus-wrapper { width:100%;height:100%; }
-#main { width:100%;height:100%;display:flex;flex-direction:column; }
-#body { flex: 1 0 auto; }
-footer { flex-shrink:1; }
+html,
+body {
+  width: 100%;
+  height: 100%;
+  @apply text-black bg-white dark:bg-black dark:text-white text-center;
+}
+header {
+  max-height: 100px;
+}
+#___gatsby,
+#gatsby-focus-wrapper {
+  width: 100%;
+  height: 100%;
+}
+#main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#body {
+  flex: 1 0 auto;
+}
+footer {
+  flex-shrink: 1;
+}
 
 code {
-    color: #e66767;
-    font-family: 'Operator Mono SSm Lig', 'Proxima Nova', 'Pragmata Pro', 'Dank Mono', Arial;
+  color: #e66767;
+  font-family: 'Operator Mono SSm Lig', 'Proxima Nova', 'Pragmata Pro',
+    'Dank Mono', Arial;
 }
 
 pre code {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 a {
-    color: #74b9ff;
-    text-decoration: none;
-    font-size: inherit;
+  color: #74b9ff;
+  text-decoration: none;
+  font-size: inherit;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 hr {
-    margin: 20px;
+  margin: 20px;
 }
 
 .gatsby-highlight {
-    background-color: #1d1f21;
-    border-radius: 0.3em;
-    margin: 0.5em 0;
-    padding: 1em;
-    overflow: auto;
+  background-color: #1d1f21;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
 }
 
 .gatsby-highlight pre[class*='language-'].line-numbers {
-    padding: 0;
-    padding-left: 2.8em;
-    overflow: initial;
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
 }
