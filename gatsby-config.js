@@ -54,7 +54,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        appendScript: require.resolve(`${__dirname}/src/arc-sw.js`)
+        appendScript: `${__dirname}/src/arc-sw.js`
       }
     }
   ]
