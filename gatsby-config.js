@@ -11,7 +11,26 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {
+                sh: 'bash',
+                'sh-session': 'bash'
+              },
+              showLineNumbers: true,
+              noInlineHighlight: true
+            }
+          }
+        ]
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

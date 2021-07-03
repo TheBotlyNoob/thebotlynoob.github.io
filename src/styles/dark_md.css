@@ -128,4 +128,5 @@ body {
 .blog-post-content blockquote {
   border-left: 3px solid #01ff70;
   padding-left: 1rem;
+  background-color: #383838;
 }

@@ -13,7 +13,7 @@
     Arial;
   text-align: center;
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 20px;
   margin: 0;
   padding: 0;
 }
@@ -45,14 +45,18 @@ footer {
   flex-shrink: 1;
 }
 
+code *,
+code {
+  font-family: 'Operator Mono SSm Lig', 'Proxima Nova', 'Pragmata Pro',
+    'Dank Mono', Arial !important;
+}
+
 code {
   color: #e66767;
-  font-family: 'Operator Mono SSm Lig', 'Proxima Nova', 'Pragmata Pro',
-    'Dank Mono', Arial;
 }
 
 pre code {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 a {
@@ -69,8 +73,16 @@ hr {
   margin: 20px;
 }
 
+img {
+  display: block;
+  margin: 10px auto;
+}
+
+.gatsby-highlight pre[class*='language-'].line-numbers {
+  padding-left: 2.8em;
+}
+
 .gatsby-highlight {
-  background-color: #1d1f21;
   border-radius: 0.3em;
   margin: 0.5em 0;
   padding: 1em;
@@ -81,4 +93,29 @@ hr {
   padding: 0;
   padding-left: 2.8em;
   overflow: initial;
+}
+
+.gatsby-highlight-code-line {
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #f99;
+}
+
+.gatsby-highlight {
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*='language-'] {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  overflow: initial;
+  float: left;
+  min-width: 100%;
 }
