@@ -6,7 +6,6 @@ const fs = require('graceful-fs'),
   NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 emojis();
-pages();
 
 // Set webpack config
 
