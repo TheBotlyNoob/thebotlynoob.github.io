@@ -12,7 +12,7 @@ export default class fonts extends Component {
     };
   }
 
-  componentDidMount = fetcher('/api/fonts.json', null, 'json', (data) =>
+  componentDidMount = fetcher('/api/fonts', null, 'json', (data) =>
     this.setState({ data })
   );
 
