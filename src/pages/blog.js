@@ -14,7 +14,7 @@ export default class Blog extends React.Component {
     };
   }
 
-  componentDidMount = fetcher('/api/blogs', null, 'json', (data) =>
+  componentDidMount = fetcher('/api/blogs.json', null, 'json', (data) =>
     this.setState({ data })
   );
 
