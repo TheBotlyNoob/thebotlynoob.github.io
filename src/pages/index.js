@@ -51,6 +51,10 @@ export default class MainPage extends Component {
           )}
         </ul>
 
+        <span style={{ marginTop: '100px' }}>
+          I Am An Owner, And Developer Of <a href='/s/freedom'>Freedom</a>
+        </span>
+
         <footer style={{ marginTop: '200px' }}>
           PS: I Would Do Some Fancy Pants Animations, But I'm Not That Good...
         </footer>

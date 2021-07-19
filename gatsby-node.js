@@ -6,6 +6,9 @@ const fs = require('graceful-fs'),
   metaParser = require('markdown-yaml-metadata-parser'),
   NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
+// Redirect config
+const redirects = { freedom: 'https://freedomapp.cc' };
+
 emojis();
 md();
 fonts();
@@ -89,3 +92,12 @@ async function pages() {
     );
   fs.writeFileSync('static/api/pages.json', JSON.stringify(pages));
 }
+
+exports.createPages = async ({ actions }) => {
+  Object.entries(redirects).map(([path, toPath]) =>
+    actions.createRedirect({
+      fromPath: `/s/${path}`,
+      toPath
+    })
+  );
+};
