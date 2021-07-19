@@ -56,6 +56,7 @@ module.exports = {
       options: {
         appendScript: require.resolve(`${__dirname}/src/arc-sw.js`)
       }
-    }
+    },
+    `gatsby-plugin-client-side-redirect`
   ]
 };

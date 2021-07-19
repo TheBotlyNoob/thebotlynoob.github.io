@@ -10,6 +10,7 @@
     "browser-monads-ts": "^1.2.2",
     "dotenv": "^10.0.0",
     "gatsby": "^3.8.1",
+    "gatsby-plugin-client-side-redirect": "^1.1.0",
     "gatsby-plugin-gatsby-cloud": "^2.8.1",
     "gatsby-plugin-image": "^1.8.0",
     "gatsby-plugin-manifest": "^3.8.0",
