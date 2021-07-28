@@ -11,7 +11,7 @@ ADD . /app/
 RUN cd /app/ \
   && apt-get update -q \
   # Install curl (I thought this was installed by default, but I guess not)
-  && apt-get install -yq curl
+  && apt-get install -yq curl \
   # Get latest version of node 16
   && curl -sSL https://deb.nodesource.com/setup_16.x | bash  \
   # Install Nodejs, and npm
