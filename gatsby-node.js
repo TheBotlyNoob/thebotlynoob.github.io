@@ -85,7 +85,12 @@ async function pages() {
     .map((page) => page.replace('src/pages', '').replace('.js', ''))
     .filter(
       (page) =>
-        !(page.includes('{') || page.includes('index') || page.includes('404'))
+        ![
+          '/{MarkdownRemark.frontmatter__slug}',
+          '/index',
+          '/404',
+          '/s'
+        ].includes(page)
     );
   fs.writeFileSync('static/api/pages.json', JSON.stringify(pages));
 }

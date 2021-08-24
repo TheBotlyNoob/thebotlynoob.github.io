@@ -2,7 +2,7 @@ import React from 'react';
 import { Seo } from '../components';
 import { Link } from 'gatsby';
 import { Layout } from '../components';
-import { fetcher } from '../utils';
+import blogs from '../../static/api/blogs.json';
 import '../styles/blog.css';
 
 export default class Blog extends React.Component {
@@ -14,15 +14,11 @@ export default class Blog extends React.Component {
     };
   }
 
-  componentDidMount = fetcher('/api/blogs.json', null, 'json', (data) =>
-    this.setState({ data })
-  );
-
   render() {
     return (
       <Layout>
         <Seo title='Blogs' />
-        {this.state.data.map((i, key) => (
+        {blogs.map((i, key) => (
           <section key={key} className='blog-info'>
             <div className='outer-container'>
               <div className='medium-container'>

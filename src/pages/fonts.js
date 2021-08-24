@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Seo } from '../components';
 import { Layout } from '../components';
-import { fetcher } from '../utils';
+import fonts from '../../static/api/fonts.json';
 
-export default class fonts extends Component {
+export default class Fonts extends Component {
   constructor(props) {
     super(props);
 
@@ -12,17 +12,14 @@ export default class fonts extends Component {
     };
   }
 
-  componentDidMount = fetcher('/api/fonts.json', null, 'json', (data) =>
-    this.setState({ data })
-  );
-
   render() {
     return (
       <Layout>
+        {console.log(fonts)}
         <Seo title='Fonts' />
         <h1 style={{ margin: '10px' }}>Fonts</h1>
         <hr />
-        {this.state.data.map((i, key) => (
+        {fonts.map((i, key) => (
           <div key={key}>
             <a href={`/fonts/${i}`} style={{ margin: '5px' }}>
               {i.split('/')[i.split('/').length - 2]}
