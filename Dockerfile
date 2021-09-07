@@ -26,4 +26,4 @@ RUN cd /app/ \
 ADD . /app/
 
 # Run: npm run production, after build 
-ENTRYPOINT cd /app/ && && npm run serve -- -p $PORT
+ENTRYPOINT cd /app/ && npm run serve -- -p $PORT
