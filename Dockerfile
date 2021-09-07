@@ -19,11 +19,12 @@ RUN cd /app/ \
   # Install packages
   && npm install \
   # Build the website
-  && npm run build
+  && npm run build \
+  && npm install -g http-server
 
 
 # Copy all files into the Home directory
 ADD . /app/
 
 # Run: npm run production, after build 
-ENTRYPOINT cd /app/ && npm run serve -- -p $PORT
+ENTRYPOINT cd /app/public && http-server --port $PORT
