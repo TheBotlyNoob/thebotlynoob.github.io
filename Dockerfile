@@ -17,7 +17,7 @@ RUN cd /app/ \
   # Install Nodejs, and npm
   && apt-get install -qy nodejs \
   # Install packages
-  && npm install
+  && npm install \
   # Build the website
   && npm run build
 
