@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Seo } from '../components';
 import { Link } from 'gatsby';
 import { Layout } from '../components';
 import blogs from '../../static/api/blogs.json';
 import '../styles/blog.css';
 
-export default class Blog extends React.Component {
+export default class Blog extends Component {
   constructor(props) {
     super(props);
 

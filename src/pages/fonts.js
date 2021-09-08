@@ -15,7 +15,6 @@ export default class Fonts extends Component {
   render() {
     return (
       <Layout>
-        {console.log(fonts)}
         <Seo title='Fonts' />
         <h1 style={{ margin: '10px' }}>Fonts</h1>
         <hr />
