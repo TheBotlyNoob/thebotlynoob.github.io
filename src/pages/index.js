@@ -23,7 +23,12 @@ export default class MainPage extends Component {
       : log.error('Your Out Of GitHub Requests! Some Things Will Not Work!');
     this.setState({
       ghRepos: (
-        await octokit.rest.repos.listForUser({ username: 'TheBotlyNoob' })
+        await octokit.rest.repos.listForUser({
+          username: 'TheBotlyNoob',
+          per_page: 100,
+          type: 'all',
+          sort: 'updated'
+        })
       ).data
     });
   }
