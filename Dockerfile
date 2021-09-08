@@ -5,7 +5,8 @@ MAINTAINER TheBotlyNoob <thebotlynoob@gmail.com>
 USER root
 
 # Update, so that we can install the packages
-RUN cd /app/ \
+RUN mkdir /app/ \ 
+  && cd /app/ \
   && apt-get update -q \
   # Install curl (I thought this was installed by default, but I guess not)
   && apt-get install -yq curl git \
