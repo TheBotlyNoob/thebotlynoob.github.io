@@ -4,9 +4,6 @@ MAINTAINER TheBotlyNoob <thebotlynoob@gmail.com>
 # Become the root user
 USER root
 
-# Copy all files into the Home directory
-ADD . /app/
-
 # Update, so that we can install the packages
 RUN cd /app/ \
   && apt-get update -q \
@@ -17,16 +14,13 @@ RUN cd /app/ \
   # Install Nodejs, and npm
   && apt-get install -qy nodejs \
   # Inititate, and update the submodules
+  && git clone https://github.com/TheBotlyNoob/website . \
   && git submodule init \
   && git submodule update \
   # Install packages
   && npm install \
   # Build the website
   && npm run build
-
-
-# Copy all files into the Home directory
-ADD . /app/
 
 # Run: npm run production, after build 
 ENTRYPOINT cd /app/ && npm run serve -- --port "$PORT" --host 0.0.0.0
