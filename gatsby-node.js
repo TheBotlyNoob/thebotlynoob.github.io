@@ -65,7 +65,7 @@ async function fonts() {
   // Set some data for the fonts
   const fonts = (await glob('static/fonts/*/')).map((font) =>
     font.replace('static/fonts/', '')
-  );\
+  );
   fs.writeFileSync('static/api/fonts.json', JSON.stringify(fonts));
   fs.writeFileSync(
     'src/styles/fonts.css',
