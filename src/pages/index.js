@@ -22,7 +22,9 @@ export default class MainPage extends Component {
       ? log.info(`Requests: ${rateLimit}`)
       : log.error('Your Out Of GitHub Requests! Some Things Will Not Work!');
     this.setState({
-      ghRepos: (await octokit.rest.repos.listForAuthenticatedUser()).data
+      ghRepos: (
+        await octokit.rest.repos.listForUser({ username: 'TheBotlyNoob' })
+      ).data
     });
   }
 
