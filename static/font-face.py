@@ -14,7 +14,6 @@ def main(fonts):
 def generateCss(fontFiles):
     for fontFile in fontFiles:
         fontFamily = openf(fontFile).fullname
-        local = fontFamily
         fontWeight = "normal"
         fontStyle = "normal"
 
@@ -104,10 +103,13 @@ def generateFonts(fontFiles):
 
 
 if __name__ == "__main__":
-    if len(argv) > 1 and argv[1] == "-d":
-        for dir in argv[2:]:
-            if not os.path.isdir(dir):
-                raise ValueError("The Directories Must Be Directories")
-            main(glob.glob(dir + "/*.{" + ",".join(EXTS) + "}"))
+    if len(argv) > 1:
+        if argv[1] == "-d":
+            for dir in argv[2:]:
+                if not os.path.isdir(dir):
+                    raise ValueError("The Directories Must Be Directories")
+                main(glob.glob(dir + "/*.{" + ",".join(EXTS) + "}"))
+        else:
+            main(argv[1:])
     else:
-        main(argv[1:])
+        raise ValueError("You Need A Directory/File To Create A Font Face For!")
