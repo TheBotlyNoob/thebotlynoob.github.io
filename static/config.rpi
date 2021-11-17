@@ -1,3 +1,0 @@
-## Setup A Raspberry Pi, More Info at https://github.com/TheBotlyNoob/My-RPI-Config
-
-curl -H 'Cache-Control: no-cache' -sSL "https://raw.githubusercontent.com/TheBotlyNoob/My-RPI-Config/master/install.sh" | bash
