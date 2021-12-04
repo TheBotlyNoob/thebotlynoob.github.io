@@ -5,4 +5,4 @@ WORKDIR /src/
 
 RUN npm install --production && npm run build
 
-ENTRYPOINT npm run preview
+ENTRYPOINT npm run preview -- --port "$PORT"
