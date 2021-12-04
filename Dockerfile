@@ -3,6 +3,6 @@ FROM node
 ADD . /src/
 WORKDIR /src/
 
-RUN npm install --production && npm run build
+RUN npm install --production --prefix /src/ && npm run build --prefix /src/
 
-ENTRYPOINT npm run preview -- --port "$PORT"
+ENTRYPOINT npm run preview --prefix /src/ -- --project-root /src/ --verbose --port "$PORT"
