@@ -1,1 +1,1 @@
-web: npm install --global http-server && http-server ./dist
+web: npm ci && npm run build && npm run serve
