@@ -12,9 +12,6 @@
   "dependencies": {
     "prettier-plugin-astro": "^0.0.11",
     "astro": "^0.21.10",
-    "date-fns": "^2.27.0",
-    "lunr": "^2.3.9",
-    "mark.js": "^8.11.1",
     "tailwindcss": "^2.2.19"
   }
 }
