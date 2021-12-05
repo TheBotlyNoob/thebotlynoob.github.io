@@ -6,12 +6,13 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "http-server dist",
     "fmt": "prettier --write ."
   },
   "dependencies": {
     "prettier-plugin-astro": "^0.0.11",
     "astro": "^0.21.10",
-    "tailwindcss": "^2.2.19"
+    "tailwindcss": "^2.2.19",
+    "http-server": "^14.0.0"
   }
 }
