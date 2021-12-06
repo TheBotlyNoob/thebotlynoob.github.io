@@ -4,10 +4,11 @@
 /** @type {import('astro').AstroUserConfig} */
 module.exports = {
   devOptions: {
-    tailwindConfig: './tailwind.config.js',
+    tailwindConfig: 'tailwind.config.js',
+    port: process.env.PORT || 3000
   },
   buildOptions: {
     site: 'https://jj.is-a.dev/',
-    sitemap: true,
-  },
+    sitemap: true
+  }
 };

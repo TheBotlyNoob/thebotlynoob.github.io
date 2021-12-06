@@ -34,7 +34,7 @@ module.exports = {
       10: '10deg',
       45: '45deg',
       90: '90deg',
-      180: '180deg',
+      180: '180deg'
     },
     spacing: {
       px: '1px',
@@ -80,35 +80,35 @@ module.exports = {
       118: '30rem',
       126: '32rem',
       132: '34rem',
-      140: '36rem',
+      140: '36rem'
     },
     inset: (theme, { negative }) => ({
       ...theme('spacing'),
       ...negative(theme('spacing')),
       0: '0',
-      auto: 'auto',
+      auto: 'auto'
     }),
     extend: {
       borderRadius: {
-        xl: '.75rem',
+        xl: '.75rem'
       },
       colors: {
         black: '#12151E',
-        'hot-pink': '#fd2d78',
+        'hot-pink': '#fd2d78'
       },
       fontFamily: {
         display: ['Londrina Solid', 'sans-serif'],
-        body: ['Poppins', 'sans-serif'],
+        body: ['Poppins', 'sans-serif']
       },
       fontSize: {
         '7xl': '5rem',
         '8xl': '6rem',
-        '9xl': '7rem',
-      },
-    },
+        '9xl': '7rem'
+      }
+    }
   },
   variants: {
-    inset: ['responsive', 'hover'],
+    inset: ['responsive', 'hover']
   },
-  plugins: [],
+  plugins: []
 };

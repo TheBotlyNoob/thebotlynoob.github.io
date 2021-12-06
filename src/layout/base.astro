@@ -1,0 +1,24 @@
+---
+import NavBar from '@/src/components/navigation.astro';
+import AnimatedCursor from '@/src/components/animated-cursor.astro';
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/src/styles/global.scss" />
+
+    <title>{title ? `${title} | JJ` : 'JJ'}</title>
+  </head>
+  <body>
+    <AnimatedCursor />
+    <NavBar />
+    <slot />
+  </body>
+</html>
