@@ -10,7 +10,7 @@
     "fmt": "prettier --write ."
   },
   "dependencies": {
-    "astro": "^0.21.10",
+    "astro": "^0.21.11",
     "fast-glob": "^3.2.7",
     "http-server": "^14.0.0",
     "prettier-plugin-astro": "^0.0.11",
