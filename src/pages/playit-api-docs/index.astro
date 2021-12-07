@@ -1,0 +1,13 @@
+---
+import glob from 'fast-glob';
+
+export async function getStaticPaths() {
+  return glob('**/*.md').then((paths) =>
+    paths.map((path) => ({ params: { path } }))
+  );
+}
+
+const params = Astro.request.params;
+
+console.log(params);
+---

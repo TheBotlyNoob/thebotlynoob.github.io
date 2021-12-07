@@ -1,5 +1,5 @@
 ---
-import Layout from '@/src/layout/base.astro';
+import Layout from '@/layouts/base.astro';
 ---
 
 <Layout>
@@ -20,11 +20,9 @@ import Layout from '@/src/layout/base.astro';
 
   <style lang="scss">
     body {
-      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/257418/andy-holmes-698828-unsplash.jpg);
+      background-image: url(/assets/images/starry-sky.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      min-height: 100vh;
-      min-width: 100vw;
       font-family: 'Roboto Mono', 'Liberation Mono', Consolas, monospace;
       color: rgba(255, 255, 255, 0.87);
     }
