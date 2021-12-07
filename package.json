@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "serve": "http-server dist --port 3000",
+    "serve": "http-server dist",
     "fmt": "prettier --write ."
   },
   "dependencies": {
