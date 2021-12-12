@@ -1,0 +1,19 @@
+html {
+  cursor: none !important;
+  // background-color: black;
+}
+
+#cursor {
+  position: fixed;
+  display: inline-block;
+  border-radius: 50%;
+  border: 3px solid #cacaca;
+  width: 10px;
+  height: 10px;
+  left: 20px;
+  right: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease,
+    background-color 0.2s ease;
+  pointer-events: none;
+  background-color: black;
+}

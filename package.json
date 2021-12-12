@@ -7,14 +7,15 @@
     "start": "astro dev",
     "build": "astro build",
     "serve": "http-server dist",
-    "fmt": "prettier --write ."
+    "fmt": "prettier --write .",
+    "upd": "ncu -u && npm install"
   },
   "dependencies": {
-    "astro": "^0.21.11",
+    "astro": "^0.21.12",
     "fast-glob": "^3.2.7",
     "http-server": "^14.0.0",
+    "npm-check-updates": "^12.0.3",
     "prettier-plugin-astro": "^0.0.11",
-    "react-animated-cursor": "^2.2.0",
-    "tailwindcss": "^2.2.19"
+    "tailwindcss": "^3.0.1"
   }
 }

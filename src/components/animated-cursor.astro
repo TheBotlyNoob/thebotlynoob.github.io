@@ -1,90 +1,50 @@
-<div id="cursor">
-  <div id="cursor1"></div>
-  <div id="cursor2"></div>
-  <div id="cursor3"></div>
-</div>
+---
+import '@/styles/cursor.scss';
+---
+
+<span>Hi!</span>
 
 <script>
-  let cursor1 = document.getElementById('cursor1');
-  let cursor2 = document.getElementById('cursor2');
-  let cursor3 = document.getElementById('cursor3');
+  const cursor = document.createElement('div');
+  cursor.id = 'cursor';
+  document.body.prepend(cursor);
 
-  document.body.addEventListener('mousemove', (event) => {
-    cursor1.style.left = event.clientX + 'px';
-    cursor1.style.top = event.clientY + 'px';
-    cursor2.style.left = event.clientX + 'px';
-    cursor2.style.top = event.clientY + 'px';
-    cursor3.style.left = event.clientX + 'px';
-    cursor3.style.top = event.clientY + 'px';
-  });
+  const link = document.querySelector('.link');
 
-  function addClasses() {
-    cursor2.classList.add('hover');
-    cursor3.classList.add('hover');
+  window.addEventListener('mousemove', mouseMoveHandler);
+  window.addEventListener('mousedown', mouseDownHandler);
+  window.addEventListener('mouseup', mouseUpHandler);
+  link.addEventListener('mouseenter', linkEnterHandler);
+  link.addEventListener('mouseleave', linkLeaveHandler);
+
+  function mouseMoveHandler(e) {
+    cursor.style.left = e.clientX - cursor.offsetWidth / 2 + 'px';
+    cursor.style.top = e.clientY - cursor.offsetHeight / 2 + 'px';
+    cursor.style.opacity = 1;
   }
 
-  function removeClasses() {
-    cursor2.classList.remove('hover');
-    cursor3.classList.remove('hover');
+  function mouseUpHandler(e) {
+    cursor.style.transform = 'scale(1)';
+
+    if (e.target.classList.contains('link')) {
+      cursor.style.transform = 'scale(5)';
+      cursor.style.opacity = 0;
+    }
   }
 
-  removeClasses();
-
-  for (const target of document.getElementsByClassname('hover-target')) {
-    addListeners(target);
+  function mouseDownHandler() {
+    cursor.style.transform = 'scale(1.5)';
   }
 
-  function addListeners(target) {
-    target.addEventListener('mouseover', addClasses);
-    target.addEventListener('mouseout', removeClasses);
+  function linkEnterHandler() {
+    cursor.style.transform = 'scale(1.5)';
+    cursor.style.borderColor = '#e71d36';
+    cursor.style.backgroundColor = 'rgba(255, 0, 0, .2)';
+  }
+
+  function linkLeaveHandler() {
+    cursor.style.transform = 'scale(1)';
+    cursor.style.borderColor = '#fdfffc';
+    cursor.style.backgroundColor = 'rgba(255, 0, 0, 0)';
   }
 </script>
-
-<style>
-  #cursor1,
-  #cursor2,
-  #cursor3 {
-    position: fixed;
-    border-radius: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    pointer-events: none;
-    left: -100px;
-    top: 50%;
-    mix-blend-mode: difference;
-    -webkit-transition: all 300ms linear;
-    transition: all 300ms linear;
-  }
-  #cursor1 {
-    background-color: #fff;
-    height: 0;
-    width: 0;
-    z-index: 99999;
-  }
-  #cursor2,
-  #cursor3 {
-    height: 36px;
-    width: 36px;
-    z-index: 99998;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-  }
-  #cursor2 .hover,
-  #cursor3 .hover {
-    -webkit-transform: scale(2) translateX(-25%) translateY(-25%);
-    transform: scale(2) translateX(-25%) translateY(-25%);
-    border: none;
-  }
-  #cursor2 {
-    border: 2px solid #fff;
-    box-shadow: 0 0 22px rgba(255, 255, 255, 0.6);
-  }
-  #cursor2 .hover {
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
-  }
-
-  body {
-    cursor: none;
-    background-color: black;
-  }
-</style>

@@ -1,6 +1,7 @@
 ---
 import NavBar from '@/components/navigation.astro';
-import AnimatedCursor from 'react-animated-cursor';
+import AnimatedCursor from '@/components/animated-cursor.astro';
+import '@/styles/global.scss';
 
 const { title } = Astro.props;
 ---
@@ -12,12 +13,10 @@ const { title } = Astro.props;
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="/src/styles/global.scss" />
-
     <title>{title ? `${title} | JJ` : 'JJ'}</title>
   </head>
   <body>
-    <AnimatedCursor client:only="react" />
+    <AnimatedCursor />
 
     <NavBar />
     <slot />
