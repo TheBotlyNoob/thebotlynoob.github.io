@@ -5,7 +5,7 @@ document.body.prepend(cursor);
 window.addEventListener("mousemove", (e) => {
   cursor.style.left = e.clientX - cursor.offsetWidth / 2 + "px";
   cursor.style.top = e.clientY - cursor.offsetHeight / 2 + "px";
-  cursor.style.opacity = 1;
+  cursor.style.opacity = "1";
 });
 
 window.addEventListener(
@@ -16,9 +16,9 @@ window.addEventListener(
 window.addEventListener("mouseup", (e) => {
   cursor.style.transform = "scale(1)";
 
-  if (e.target.tagName === "A") {
+  if ((e.target as HTMLElement).tagName === "A") {
     cursor.style.transform = "scale(5)";
-    cursor.style.opacity = 0;
+    cursor.style.opacity = "0";
     setTimeout(() => (cursor.style.transform = "scale(1)"), 100);
   }
 });
