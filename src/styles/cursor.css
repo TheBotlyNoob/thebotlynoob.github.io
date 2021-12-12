@@ -6,7 +6,7 @@
   position: fixed;
   display: inline-block;
   border-radius: 50%;
-  border: 3px solid #cacaca;
+  border: 3px solid var(--cursor-circle-color);
   width: 10px;
   height: 10px;
   opacity: 0;
