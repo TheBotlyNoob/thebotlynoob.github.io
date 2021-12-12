@@ -1,48 +1,41 @@
 ---
-import '@/styles/cursor.css';
+import "@/styles/cursor.css";
 ---
 
 <script>
-  const cursor = document.createElement('div');
-  cursor.id = 'cursor';
-  document.body.prepend(cursor);
+  document.addEventListener("DOMContentLoaded", () => {
+    const cursor = document.createElement("div");
+    cursor.id = "cursor";
+    document.body.prepend(cursor);
 
-  const link = document.querySelector('.link');
+    window.addEventListener("mousemove", (e) => {
+      cursor.style.left = e.clientX - cursor.offsetWidth / 2 + "px";
+      cursor.style.top = e.clientY - cursor.offsetHeight / 2 + "px";
+      cursor.style.opacity = 1;
+    });
+    window.addEventListener(
+      "mousedown",
+      () => (cursor.style.transform = "scale(1.5)")
+    );
+    window.addEventListener("mouseup", (e) => {
+      cursor.style.transform = "scale(1)";
 
-  window.addEventListener('mousemove', mouseMoveHandler);
-  window.addEventListener('mousedown', mouseDownHandler);
-  window.addEventListener('mouseup', mouseUpHandler);
-  link.addEventListener('mouseenter', linkEnterHandler);
-  link.addEventListener('mouseleave', linkLeaveHandler);
+      if (e.target.tagName === "A") {
+        cursor.style.transform = "scale(5)";
+        cursor.style.opacity = 0;
+        setTimeout(() => (cursor.style.transform = "scale(1)"), 100);
+      }
+    });
 
-  function mouseMoveHandler(e) {
-    cursor.style.left = e.clientX - cursor.offsetWidth / 2 + 'px';
-    cursor.style.top = e.clientY - cursor.offsetHeight / 2 + 'px';
-    cursor.style.opacity = 1;
-  }
-
-  function mouseUpHandler(e) {
-    cursor.style.transform = 'scale(1)';
-
-    if (e.target.classList.contains('link')) {
-      cursor.style.transform = 'scale(5)';
-      cursor.style.opacity = 0;
-    }
-  }
-
-  function mouseDownHandler() {
-    cursor.style.transform = 'scale(1.5)';
-  }
-
-  function linkEnterHandler() {
-    cursor.style.transform = 'scale(1.5)';
-    cursor.style.borderColor = '#e71d36';
-    cursor.style.backgroundColor = 'rgba(255, 0, 0, .2)';
-  }
-
-  function linkLeaveHandler() {
-    cursor.style.transform = 'scale(1)';
-    cursor.style.borderColor = '#fdfffc';
-    cursor.style.backgroundColor = 'rgba(255, 0, 0, 0)';
-  }
+    Array.from(document.getElementsByTagName("a")).map((link) => {
+      link.addEventListener(
+        "mouseenter",
+        () => (cursor.style.transform = "scale(1.7)")
+      );
+      link.addEventListener(
+        "mouseleave",
+        () => (cursor.style.transform = "scale(1)")
+      );
+    });
+  });
 </script>
