@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "astro": "^0.21.12",
+    "astro-stylesheet": "^3.0.0",
+    "astro-xelement": "^3.1.0",
     "fast-glob": "^3.2.7",
     "http-server": "^14.0.0",
     "json2toml": "^2.2.1",
