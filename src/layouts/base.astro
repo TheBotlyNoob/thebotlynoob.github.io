@@ -5,7 +5,11 @@ import "@/styles/global.css";
 import NavBar from "@/components/navigation.astro";
 import AnimatedCursor from "@/components/cursor.astro";
 
-const { title } = Astro.props;
+export interface props {
+  title?: string | undefined;
+}
+
+const { title } = Astro.props as props;
 ---
 
 <!DOCTYPE html>

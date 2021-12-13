@@ -10,11 +10,10 @@
     "fmt": "prettier --write ."
   },
   "dependencies": {
-    "@iarna/toml": "^2.2.5",
     "astro": "^0.21.12",
     "fast-glob": "^3.2.7",
     "http-server": "^14.0.0",
-    "prettier-plugin-astro": "^0.0.11",
-    "toml": "^3.0.0"
+    "json2toml": "^2.2.1",
+    "prettier-plugin-astro": "^0.0.11"
   }
 }
