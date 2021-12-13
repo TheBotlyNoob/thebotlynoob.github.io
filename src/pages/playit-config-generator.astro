@@ -1,7 +1,18 @@
 ---
 import Layout from "@/layouts/base.astro";
+import "@/styles/playit-config-generator.css";
 ---
 
 <Layout>
   <script defer async src="/src/ts/playit-config-generator.ts"></script>
+
+  <div id="inputs">
+    <input id="secret-key" type="text" placeholder="Secret Key" />
+  </div>
+
+  <div id="output">
+    <h1>Output:</h1>
+    <hr />
+    <pre id="config-output"></pre>
+  </div>
 </Layout>

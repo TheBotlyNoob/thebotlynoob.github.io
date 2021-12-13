@@ -4,11 +4,6 @@
   --font-color: black;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-}
-
 html {
   background-color: var(--background-color);
   color: var(--font-color);
