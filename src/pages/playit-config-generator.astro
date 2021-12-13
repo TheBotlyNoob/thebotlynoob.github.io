@@ -1,5 +1,6 @@
 ---
 import Layout from "@/layouts/base.astro";
+import { Code } from 'astro/components'
 import "@/styles/playit-config-generator.css";
 ---
 
@@ -37,5 +38,6 @@ import "@/styles/playit-config-generator.css";
   <div id="output">
     <h1>Your Config:</h1>
     <hr />
+    <Code id="config-output" lang="toml" />
   </div>
 </Layout>
