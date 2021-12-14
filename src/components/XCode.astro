@@ -3,32 +3,11 @@ import XElement from 'astro-xelement'
 
 const {pre:XPre,code:XCode} = XElement
 ---
-<XPre><XCode @do={(element)=>{
-const example = `# This is a TOML document
-
-title = "TOML Example"
-
-[owner]
-name = "Tom Preston-Werner"
-dob = 1979-05-27T07:32:00-08:00
-
-[database]
-enabled = true
-ports = [ 8000, 8001, 8002 ]
-data = [ ["delta", "phi"], [3.14] ]
-temp_targets = { cpu = 79.5, case = 72.0 }
-
-[servers]
-
-[servers.alpha]
-ip = "10.0.0.1"
-role = "frontend"
-
-[servers.beta]
-ip = "10.0.0.2"
-role = "backend"`
-
-element.textContent = example
+<XPre><XCode @do={async (element)=>{
+const tommy = await fetch('https://raw.githubusercontent.com/TheBotlyNoob/playit.gg-rust/master/Cargo.toml')
+const reader = await tommy.text()
+console.log(reader)
+element.textContent = reader
 }} class="language-toml">
 
 </XCode></XPre>	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-core.min.js"></script>
