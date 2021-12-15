@@ -4,6 +4,7 @@
 
 #cursor {
   position: fixed;
+  z-index: 1;
   display: inline-block;
   border-radius: 50%;
   border: 3px solid var(--cursor-circle-color);

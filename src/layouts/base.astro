@@ -1,9 +1,8 @@
 ---
-import "@/styles/reset.css";
-
-import "@/styles/global.css";
+import "@/css/reset.css";
+import "@/css/cursor.css";
+import "@/css/global.css";
 import NavBar from "@/components/navigation.astro";
-import AnimatedCursor from "@/components/cursor.astro";
 
 export interface props {
   title?: string | undefined;
@@ -18,11 +17,12 @@ const { title } = Astro.props as props;
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" defer async src="/src/ts/prism.ts"></script>
+    <script type="module" defer async src="/src/ts/cursor.ts"></script>
 
     <title>{title ? `${title} | JJ` : "JJ"}</title>
   </head>
   <body>
-    <AnimatedCursor />
     <NavBar />
 
     <slot />

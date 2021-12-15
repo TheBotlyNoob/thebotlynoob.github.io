@@ -10,10 +10,12 @@
     "fmt": "prettier --write ."
   },
   "dependencies": {
+    "@types/prismjs": "^1.16.6",
     "astro": "^0.21.12",
     "fast-glob": "^3.2.7",
     "http-server": "^14.0.0",
     "json2toml": "^2.2.1",
-    "prettier-plugin-astro": "^0.0.11"
+    "prettier-plugin-astro": "^0.0.11",
+    "prismjs": "^1.25.0"
   }
 }

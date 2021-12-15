@@ -23,3 +23,5 @@ cypress/screenshots
 
 package-lock.json
 yarn.lock
+pnpm-lock.yaml
+yarn.lock

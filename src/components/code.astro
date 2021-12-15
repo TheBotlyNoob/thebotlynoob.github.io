@@ -1,0 +1,20 @@
+---
+export interface props {
+  lang: string;
+  inline?: boolean;
+}
+
+const { lang, inline, ...props } = Astro.props as props;
+---
+
+{inline ? (
+  <code {...props} class={`language-${lang}`}>
+    <slot />
+  </code>
+) : (
+  <pre>
+    <code {...props} class={`language-${lang}`}>
+      <slot />
+    </code>
+  </pre>
+)}
