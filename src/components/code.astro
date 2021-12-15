@@ -12,8 +12,8 @@ const { lang, inline, ...props } = Astro.props as props;
     <slot />
   </code>
 ) : (
-  <pre>
-    <code {...props} class={`language-${lang}`}>
+  <pre {...props}>
+    <code class={`language-${lang}`}>
       <slot />
     </code>
   </pre>
