@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/base.astro";
 import Code from "@/components/code.astro";
+import { Button } from "react-bulma-components";
 import "@/css/playit-config-generator.css";
 ---
 
@@ -10,9 +11,11 @@ import "@/css/playit-config-generator.css";
 
   <div id="input">
     <input id="secret-key" type="text" placeholder="Secret Key" />
+    <div id="mappings">
+      <div class="mapping"></div>
+    </div>
+    <Button id="create-mapping" color="primary">Create A Mapping</Button>
   </div>
-
-  <button></button>
 
   <!-- 
     #[derive(Serialize, Deserialize, Debug)]
@@ -38,6 +41,11 @@ import "@/css/playit-config-generator.css";
   <div id="output">
     <h1>Your Config:</h1>
     <hr />
-    <Code id="config-output" lang="toml">some = "toml"</Code>
+
+    <!-- prettier-ignore -->
+    <Code id="config-output" lang="toml">
+      mappings = [] 
+      secret_key = ""
+    </Code>
   </div>
 </Layout>

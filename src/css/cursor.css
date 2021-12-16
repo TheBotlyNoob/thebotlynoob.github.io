@@ -1,5 +1,5 @@
-* {
-  cursor: none;
+html {
+  cursor: none !important;
 }
 
 #cursor {

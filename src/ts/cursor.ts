@@ -1,4 +1,4 @@
-const cursor = document.createElement("div");
+let cursor = document.createElement("div");
 cursor.id = "cursor";
 document.body.prepend(cursor);
 

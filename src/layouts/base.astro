@@ -1,5 +1,6 @@
 ---
 import "@/css/reset.css";
+import "bulma/css/bulma.css";
 import "@/css/cursor.css";
 import "@/css/global.css";
 import NavBar from "@/components/navigation.astro";
@@ -8,7 +9,7 @@ export interface props {
   title?: string | undefined;
 }
 
-const { title } = Astro.props as props;
+let { title } = Astro.props as props;
 ---
 
 <!DOCTYPE html>
