@@ -12,9 +12,6 @@ import "prismjs/plugins/show-language/prism-show-language";
 import "prismjs/plugins/line-numbers/prism-line-numbers";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
-// Extra languages
-import "prismjs/components/prism-toml";
-
 Prism.highlightAll();
 
 Array.from(
