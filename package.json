@@ -11,11 +11,11 @@
   },
   "dependencies": {
     "@types/prismjs": "^1.16.6",
-    "astro": "^0.21.12",
+    "astro": "^0.22.5",
     "astro-feather-icons": "^1.0.2",
     "fast-glob": "^3.2.7",
     "http-server": "^14.0.0",
-    "json2toml": "^2.2.1",
+    "json2toml": "^3.0.1",
     "prettier-plugin-astro": "^0.0.11",
     "prismjs": "^1.25.0",
     "react": "^17.0.2",
