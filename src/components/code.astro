@@ -5,15 +5,17 @@ export interface props {
 }
 
 let { lang, inline, ...props } = Astro.props as props;
+
+let class_name = `language-${lang}`;
 ---
 
 {inline ? (
-  <code {...props} class={`language-${lang}`}>
+  <code {...props} class={class_name}>
     <slot />
   </code>
 ) : (
   <pre {...props}>
-    <code class={`language-${lang}`}>
+    <code class={class_name}>
       <slot />
     </code>
   </pre>
