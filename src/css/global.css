@@ -1,19 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap");
 
 :root {
-  --cursor-circle-color: #cacaca;
-  --background-color: white;
-  --font-color: black;
-  --font: Ubuntu;
-  --fallback-font: Monospace;
+    --background-color: white;
+    --font-color: black;
+    --font: Ubuntu;
+    --fallback-font: Monospace;
 }
 
-html {
-  background-color: var(--background-color);
-  color: var(--font-color);
-  font-family: var(--font), var(--fallback-font);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    text-align: center;
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-family: var(--font), var(--fallback-font);
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
