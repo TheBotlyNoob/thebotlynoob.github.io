@@ -28,7 +28,7 @@ jobs:
           node-version: 18.x
 
       - name: Install dependencies
-      run: npm install
+        run: npm install
 
       - name: Build site w/Astro
         run: npm run build
