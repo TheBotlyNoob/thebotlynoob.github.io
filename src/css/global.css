@@ -29,3 +29,7 @@ body {
 .hidden {
     display: none;
 }
+
+li {
+    margin: 30px;
+}
