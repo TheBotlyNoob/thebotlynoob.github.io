@@ -1,27 +1,24 @@
 # build output
-dist
+build
+static
+.svelte-kit
+.netlify
+.vercel
 
 # dependencies
-node_modules/
-.snowpack/
+node_modules
+
+# env
+*.local
 
 # logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# environment variables
-.env
-.env.production
+pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
 
-#cypress
-cypress/videos
-cypress/screenshots
-
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-yarn.lock
+# temp file
+src/routes/**/+page.svelte.md
+src/routes/**/+page.md
+*.config.js
+urara.js
