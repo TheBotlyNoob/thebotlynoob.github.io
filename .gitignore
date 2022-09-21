@@ -1,24 +1,8 @@
-# build output
-build
-static
-.svelte-kit
-.netlify
-.vercel
-
-# dependencies
-node_modules
-
-# env
-*.local
-
-# logs
-pnpm-debug.log*
-
-# macOS-specific files
 .DS_Store
-
-# temp file
-src/routes/**/+page.svelte.md
-src/routes/**/+page.md
-*.config.js
-urara.js
+node_modules
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example
