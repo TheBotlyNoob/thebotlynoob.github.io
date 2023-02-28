@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import avatar from "../assets/avatar.jpg";
+---
+
+<Layout title="Jay Jackson">
+    <main class="flex flex-col lg:flex-row">
+        <div
+            class="hero min-h-screen bg-base-200 hero-content flex-col lg:flex-row-reverse gap-10 w-full lg:w-6/12"
+        >
+            <img
+                class="avatar shadow-xl max-w-sm rounded-lg w-64 border"
+                src={avatar}
+            />
+            <div>
+                <h1>Jay Jackson</h1>
+                <p class="py-6 mx-8">
+                    Lover of dogs, anything tech-related, math, and creative
+                    writing.
+                </p>
+            </div>
+        </div>
+        <div
+            class="flex flex-col items-center min-w-6/12 min-h-full w-full lg:w-6/12"
+        >
+            <h2 class="mt-10">About Me</h2>
+        </div>
+    </main>
+</Layout>
