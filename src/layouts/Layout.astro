@@ -36,8 +36,6 @@ const { title } = Astro.props;
                                 true)
                     );
             }
-            // "theme" LocalStorage value is set by the package to remember user preference.
-            // The value is checked and applyed before rendering anything.
         </script>
         <script>
             import { themeChange } from "theme-change";
@@ -45,7 +43,7 @@ const { title } = Astro.props;
         </script>
         <title>{title}</title>
     </head>
-    <body class="w-full h-full m-0 p-0 bg-base-200 font-sans">
+    <body class="w-full h-full m-0 p-0 bg-base-200 font-mono">
         <input
             type="checkbox"
             class="absolute top-2 right-3 z-50 toggle"
@@ -58,7 +56,7 @@ const { title } = Astro.props;
 </html>
 <style is:global type="scss">
     :root {
-        font-size: 150%;
+        font-size: 140%;
     }
     h1,
     h2,

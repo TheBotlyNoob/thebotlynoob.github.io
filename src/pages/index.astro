@@ -4,12 +4,12 @@ import avatar from "../assets/avatar.jpg";
 ---
 
 <Layout title="Jay Jackson">
-    <main class="flex flex-col xl:flex-row">
+    <main class="flex flex-col xl:flex-row gap-8">
         <section
             class="hero min-h-screen hero-content flex-col lg:flex-row-reverse gap-10 w-full xl:w-6/12"
         >
             <img
-                class="avatar md:shadow-xl dark:shadow-gray-200 max-w-sm rounded-lg w-64"
+                class="avatar md:shadow-xl md:dark:shadow-gray-400 max-w-sm rounded-lg w-64"
                 src={avatar}
             />
             <div>
@@ -21,10 +21,31 @@ import avatar from "../assets/avatar.jpg";
             </div>
         </section>
         <section
-            class="flex flex-col items-center min-w-6/12 min-h-full w-full lg:w-6/12"
+            class="flex flex-col items-center min-h-full w-full xl:w-6/12 md:px-5"
         >
             <h2 class="mt-10">About Me</h2>
-            <p class="mt-6">I'm a</p>
+            <p class="mt-6">
+                I am someone who adores coding. Some might say I like technology
+                a tad too much, but I think my interest is , excels in school,
+                and is excited for new opportunities. There is nothing quite
+                like the thrill of solving a challenging programming problem,
+                and I find great satisfaction in the creative and logical
+                aspects of coding.
+
+                <br /><br />
+
+                In addition to my love for coding, I am also a high-achieving
+                student who is always striving to learn more and improve myself.
+                I have a strong work ethic and am not afraid to put in the time
+                and effort required to achieve my goals.
+
+                <br /><br />
+
+                Looking towards the future, I have clear plans for my academic
+                and professional career. I am determined to attend a top college
+                or university, where I can continue to pursue my interests in
+                coding and possibly psychology.
+            </p>
         </section>
     </main>
 </Layout>
