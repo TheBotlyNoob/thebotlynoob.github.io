@@ -36,6 +36,17 @@ const { title } = Astro.props;
                                 true)
                     );
             }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const toggle = document.getElementById("theme-toggle");
+                toggle.addEventListener("click", () => {
+                    if (toggle.checked) {
+                        document.documentElement.classList.add("dark");
+                    } else {
+                        document.documentElement.classList.remove("dark");
+                    }
+                });
+            });
         </script>
         <script>
             import { themeChange } from "theme-change";
@@ -49,7 +60,7 @@ const { title } = Astro.props;
             class="absolute top-2 right-3 z-50 toggle"
             id="theme-toggle"
             data-toggle-theme="night,emerald"
-            data-act-class="night"
+            data-act-class="light"
         />
         <slot />
     </body>
