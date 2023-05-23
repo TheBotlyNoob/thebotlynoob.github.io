@@ -1,46 +1,75 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import avatar from "../assets/avatar.jpg";
+import Layout from "@/layouts/Layout.astro";
+import avatar from "@/assets/avatar.jpg";
 ---
 
-<Layout title="Jay Jackson">
-    <div class="flex flex-col xl:flex-row gap-8">
-        <section
-            class="sm:pl-12 hero min-h-screen hero-content flex-col xl:flex-row-reverse gap-10 w-full xl:w-6/12"
-        >
-            <img
-                class="avatar shadow-lg dark:shadow-gray-50 max-w-sm rounded-lg w-64"
-                src={avatar}
-            />
-            <div>
-                <h1>Jay Jackson</h1>
-                <p class="my-6">
-                    Lover of dogs, anything tech-related, math, and creative
-                    writing.
-                </p>
-            </div>
-        </section>
-        <section
-            class="flex flex-col items-center min-h-full w-full xl:w-6/12 px-5"
-        >
-            <h2 class="mt-10">About Me</h2>
-            <p class="mt-6">
-                Hello 👋! I'm Jay. A devoted student and programmer. My favorite
-                (<i>among far too many</i>) hobbies are: <kbd
-                    class="!kbd tooltip tooltip-info"
-                    data-tip="operating systems">coding</kbd
-                >, <kbd
-                    class="!kbd tooltip tooltip-info"
-                    data-tip="generally helpful things">coding</kbd
-                >, <kbd class="!kbd tooltip tooltip-info" data-tip="websites"
-                    >coding</kbd
-                >, <a href="/school"
-                    ><kbd
-                        class="!kbd tooltip tooltip-success"
-                        data-tip="mostly for school">creative writing</kbd
-                    ></a
-                >. As you can clearly see, I enjoy programming
+<Layout
+    title="Jay Jackson"
+    class={["flex", "flex-col", "xl:flex-row", "gap-8"]}
+>
+    <section
+        class:list={[
+            "sm:pl-12",
+            "hero",
+            "min-h-screen",
+            "hero-content",
+            "flex-col",
+            "xl:flex-row-reverse",
+            "gap-10",
+            "w-full",
+            "xl:w-6/12"
+        ]}
+    >
+        <img
+            class:list={[
+                "avatar",
+                "shadow-lg",
+                "dark:shadow-gray-50",
+                "max-w-sm",
+                "rounded-lg",
+                "w-64"
+            ]}
+            src={avatar}
+        />
+        <div>
+            <h1>Jay Jackson</h1>
+            <p class:list={["my-6"]}>
+                Lover of dogs, anything tech-related, math, and creative
+                writing.
             </p>
-        </section>
-    </div>
+        </div>
+    </section>
+    <section
+        class:list={[
+            "flex",
+            "flex-col",
+            "items-center",
+            "min-h-full",
+            "w-full",
+            "xl:w-6/12",
+            "px-5"
+        ]}
+    >
+        <h2 class:list={["mt-10"]}>About Me</h2>
+        <p class:list={["mt-6"]}>
+            Hello 👋! I'm Jay. A devoted student and programmer. My favorite (<i
+                >among far too many</i
+            >) hobbies are: <kbd
+                class:list={["!kbd", "tooltip", "tooltip-info"]}
+                data-tip="operating systems">coding</kbd
+            >, <kbd
+                class:list={["!kbd", "tooltip", "tooltip-info"]}
+                data-tip="for school">coding</kbd
+            >, <kbd
+                class:list={["!kbd", "tooltip", "tooltip-info"]}
+                data-tip="websites">coding</kbd
+            >, and <a href="/school"
+                ><kbd
+                    class:list={["!kbd", "tooltip", "tooltip-success"]}
+                    data-tip="storeys and storeys of paper"
+                    >creative writing</kbd
+                ></a
+            >.
+        </p>
+    </section>
 </Layout>

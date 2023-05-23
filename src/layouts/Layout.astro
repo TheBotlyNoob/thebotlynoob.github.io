@@ -1,13 +1,12 @@
 ---
 export interface Props {
     title: string;
+    class: string[];
 }
-
-const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="h-full w-full">
+<html lang="en" dir="ltr" class:list={["min-h-full", "min-w-full"]}>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -47,17 +46,35 @@ const { title } = Astro.props;
             import { themeChange } from "theme-change";
             themeChange();
         </script>
-        <title>{title}</title>
+        <title>{Astro.props.title}</title>
     </head>
-    <body class="w-full h-full py-4 bg-base-200 font-mono flex justify-center">
+    <body
+        class:list={[
+            "min-w-full",
+            "min-h-full",
+            "py-4",
+            "bg-base-200",
+            "font-mono"
+        ]}
+    >
         <input
             type="checkbox"
-            class="absolute top-2 right-3 z-50 toggle"
+            class:list={["absolute", "top-2", "right-3", "z-50", "toggle"]}
             id="theme-toggle"
             data-toggle-theme="night,emerald"
             data-act-class="light"
         />
-        <slot />
+        <main
+            class:list={[
+                "min-w-full",
+                "min-h-full",
+                "flex",
+                "justify-center",
+                ...Astro.props.class
+            ]}
+        >
+            <slot />
+        </main>
     </body>
 </html>
 <style is:global type="scss">
@@ -71,15 +88,15 @@ const { title } = Astro.props;
         @apply font-serif font-bold;
     }
     h1 {
-        @apply text-5xl;
+        @apply !text-5xl;
     }
     h2 {
-        @apply text-4xl;
+        @apply !text-4xl;
     }
     h3 {
-        @apply text-3xl;
+        @apply !text-3xl;
     }
     h4 {
-        @apply text-2xl;
+        @apply !text-2xl;
     }
 </style>
