@@ -6,11 +6,11 @@ export interface Props {
 ---
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class:list={["min-h-full", "min-w-full"]}>
+<html lang="en" dir="ltr" class:list={["h-full", "w-full"]}>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="icon" type="image/png" href="favicon.png" />
         <meta name="generator" content={Astro.generator} />
         <script is:inline>
             const root = document.documentElement;
@@ -22,13 +22,15 @@ export interface Props {
             else {
                 const theme = localStorage.getItem("theme");
                 root.setAttribute("data-theme", theme);
-                if (theme === "night")
+                if (theme === "night") {
+                    root.classList.add("dark");
                     document.addEventListener(
                         "DOMContentLoaded",
                         () =>
                             (document.getElementById("theme-toggle").checked =
                                 true)
                     );
+                }
             }
 
             document.addEventListener("DOMContentLoaded", () => {
@@ -48,22 +50,17 @@ export interface Props {
         </script>
         <title>{Astro.props.title}</title>
     </head>
-    <body
-        class:list={[
-            "min-w-full",
-            "min-h-full",
-            "py-4",
-            "bg-base-200",
-            "font-mono"
-        ]}
-    >
-        <input
-            type="checkbox"
-            class:list={["absolute", "top-2", "right-3", "z-50", "toggle"]}
-            id="theme-toggle"
-            data-toggle-theme="night,emerald"
-            data-act-class="light"
-        />
+    <body class:list={["w-full", "h-full", "py-4", "bg-base-200", "font-mono"]}>
+        <div>
+            <label for="theme-toggle" hidden>Toggle theme</label>
+            <input
+                type="checkbox"
+                class:list={["absolute", "top-2", "right-3", "z-50", "toggle"]}
+                id="theme-toggle"
+                data-toggle-theme="night,emerald"
+                data-act-class="light"
+            />
+        </div>
         <main
             class:list={[
                 "min-w-full",
@@ -98,5 +95,12 @@ export interface Props {
     }
     h4 {
         @apply !text-2xl;
+    }
+
+    mark {
+        @apply text-neutral-content bg-secondary dark:text-neutral;
+    }
+    mark[secondary] {
+        @apply bg-accent;
     }
 </style>

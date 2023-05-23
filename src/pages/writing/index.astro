@@ -4,8 +4,12 @@ import Layout from "@/layouts/Layout.astro";
 const writings = await Astro.glob("./*.md");
 ---
 
-<Layout title="School" class={["flex", "flex-col", "gap-8"]}>
-    <h1>School</h1>
+<Layout
+    title="My Writings"
+    class={["flex-col", "items-center", "!justify-normal", "gap-12"]}
+>
+    <h1>Writings</h1>
+    <p></p>
     <section class:list={["flex", "flex-row"]}>
         {
             writings.map((writing) => (

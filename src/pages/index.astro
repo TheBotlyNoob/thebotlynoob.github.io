@@ -11,7 +11,7 @@ import avatar from "@/assets/avatar.jpg";
         class:list={[
             "sm:pl-12",
             "hero",
-            "min-h-screen",
+            "min-h-full",
             "hero-content",
             "flex-col",
             "xl:flex-row-reverse",
@@ -30,6 +30,7 @@ import avatar from "@/assets/avatar.jpg";
                 "w-64"
             ]}
             src={avatar}
+            alt="Jay Jackson"
         />
         <div>
             <h1>Jay Jackson</h1>
@@ -41,13 +42,14 @@ import avatar from "@/assets/avatar.jpg";
     </section>
     <section
         class:list={[
-            "flex",
-            "flex-col",
-            "items-center",
+            "sm:pl-12",
+            "hero",
             "min-h-full",
+            "hero-content",
+            "flex-col",
+            "gap-4",
             "w-full",
-            "xl:w-6/12",
-            "px-5"
+            "xl:w-6/12"
         ]}
     >
         <h2 class:list={["mt-10"]}>About Me</h2>
@@ -57,17 +59,19 @@ import avatar from "@/assets/avatar.jpg";
             >) hobbies are: <kbd
                 class:list={["!kbd", "tooltip", "tooltip-info"]}
                 data-tip="operating systems">coding</kbd
-            >, <kbd
-                class:list={["!kbd", "tooltip", "tooltip-info"]}
-                data-tip="for school">coding</kbd
+            >, <a href="https://jj.is-a.dev/solar-system"
+                ><kbd
+                    class:list={["!kbd", "tooltip", "tooltip-info"]}
+                    data-tip="for school">coding</kbd
+                ></a
             >, <kbd
                 class:list={["!kbd", "tooltip", "tooltip-info"]}
                 data-tip="websites">coding</kbd
-            >, and <a href="/school"
+            >, and <a href="writing"
                 ><kbd
                     class:list={["!kbd", "tooltip", "tooltip-success"]}
-                    data-tip="storeys and storeys of paper"
-                    >creative writing</kbd
+                    data-tip="storeys and storeys of paper (online)"
+                    >writing</kbd
                 ></a
             >.
         </p>
