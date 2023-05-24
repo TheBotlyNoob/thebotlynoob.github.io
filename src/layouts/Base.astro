@@ -50,7 +50,7 @@ export interface Props {
         </script>
         <title>{Astro.props.title}</title>
     </head>
-    <body class:list={["w-full", "h-full", "py-4", "font-mono"]}>
+    <body class:list={["w-full", "h-full", "font-mono"]}>
         <div>
             <label for="theme-toggle" hidden>Toggle theme</label>
             <input
@@ -102,5 +102,9 @@ export interface Props {
     }
     mark[secondary] {
         @apply bg-accent;
+    }
+
+    a {
+        @apply link link-primary;
     }
 </style>
