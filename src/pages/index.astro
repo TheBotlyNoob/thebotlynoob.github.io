@@ -17,7 +17,7 @@ import avatar from "@/assets/avatar.jpg";
             "xl:flex-row-reverse",
             "gap-10",
             "w-full",
-            "xl:w-6/12"
+            "xl:w-1/2"
         ]}
     >
         <img
@@ -51,7 +51,7 @@ import avatar from "@/assets/avatar.jpg";
             "flex-col",
             "gap-4",
             "w-full",
-            "xl:w-6/12"
+            "xl:w-1/2"
         ]}
     >
         <h2 class:list={["mt-10"]}>About Me</h2>
@@ -69,12 +69,10 @@ import avatar from "@/assets/avatar.jpg";
             >, <kbd
                 class:list={["!kbd", "tooltip", "tooltip-info"]}
                 data-tip="websites">coding</kbd
-            >, and <a
-                ><kbd
-                    class:list={["!kbd", "tooltip", "tooltip-success"]}
-                    data-tip="storeys and storeys of paper (online)"
-                    >writing</kbd
-                ></a
+            >, and
+            <kbd
+                class:list={["!kbd", "tooltip", "tooltip-success"]}
+                data-tip="storeys and storeys of paper (online)">writing</kbd
             >.
         </p>
     </section>
